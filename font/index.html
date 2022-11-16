@@ -1,0 +1,1527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;900&family=Source+Serif+Pro:wght@600&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="script/jquery-animate-css-rotate-scale.js"></script>
+
+    <script>
+
+
+
+
+        $(document).ready(function(){
+            
+            ep3_key = 1
+            //////////////////// 시작애니/////////////////////
+            $("#series_on_ep3>#on_1").fadeIn(1500)
+            $("#series_on_ep3>#series_border>img").fadeIn(3500)
+            $("#series_on_ep3>#series_border>div").delay(2000).animate({"width":"100%",})
+            $("#series_on_ep3>#on_3").delay(2000).animate({"bottom":0,})
+            $("#series_logo_ep3").fadeIn(1500)
+            $("#ep3_anakin").delay(2500).animate({"left":"50%",'opacity':"1"},500)
+            $("#ep3_obiwan").delay(2500).animate({"left":"50%",'opacity':"1"},500)
+            $("#back_light").delay(2850).fadeIn()
+            $("#front_light").delay(2800).fadeIn()
+            $("#ep3_yoda").delay(2700).fadeIn(1200)
+
+                $("#ep3_starF").delay(2700).animate({"left":"70%","top":"15%"},1000)
+
+            
+
+
+
+            $("#intro_box").delay(2500).animate({"left":0},)
+            $("#teaser_box").delay(2500).animate({"right":0},)
+            $("#menu_bg").delay(2200).animate({"top":"0"})
+            $("#logo").delay(2200).animate({"top":"10px"})
+            $("#next_btn").delay(2200).animate({"right":0})
+            $("#prev_btn").delay(2200).animate({"left":0})
+            $("#scroll").delay(2200).animate({"bottom":10},)
+          
+
+///////////////////////////광선검,인물///////
+            page_num = 3
+    $("#next_btn").click(function(){
+        page_num = page_num + 1
+
+
+        if(page_num == 4){
+            $("#ep3_home").fadeOut(1000)
+
+           
+            $("#ep4_home").fadeIn(2500)
+            $("#series_on_ep4>#on_1").fadeIn(2500)
+            $("#series_on_ep4>#series_border>img").fadeIn(4500)
+            $("#series_on_ep4>#series_border>div").delay(3000).animate({"width":"100%",})
+            $("#series_on_ep4>#on_3").delay(3000).animate({"bottom":0,})
+            $("#ep4_luke").delay(500).fadeIn(2000)
+            $("#ep4_vader").delay(1000).fadeIn(1000)
+            $("#ep4_obiwan").delay(1000).fadeIn(1000)
+            $("#ep4_death_star").delay(2000).fadeIn(1000)
+            $("#ep4_Xwing").delay(2000).animate({"margin-left":"-350px","opacity":"1"},500)
+            $("#ep4_tai").delay(2000).animate({"margin-left":"150px","opacity":"1"},500)
+            $("#intro_box").delay(1500).animate({"left":0},)
+            $("#teaser_box").delay(1500).animate({"right":0},)
+            $("#teaser_box>iframe").attr({"src":"https://www.youtube.com/embed/MpkrMqmmy5k"})
+            $("#intro_box>div>video").attr({"src":"image/home/ep4/ep4.mp4"})
+            ep3_key = 0
+        }
+
+        
+        
+        if(page_num == 5){
+            $("#ep4_home").fadeOut(1000)
+
+
+
+            $("#ep5_home").fadeIn(2500)
+            $("#series_on_ep5>#on_1").fadeIn(2500)
+            $("#series_on_ep5>#series_border>img").fadeIn(4500)
+            $("#series_on_ep5>#series_border>div").delay(3000).animate({"width":"100%",})
+            $("#series_on_ep5>#on_3").delay(3000).animate({"bottom":0,})
+            $(" #ep5_atat_right").delay(1000).fadeIn(1000)
+            $(" #ep5_atat_left").delay(1000).fadeIn(1000)
+            $("#intro_box>p").html()
+            $("#intro_box").delay(1500).animate({"left":0},)
+            $("#teaser_box").delay(1500).animate({"right":0},)
+            $("#teaser_box>iframe").attr({"src":"https://www.youtube.com/embed/urhsYepFqs0"})
+            $("#intro_box>div>video").attr({"src":"image/home/ep5/ep5.mp4"})
+        }
+
+        if(page_num == 6){
+            page_num = 3
+            $("#ep5_home").fadeOut(1000)
+
+            $(" #ep5_atat_right").delay(1000).fadeOut(10)
+            $(" #ep5_atat_left").delay(1000).fadeOut(10)
+
+            $("#ep3_home").fadeIn(2500)
+            $("#series_logo_ep3").fadeIn(4500)
+
+            $("#intro_box").delay(1000).animate({"left":0},)
+            $("#teaser_box").delay(1000).animate({"right":0},)
+            $("#teaser_box>iframe").attr({"src":"https://www.youtube.com/embed/5UnjrG_N8hU"})
+            $("#intro_box>div>video").attr({"src":"image/home/ep3/ep3.mp4"})
+
+        }
+
+    })    
+    $("#prev_btn").click(function(){
+        page_num = page_num - 1
+
+        if(page_num == 2){
+            page_num = 5
+            $("#ep3_home").fadeOut(1000)
+
+
+            $("#ep5_home").fadeIn(2500)
+            $("#series_on_ep5>#on_1").fadeIn(2500)
+            $("#series_on_ep5>#series_border>img").fadeIn(4500)
+            $("#series_on_ep5>#series_border>div").delay(3000).animate({"width":"100%",})
+            $("#series_on_ep5>#on_3").delay(3000).animate({"bottom":0,})
+            $(" #ep5_atat_right").delay(1000).fadeIn(1000)
+            $(" #ep5_atat_left").delay(1000).fadeIn(1000)
+            $("#intro_box").delay(1000).animate({"left":0},)
+            $("#teaser_box").delay(1000).animate({"right":0},)
+
+            $("#teaser_box>iframe").attr({"src":"https://www.youtube.com/embed/urhsYepFqs0"})
+            $("#intro_box>div>video").attr({"src":"image/home/ep5/ep5.mp4"})
+
+        }
+
+        if(page_num == 3){
+
+            $("#ep4_home").fadeOut(1000)
+
+
+            $("#ep3_home").fadeIn(2500)
+
+
+            $("#intro_box").delay(1000).animate({"left":0},)
+            $("#teaser_box").delay(1000).animate({"right":0},)
+
+            $("#teaser_box>iframe").attr({"src":"https://www.youtube.com/embed/5UnjrG_N8hU"})
+            $("#intro_box>div>video").attr({"src":"image/home/ep3/ep3.mp4"})
+        }
+
+        if(page_num == 4){
+
+            $("#ep5_home").fadeOut(1000)
+
+
+
+
+            $("#ep4_home").fadeIn(2500)
+            $("#series_on_ep4>#on_1").fadeIn(2500)
+            $("#series_on_ep4>#series_border>img").fadeIn(4500)
+            $("#series_on_ep4>#series_border>div").delay(3000).animate({"width":"100%",})
+            $("#series_on_ep4>#on_3").delay(3000).animate({"bottom":0,})
+            $("#ep4_luke").delay(500).fadeIn(2000)
+            $("#ep4_vader").delay(1000).fadeIn(1000)
+            $("#ep4_obiwan").delay(1000).fadeIn(1000)
+            $("#ep4_death_star").delay(2000).fadeIn(1000)
+            $("#ep4_Xwing").delay(2000).animate({"margin-left":"-350px","opacity":"1"},500)
+            $("#ep4_tai").delay(2000).animate({"margin-left":"150px","opacity":"1"},500)
+
+            $("#intro_box").delay(1000).animate({"left":0},)
+            $("#teaser_box").delay(1000).animate({"right":0},)
+
+            $("#teaser_box>iframe").attr({"src":"https://www.youtube.com/embed/MpkrMqmmy5k"})
+            $("#intro_box>div>video").attr({"src":"image/home/ep4/ep4.mp4"})
+        }
+
+
+
+    })     
+
+
+
+            setInterval(function(){
+                
+
+                $("#ep3_anakin>img").eq(2).animate({"opacity":"1"},30,function(){
+                    $("#ep3_anakin>img").eq(3).animate({"opacity":"1"},80,function(){
+                        $("#ep3_anakin>img").eq(3).animate({"opacity":"0"},30)
+                        $("#ep3_anakin>img").eq(2).animate({"opacity":"0"},30)
+                           
+                    })
+                })
+
+
+    
+
+            },201)
+
+            setInterval(function(){
+                    $("#ep3_obiwan>img").eq(2).animate({"opacity":"1"},30,function(){
+                    $("#ep3_obiwan>img").eq(3).animate({"opacity":"1"},80,function(){
+                        $("#ep3_obiwan>img").eq(3).animate({"opacity":"0"},30)
+                        $("#ep3_obiwan>img").eq(2).animate({"opacity":"0"},30)
+                           
+                    })
+                }) 
+            },201)
+
+            setInterval(function(){
+                    $("#ep3_vader").fadeOut(6000)
+                    $("#ep3_vader").fadeIn(6000)
+            })
+
+          setInterval(function(){
+
+    
+                $("#ep3_yoda").animate({"margin-top":"-240px"},1600)
+                $("#ep3_yoda").animate({"margin-top":"-160px"},1600)
+                $("#ep3_starF").animate({"margin-top":"5px"},1600)
+                $("#ep3_starF").animate({"margin-top":"-5px"},1600)                
+   
+
+            
+
+
+         
+          })
+
+          atat_right = 300;
+          atat_left = -500;
+          x1 = 0;
+          setInterval(function(){
+            if(atat_right >= 700){
+                $("#ep5_atat_right").css({"margin-left":"300px","opacity":0})
+                atat_right = 300
+                $("#ep5_atat_right").animate({"opacity":"1"},2000)
+            }
+            if(page_num == 5){atat_right = atat_right + 35
+                
+            $("#ep5_atat_right").animate({"margin-left":atat_right})}
+            
+        
+         },6000)
+         setInterval(function(){
+            if(atat_left <= -950){
+                $("#ep5_atat_left").css({"margin-left":"-500px","opacity":0})
+                atat_left = -600
+                $("#ep5_atat_left").animate({"opacity":"1"},2000)
+            }
+            if(page_num == 5){
+                x1 = -40;
+            }
+            atat_left = atat_left + x1
+          
+                
+            $("#ep5_atat_left").animate({"margin-left":atat_left})
+            
+        
+         },6000)
+
+         setInterval(function(){
+            $(".beam_line>img").animate({"left":"0","opacity":"0"},10)
+            $(".beam_line>img").animate({"opacity":"1"},100)
+            $(".beam_line>img").animate({"left":"600px"},700)
+
+            $(".beam_line2>img").animate({"left":"0","opacity":"0"},10)
+            $(".beam_line2>img").animate({"opacity":"1"},100)
+            $(".beam_line2>img").animate({"left":"600px"},700)
+
+         })
+
+         setInterval(function(){
+            if(page_num == 4){
+            $("#ep4_Xwing").animate({"margin-top":"-190px"},2000)
+            $("#ep4_Xwing").animate({"margin-top":"-210px"},2000)
+            $("#ep4_tai").animate({"margin-top":"-360"},2000)
+            $("#ep4_tai").animate({"margin-top":"-340px"},2000)
+
+
+            }
+
+         })
+
+         setInterval(function(){
+            if(page_num == 5){
+            $("#ep5_atat_right>img:nth-child(2)").fadeIn(1000)
+            $("#ep5_atat_right>img:nth-child(2)").fadeOut(1000)
+            $("#ep5_atat_left>img:nth-child(2)").fadeIn(1000)
+            $("#ep5_atat_left>img:nth-child(2)").fadeOut(1000)}
+         },4010)
+
+
+    setInterval(function(){
+        if(page_num == 5){
+        $("#ep5_starD_right").fadeIn(1000)
+        $("#ep5_starD_right").animate({"width":"804px","margin-top":"-100px","margin-left":"1000px"},30000)
+        $("#ep5_starD_right").fadeOut(10)
+        $("#ep5_starD_right").css({"width":"174px","margin-left":"250px","margin-top":"-350px"})}
+
+
+    })
+
+    setInterval(function(){
+        $("#ep5_vader_breath").fadeIn(3000)
+        $("#ep5_vader_breath").fadeOut(3000)
+    })
+
+    setInterval(function(){
+        if(page_num == 5){
+        $("#ep5_starD_left").fadeIn(1000)
+        $("#ep5_starD_left").animate({"width":"804px","margin-top":"-100px","left":"-13%"},30000)
+        $("#ep5_starD_left").fadeOut(10)
+        $("#ep5_starD_left").css({"width":"200px","left":"50%","margin-top":"-390px"})}
+    })
+
+        vader_light = -1
+    setInterval(function(){
+        if(vader_light >= 3){
+            vader_light = -1
+        }
+        vader_light = vader_light + 1
+
+        $("#ep5_vader_light>img").eq(vader_light).fadeIn(10).siblings().fadeOut()
+    },500)
+
+
+
+
+
+
+            light_size = 1
+            light_size_control = -1/10
+          setInterval(function(){
+                if(light_size>=12/10){
+                    light_size_control = (-1/10)
+                
+                }
+                else if(light_size<=7/10){
+                    light_size_control = 1/10
+                    
+                }
+
+                light_size = light_size + light_size_control
+                $("#front_light").css({"transform":"scale("+light_size+")"})
+
+          },60)
+
+            $("#ep3_starF").click(function(){
+                $("#ep3_starF").animate({"width":"400px","opacity":0})
+
+                
+            })
+                
+
+      
+            ///////////////////마우스 움직임 관련////////////////
+            $(window).mousemove(function(e){
+                mouseX = e.pageX
+                mouseX = e.pageY
+                ep3X= e.pageX*0.1-95
+                ep3Y= e.pageY*0.1-45
+                
+
+                $("#ep3_anakin").css({"margin-left":-900+ep3X})
+                $("#ep3_anakin").css({"margin-top":-1040-(ep3X)})
+
+                $("#ep3_obiwan").css({"margin-left":-580+(ep3X)})
+                $("#ep3_obiwan").css({"margin-top":-850+(ep3X)})
+
+                $("#back_light").css({"margin-left":(-600)+ep3X*300/1000})
+                $("#front_light").css({"margin-left":(-190)+ep3X*400/1000})
+                $("#front_light").css({"margin-top":(-460)+ep3X*300/1000})
+                $("#ep3_yoda").css({"margin-left":500+(ep3X)})
+                $("#ep3_starF").css({"margin-left":ep3X/100+"%"})
+               
+                $("#ep3_sidious").css({"opacity":(ep3X/100)-2/10})
+
+            })
+
+            /////////////////////////티저, 인트로,내려라 등등 ///////////////////////////
+            intro_num = 1
+            teaser_num = 1
+            $("#intro_btn").click(function(){
+                if(intro_num == 0){
+                    intro_num = 1
+                    $("#intro_box").animate({"bottom":0},300)
+                }
+                else if(intro_num == 1){
+                    intro_num = 0
+                    $("#intro_box").animate({"bottom":-205},300)
+                }
+            })
+
+            $("#teaser_btn").click(function(){
+                if( teaser_num == 0){
+                    teaser_num = 1
+                    $("#teaser_box").animate({"bottom":0},300)
+                }
+                else if( teaser_num == 1){
+                    teaser_num = 0
+                    $("#teaser_box").animate({"bottom":-200},300)
+                }
+            })
+
+            setInterval(function(){
+               
+                $("#scroll_round").css({'opacity':'1','top':'7px'})
+                $("#scroll_round").animate({'opacity':'0','top':'46px'},600)
+                },800)
+            
+                setInterval(function(){
+                    $("#scroll_move").animate({bottom:16},300)
+                    $("#scroll_move").animate({bottom:22},300)
+                })
+
+
+
+
+                info_key = 1
+                $("#info_box5_episode1").click(function(){
+                    if(info_key == 1){
+                        info_key = 0
+                    }
+                    
+                })
+                ///////////////////info////////////////////////
+                $(window).scroll(function(){
+                    sc = $(window).scrollTop()
+                    
+                   $("#command").text(episode_num)
+                    
+                   if(sc>=900){
+                    $("#info_title>img").fadeIn(2000)
+                    $("#info_title>.info_line").delay(1000).animate({'width':"430px"})
+                    
+                   }
+                   if(sc>=1000){
+                    $("#info_box1_logo").fadeIn(2000)
+                    $("#info_box1_txt").fadeIn(100)
+                    $(" #info_box1_txt>p:nth-child(1)").animate({"margin-top":"0","opacity":"1"},500,function(){
+                        $(" #info_box1_txt>p:nth-child(2)").animate({"margin-top":"20px","opacity":"1"},500,function(){
+                            $(" #info_box1_txt>p:nth-child(3)").animate({"margin-top":"20px","opacity":"1"},500)
+                        })
+                    })
+                    $("#info_box1_img1").delay(500).fadeIn(800)
+                    $("#info_box1_img2").delay(1000).fadeIn(800)
+                    $("#info_box1_img3").delay(1500).fadeIn(800)
+                   }
+
+                   if(sc>1500){
+                    $("#info_inbox1").css({"position":"absolute","top":"594px"})
+
+                   }
+
+                   if(sc>2000){
+
+                    $(" #info_jet>img:nth-child(2)").animate({"right":"2000px"},1000,function(){
+                        $(" #info_jet>img:nth-child(1)").animate({"right":"2000px"},1000)
+                    })
+
+                   }
+                   if(sc>2600){
+                    $("#info_title2>img").fadeIn(2000)
+                    $("#info_title2>.info_line").delay(1000).animate({'width':"430px"})
+                    $("#info_box2_poster").fadeIn(2000)
+                    $("#info_box2_txt").fadeIn(100)
+                    $(" #info_box2_txt>p:nth-child(1)").animate({"margin-top":"0","opacity":"1"},500,function(){
+                        $(" #info_box2_txt>p:nth-child(2)").animate({"margin-top":"20px","opacity":"1"},500,function(){
+                            $(" #info_box2_txt>p:nth-child(3)").animate({"margin-top":"20px","opacity":"1"},500)
+                        })
+                    })
+                    $("#info_box2_jet1").delay(500).animate({"right":"100px","opacity":"1"},1000)
+                    $("#info_box2_jet2").delay(1500).animate({"right":"500px","opacity":"1"},1000)
+                   }
+
+                   if(sc>3900){
+                    $("#info_inbox2").css({"position":"absolute","top":"2924px"})
+
+                   }
+                  if(sc>4700){
+                    $("#saber1").css({"left":-2200+(sc-4700)})
+                    $("#saber2").css({"right":-2200+(sc-4700)})
+                    $("#saber_txt1").css({"right":-2200+(sc-4700)})
+                    $("#saber_txt2").css({"left":-2200+(sc-4700)})
+                  }
+
+                  if(sc>8700){
+                    $("#info_title3>img").fadeIn(2000)
+                    $("#info_title3>.info_line").delay(1000).animate({'width':"430px"})
+                    $("#info_box3_saber1").animate({"left":"-90px","bottom":"180px","opacity":"1"},500)
+                    $("#info_box3_saber2").animate({"right":"-90px","bottom":"180px","opacity":"1"},500)
+
+                    $("#info_box3_txt").fadeIn(100)
+                    $(" #info_box3_txt>p:nth-child(1)").animate({"margin-top":"0","opacity":"1"},500,function(){
+                        $(" #info_box3_txt>p:nth-child(2)").animate({"margin-top":"20px","opacity":"1"},500,function(){
+                            
+                        })
+                    })
+
+                    $("#info_box3_poster>li:nth-child(1)").fadeIn(1500)
+                    $("#info_box3_poster>li:nth-child(2)").delay(400).fadeIn(1500)
+                    $("#info_box3_poster>li:nth-child(3)").delay(800).fadeIn(1500)
+                    $("#info_box3_poster>li:nth-child(4)").delay(1200).fadeIn(1500)
+                    $("#info_box3_poster>li:nth-child(5)").delay(1600).fadeIn(1500)
+                    $("#info_box3_poster>li:nth-child(6)").delay(2000).fadeIn(1500)
+                  }
+
+                  if(sc>9500){
+                    $("#info_inbox3").css({"position":"absolute","top":"8524px"})
+                  }
+                  if(sc>9000){
+                    $("#info_box4").fadeIn(10)
+                  }
+                  if(sc>9800){
+                    
+                    $("#info_box4").css({"left":2000+(-(sc-9800))})
+                  }
+                  if(sc>10900){
+                    $("#info_box4_ep1>.poster_box").animate({"left":0,"opacity":1},1000)
+                    $("#info_box4_ep1>.info_box4_text").delay(500).animate({"left":"260px","opacity":1},1000)
+                    $("#info_box4_ep1>.info_box4_view").delay(1500).fadeIn(1000)
+                    $("#ep1_race1").delay(1200).animate({"right":"510px","opacity":"0.5"},600)
+                    $("#ep1_race2").delay(1000).animate({"right":"0px","opacity":1},600)
+                  }
+                  if(sc>11900){
+                    $("#info_box4_ep2>.poster_box").animate({"left":0,"opacity":1},1000)
+                    $("#info_box4_ep2>.info_box4_text").delay(500).animate({"left":"260px","opacity":1},1000)
+                    $("#info_box4_ep2>.info_box4_view").delay(1500).fadeIn(1000)
+                    $("#ep2_object1").delay(1000).fadeIn(1000)
+                    $("#ep2_object2").delay(1800).animate({"right":"130px","top":"60px","opacity":"1"})
+                    $("#ep2_object3").delay(1800).animate({"right":"20px","top":"20px","opacity":"0.6"})
+                }
+                if(sc>12900){
+                    $("#info_box4_ep3>.poster_box").animate({"left":0,"opacity":1},1000)
+                    $("#info_box4_ep3>.info_box4_text").delay(500).animate({"left":"260px","opacity":1},1000)
+                    $("#info_box4_ep3>.info_box4_view").delay(1500).fadeIn(1000)
+                    $("#ep3_object1").delay(1000).fadeIn(1000)
+                    $("#ep3_object2").delay(1800).animate({"right":"440px","top":"60px","opacity":"1"})
+                    $("#ep3_object3").delay(1800).animate({"right":"520px","top":"110px","opacity":"1"})
+                }
+                if(sc>13900){
+                    $("#info_box4_ep4>.poster_box").animate({"left":0,"opacity":1},1000)
+                    $("#info_box4_ep4>.info_box4_text").delay(500).animate({"left":"260px","opacity":1},1000)
+                    $("#info_box4_ep4>.info_box4_view").delay(1500).fadeIn(1000)
+                    $("#ep4_object1").delay(1000).fadeIn(1000)
+                    $("#ep4_object2").delay(1900).animate({"right":"530px","top":"170px","opacity":"1"})
+                    $("#ep4_object3").delay(1800).animate({"right":"460px","top":"220px","opacity":"1"})
+                    $("#ep4_object4").delay(2000).animate({"right":"560px","top":"280px","opacity":"1"})
+                    $("#ep4_object5").delay(1900).animate({"right":"70px","top":"30px","opacity":"1"})
+                    $("#ep4_object6").delay(1800).animate({"right":"140px","top":"70px","opacity":"1"})
+                }
+                if(sc>14900){
+                    $("#info_box4_ep5>.poster_box").animate({"left":0,"opacity":1},1000)
+                    $("#info_box4_ep5>.info_box4_text").delay(500).animate({"left":"260px","opacity":1},1000)
+                    $("#info_box4_ep5>.info_box4_view").delay(1500).fadeIn(1000)
+                    $("#ep5_object1").delay(2000).animate({"right":"200px","top":"160px","opacity":"1","width":"377px"})
+                    $("#ep5_object2").delay(1000).fadeIn(1000)
+                }
+                if(sc>15900){
+                    $("#info_box4_ep6>.poster_box").animate({"left":0,"opacity":1},1000)
+                    $("#info_box4_ep6>.info_box4_text").delay(500).animate({"left":"260px","opacity":1},1000)
+                    $("#info_box4_ep6>.info_box4_view").delay(1500).fadeIn(1000)
+                    $("#ep6_object").delay(1000).fadeIn(2000)
+                }
+                if(sc>19500){
+                    $("#info_title5>img").fadeIn(2000)
+                    $("#info_title5>.info_line").delay(1000).animate({'width':"430px"})
+                    $("#series_map").fadeIn(1000)
+                    $("#info_box5_episode1").delay(300).fadeIn(1000)
+                    $("#info_box5_episode2").delay(500).fadeIn(1000)
+                    $("#info_box5_episode3").delay(700).fadeIn(1000)
+                    $("#info_box5_episode4").delay(900).fadeIn(1000)
+                    $("#info_box5_episode5").delay(1100).fadeIn(1000)
+                    $("#info_box5_episode6").delay(1300).fadeIn(1000)
+                    
+                }
+                if(sc>19570 && info_key == 1){
+                    
+                        $("html,body").scrollTop(19570)
+                    
+                        $("#info_box5_episode1").click(function(){
+                    info_key = 0})
+
+                }
+                })
+                $("#ship_door").animate({"scale":2})
+
+                episode_num = 3
+                ////////////////////////////에피소드 누를시 액션들//////////////////////////////
+                $("#info_box5_episode1,#info_box5_episode2,#info_box5_episode3,#info_box5_episode4,#info_box5_episode5,#info_box5_episode6").click(function(){
+                    episode_num = $(this).index()
+                    info_key = 0
+
+                    $("#movie_poster").attr({"src":"image/series/poster_ep"+episode_num+".png"})
+                    $("#movie_char_holo1>.char_holo_char").attr({"src":"image/character/info_"+episode_num+"_1.png"})
+                    $("#movie_char_holo2>.char_holo_char").attr({"src":"image/character/info_"+episode_num+"_2.png"})
+                    $("#movie_char_holo3>.char_holo_char").attr({"src":"image/character/info_"+episode_num+"_3.png"})
+                    $("#movie_char_holo4>.char_holo_char").attr({"src":"image/character/info_"+episode_num+"_4.png"})
+                    if(episode_num == 3){
+                        $("#movie_char_holo1>.char_hololight_back").attr({"src":"image/character/red_light_high.png"})
+                        $("#movie_char_holo1>.char_hololight_front").attr({"src":"image/character/red_light_high.png"})
+                        $("#movie_char_holo4>.char_hololight_back").attr({"src":"image/character/blue_light_high.png"})
+                        $("#movie_char_holo4>.char_hololight_front").attr({"src":"image/character/blue_light_high.png"})
+                        $("#movie_char_holo1>.holo_name").html("Darth <br> Sidious ")
+                        $("#movie_char_holo2>.holo_name").html("Anakin <br> Skywalker")
+                        $("#movie_char_holo3>.holo_name").html("Obi-wan <br> Kenobi")
+                        $("#movie_char_holo4>.holo_name").html("Yoda")
+
+                    }
+                    if(episode_num == 4){
+                        $("#movie_char_holo1>.char_hololight_back").attr({"src":"image/character/blue_light_high.png"})
+                        $("#movie_char_holo1>.char_hololight_front").attr({"src":"image/character/blue_light_high.png"})
+                        $("#movie_char_holo4>.char_hololight_back").attr({"src":"image/character/red_light_high.png"})
+                        $("#movie_char_holo4>.char_hololight_front").attr({"src":"image/character/red_light_high.png"})
+                        $("#movie_char_holo1>.holo_name").html("Luke <br> Skywalker ")
+                        $("#movie_char_holo2>.holo_name").html("Leia <br> Organa")
+                        $("#movie_char_holo3>.holo_name").html("Obi-wan <br> Kenobi")
+                        $("#movie_char_holo4>.holo_name").html("Darth <br> vader")
+                    }
+
+                    if(episode_num == 5){
+
+                        
+}
+
+
+
+
+
+
+
+
+
+
+                    $("#ship_door").fadeIn(1)
+                    $("#ship_door").animate({"scale":1})
+                    $("#left_door").delay(500).animate({"left":"235px"},700)
+                    $("#right_door").delay(500).animate({"right":"212px"},700)
+                    $("html,body").delay(1500).animate({scrollTop:$("#movie_screen").offset().top},10)
+                    $("#left_door").delay(2000).animate({"left":"-1200px"},700)
+                    $("#right_door").delay(2000).animate({"right":"-1200px"},700)
+                    $("#ship_door").delay(3500).animate({"scale":2})
+                    $("#ship_door").fadeOut(1)
+                })
+
+                /////////////////////////////시리즈 갤러리 캐릭터//////////////////////////////////
+
+                setInterval(function(){
+
+                    $(".projecter_holo,.projecter_btn").animate({"opacity":"0.5"},100,function(){
+                        $(".projecter_holo,.projecter_btn").animate({"opacity":"1"},100)
+                    })
+
+                },3000)
+
+                $("#screen_char_box>.projecter_btn").click(function(){
+
+                    $("#movie_poster_box").animate({"left":"-760px"},500)
+                    $("#movie_screen_btn_box").animate({"bottom":"-310px"},500)
+                    $(" #screen_char_box").delay(00).animate({"margin-top":"484px"},100)
+                    $(" #screen_gal_box").delay(00).animate({"margin-top":"484px"},100)
+                    $("#movie_char_box").delay(500).animate({"bottom":"0"},500)
+                    $("#char_title").delay(500).fadeIn(1000)
+                    $("#movie_char_box>div>.char_holo_char").delay(1000).fadeIn(1000)
+                    $("#char_box_close").delay(1000).fadeIn(1000)
+                    $(".holo_name").delay(1000).fadeIn(1000)
+                })
+                $("#char_box_close").click(function(){
+
+                    $("#movie_poster_box").animate({"left":"-40px"},500)
+                    $("#movie_screen_btn_box").animate({"bottom":"-0px"},500)
+                    $(" #screen_char_box").delay(00).animate({"margin-top":"227px"},500)
+                    $(" #screen_gal_box").delay(00).animate({"margin-top":"227px"},500)
+                    $("#movie_char_box").delay(00).animate({"bottom":"-800px"},500)
+                    $("#char_title").delay(0).fadeOut(100)
+                    $("#movie_char_box>div>.char_holo_char").delay(1000).fadeOut(100)
+                    $(".holo_name").delay(1000).fadeOut(100)
+                    $("#char_box_close").delay(0).fadeOut(100)
+                })
+                $("#movie_char_box>div").mouseenter(function(){
+                    $(this).children(".char_holo_char").animate({"opacity":"1"},100)
+                    $(this).children(".char_hololight_back").fadeIn(100)
+                    $(this).children(".char_hololight_front").fadeIn(100)
+                })
+                $("#movie_char_box>div").mouseleave(function(){
+                    $(this).children(".char_holo_char").animate({"opacity":"0.5"},100)
+                    $(this).children(".char_hololight_back").fadeOut(100)
+                    $(this).children(".char_hololight_front").fadeOut(100)
+                })
+
+                //////////////////////////////////캐릭터창 누를떄에 따른 반응서///////////////////////////
+                $("#movie_char_holo1").click(function(){
+
+                    if(episode_num == 3){
+                        $("#char_name").text("Darth Sidious")
+                        $("#char_txt1>.small_info").text("Male")
+                        $("#char_txt2>.small_info").text("1.85M")
+                        $("#char_txt3>.small_info").text("Human")
+                        $("#char_txt4>.small_info").text("Coruscant")
+                        $("#char_txt5>.small_info").text("Sith")
+                        $("#char_info_txt_box>p").text("The dark side of the Force is a pathway to many abilities some consider to be unnatural, and Sheev Palpatine is the most infamous follower of its doctrines. Scheming, powerful, and evil to the core, Darth Sidious restored the Sith and destroyed the Jedi Order. Living a double life, he was also Palpatine, a Naboo Senator and phantom menace. He manipulated the political system of the Galactic Republic until he was named Supreme Chancellor -- and eventually Emperor – and ruled the galaxy through fear and tyranny. ")
+                        $("#char_standing").attr({"src":"image/character/Char_info_3_1.png"})
+                        $("#char_simbol").attr({"src":"image/character/galaxy_empire_simbol.png"})
+
+                    }
+
+                    if(episode_num == 4){
+                        $("#char_name").text("Luke Skywalker")
+                        $("#char_txt1>.small_info").text("Male")
+                        $("#char_txt2>.small_info").text("1.72M")
+                        $("#char_txt3>.small_info").text("Human")
+                        $("#char_txt4>.small_info").text("Tatuin")
+                        $("#char_txt5>.small_info").text("Unknown")
+                        $("#char_info_txt_box>p").text("a young man living on the planet Tatuin He finds out that the Imperial army is looking for the droid he purchased, and that Obi-Wan Kenobi, who was looking for, is Ben Kenobi, an old man who lived nearby. Obi-Wan tells us that Luke's father was a Jedi. And Luke decides to become a Jedi and goes on a long journey.")
+                        $("#char_standing").attr({"src":"image/character/char_info_4_1.png"})
+                        $("#char_simbol").attr({"src":"image/character/"})
+                    }
+
+                    if(episode_num == 5){
+                        $("#char_name").text()
+                        $("#char_txt1>.small_info").text()
+                        $("#char_txt2>.small_info").text()
+                        $("#char_txt3>.small_info").text()
+                        $("#char_txt4>.small_info").text()
+                        $("#char_txt5>.small_info").text()
+                        $("#char_info_txt_box>p").text()
+                        $("#char_standing").attr({"src":"image/character/char_info_5_1.png"})
+                    }
+
+
+                 })
+                $("#movie_char_holo2").click(function(){
+
+                    if(episode_num == 3){
+                        $("#char_name").text("Anakin Skywalker")
+                        $("#char_txt1>.small_info").text("Male")
+                        $("#char_txt2>.small_info").text("1.85M")
+                        $("#char_txt3>.small_info").text("Human")
+                        $("#char_txt4>.small_info").text("Coruscant")
+                        $("#char_txt5>.small_info").text("Jedi Order")
+                        $("#char_info_txt_box>p").text("Discovered as a slave on Tatooine by Qui-Gon Jinn and Obi-Wan Kenobi, Anakin Skywalker had the potential to become one of the most powerful Jedi ever. Some even believed he was the prophesied Chosen One who would bring balance to the Force. Always pushing the limits of his Jedi training, seeking to excel and live up to his reputation, Skywalker's passion often brought him into conflict with his mentor, Jedi Master Obi-Wan Kenobi. A hero of the Clone Wars, Anakin was caring and compassionate, but suffered from a deep fear of loss that would prove to be his downfall.")
+                        $("#char_standing").attr({"src":"image/character/Char_info_3_2.png"})
+                        $("#char_simbol").attr({"src":"image/character/jedi_simbol.png"})
+
+                    }
+
+                    if(episode_num == 4){
+                        $("#char_name").text("Leia Organa")
+                        $("#char_txt1>.small_info").text("Female")
+                        $("#char_txt2>.small_info").text("1.5M")
+                        $("#char_txt3>.small_info").text("Human")
+                        $("#char_txt4>.small_info").text("Alderaan")
+                        $("#char_txt5>.small_info").text("Rebel Alliance")
+                        $("#char_info_txt_box>p").text("Princess of Alderan. She is a member of the rebel coalition, but in fact.Darth Vader gets caught while stealing Death Star's blueprint. After that, he had a fateful encounter with Luke Skywalker, who came to save him.")
+                        $("#char_standing").attr({"src":"image/character/char_info_4_2.png"})
+                        $("#char_simbol").attr({"src":"image/character/revel_simbol.png"})
+
+                    }
+
+                    if(episode_num == 5){
+                        $("#char_name").text()
+                        $("#char_txt1>.small_info").text()
+                        $("#char_txt2>.small_info").text()
+                        $("#char_txt3>.small_info").text()
+                        $("#char_txt4>.small_info").text()
+                        $("#char_txt5>.small_info").text()
+                        $("#char_info_txt_box>p").text()
+                        $("#char_standing").attr({"src":"image/character/char_info_5_2.png"})
+                    }
+
+
+                    })
+                $("#movie_char_holo3").click(function(){
+
+                    if(episode_num == 3){
+                        $("#char_name").text("Obiwan Kenobi")
+                        $("#char_txt1>.small_info").text("Male")
+                        $("#char_txt2>.small_info").text("1.82M")
+                        $("#char_txt3>.small_info").text("Human")
+                        $("#char_txt4>.small_info").text("Coruscant")
+                        $("#char_txt5>.small_info").text("Jedi Order")
+                        $("#char_info_txt_box>p").text("A legendary Jedi Master, Obi-Wan Kenobi was a noble man and gifted in the ways of the Force. He trained Anakin Skywalker, served as a general in the Republic Army during the Clone Wars")
+                        $("#char_standing").attr({"src":"image/character/Char_info_3_3.png"})
+                        $("#char_simbol").attr({"src":"image/character/jedi_simbol.png"})
+
+                    }
+
+                    if(episode_num == 4){
+                        $("#char_name").text("Obi-wan Kenobi")
+                        $("#char_txt1>.small_info").text("Male")
+                        $("#char_txt2>.small_info").text("1.72M")
+                        $("#char_txt3>.small_info").text("Human")
+                        $("#char_txt4>.small_info").text("Tatuin")
+                        $("#char_txt5>.small_info").text("Jedi Order")
+                        $("#char_info_txt_box>p").text("An old man who lived as Ben Kenobi.A survivor of the Jedi Order, which was overthrown by the Empire. I have long watched Luke, the descendant of the Jedi Knight. When the time came, he told Luke about Darth Vader, Luke's father's enemy, and recommended that he become a Jedi")
+                        $("#char_standing").attr({"src":"image/character/char_info_4_3.png"})
+                        $("#char_simbol").attr({"src":"image/character/jedi_simbol.png"})
+                    }
+
+                    if(episode_num == 5){
+                        $("#char_name").text()
+                        $("#char_txt1>.small_info").text()
+                        $("#char_txt2>.small_info").text()
+                        $("#char_txt3>.small_info").text()
+                        $("#char_txt4>.small_info").text()
+                        $("#char_txt5>.small_info").text()
+                        $("#char_info_txt_box>p").text()
+                        $("#char_standing").attr({"src":"image/character/char_info_5_3.png"})
+                    }
+
+
+                })
+
+                $("#movie_char_holo4").click(function(){
+
+                    if(episode_num == 3){
+                        $("#char_name").text("Yoda")
+                        $("#char_txt1>.small_info").text("Male")
+                        $("#char_txt2>.small_info").text("0.66M")
+                        $("#char_txt3>.small_info").text("Unknown")
+                        $("#char_txt4>.small_info").text("Coruscant")
+                        $("#char_txt5>.small_info").text("Jedi Order")
+                        $("#char_info_txt_box>p").text("Yoda was a legendary Jedi Master and stronger than most in his connection with the Force. Small in size but wise and powerful, he trained Jedi for over 800 years, playing integral roles in the Clone Wars, the instruction of Luke Skywalker, and unlocking the path to immortality.")
+                        $("#char_standing").attr({"src":"image/character/Char_info_3_4.png"})
+                        $("#char_simbol").attr({"src":"image/character/jedi_simbol.png"})
+
+                    }
+
+                    if(episode_num == 4){
+                        $("#char_name").text("Darth Vader")
+                        $("#char_txt1>.small_info").text("Male")
+                        $("#char_txt2>.small_info").text("2.03M")
+                        $("#char_txt3>.small_info").text("Human(Cyborg)")
+                        $("#char_txt4>.small_info").text("Death Star")
+                        $("#char_txt5>.small_info").text("galaxtic Empire")
+                        $("#char_info_txt_box>p").text("Darth Vader, the evil Sith monarch. Captures Princess Leah, who tried to steal Death Star's blueprint. After that, he confronts his archrival Obi-Wan Kenobi, who came to rescue the princess, and begins to pay attention to Luke, a young man with a strong force.")
+                        $("#char_standing").attr({"src":"image/character/char_info_4_4.png"})
+                        $("#char_simbol").attr({"src":"image/character/galaxy_empire_simbol.png"})
+
+                    }
+
+                    if(episode_num == 5){
+                        $("#char_name").text()
+                        $("#char_txt1>.small_info").text()
+                        $("#char_txt2>.small_info").text()
+                        $("#char_txt3>.small_info").text()
+                        $("#char_txt4>.small_info").text()
+                        $("#char_txt5>.small_info").text()
+                        $("#char_info_txt_box>p").text()
+                        $("#char_standing").attr({"src":"image/character/char_info_5_4.png"})
+                    }
+
+
+                })
+
+                $("#movie_char_box>div").click(function(){
+                    $("#char_info_txt_box>div").animate({"width":"400px"})
+                    $("#char_name").animate({"width":"280px"})
+                    $("#char_info_txt_box>p").fadeIn(200)
+
+
+                })
+
+
+
+
+        })
+    </script>
+    <style>
+        @font-face{src: url(font/Spaceport.otf); font-family: space;}
+       @font-face {
+        font-family: jedi;
+        src: url(font/Starjedi.ttf);
+       }
+       @font-face {
+        font-family: lemonmilk;
+        src: url(font/LEMONMILK-Bold.otf);
+       }
+       @font-face {
+        font-family: akira;
+        src: url(font/Akira\ Expanded\ Demo.otf);
+       }
+        *{margin: 0;padding: 0;list-style: none;}
+        #command{position: fixed;top: 0;left: 0;width: 300px;height: 100px;z-index: 999;background-color: red;color: blue;font-size: 60px;line-height: 100px;z-index: 999;}
+        body{}
+        #menu_bg{position: fixed;top: -200px;left: 0;right: 0;margin: auto;width: 100%;height: 100px;background: linear-gradient(to bottom,#000 60%,transparent);z-index: 98;}
+        #menu{position: fixed;left: 0;margin: 16px;z-index: 99;}
+        #menu>li{float: left;font-size: 20px;margin: 0 15px;font-family: 'Roboto', sans-serif;font-weight: 500;color: #fff;}
+        #menu>li:hover{cursor: pointer;}
+        #logo{position: fixed;left: 0;right: 0;top: -110px;margin: auto;width: 160px;height: 75px;z-index: 99;cursor: pointer;}
+        #logo>img{width: 100%;}
+        #icon_menu{position: fixed;right: 0;margin: 16px;z-index: 99;}
+        #icon_menu>li{float: left;margin: 0 15px;}
+        
+        #main{width: 100%;height: 970px;position:fixed;overflow: hidden;background-color: #000;top: 0;left: 0;}
+       #ep3_home{position: relative;width: 100%;height: 100%;background: url(image/home/ep3/ep3_bg.png) center no-repeat;}
+       #ep5_home{position: relative;width: 100%;height: 100%;background: url(image/home/ep5/ep5_bg.png) center no-repeat;display: none;}
+       #ep4_home{position: relative;width: 100%;height: 100%;background: url(image/home/ep4/ep4_bg.png) center no-repeat;display: none;}
+
+        #ep3_vader{mix-blend-mode: overlay;position: absolute;left: 50%;top: 50%;z-index: 2;margin-left: -1000px;margin-top: -450px;display: none;}
+        #ep3_sidious{position: absolute;left: 50%;top: 50%;z-index: 3;margin-left: -1005px;margin-top: -150px;transform: scale(0.8);display: none;}
+        #ep3_yoda{position: absolute;left: 50%;top: 50%;z-index: 2;margin-left: 500px;margin-top: -200px;display: none;width: 400px;}
+        #ep3_starF{position: absolute;top: 0%;left: 100%;z-index: 5;width: 120px;}
+
+        #back_light{z-index: 3;position: absolute;top: 50%;left: 50%;margin-left: -600px;margin-top: -540px;display: none;}
+        #front_light{z-index: 5;position: absolute;top: 50%;left: 50%;margin-left: -190px;margin-top: -460px;mix-blend-mode: screen;display: none;transform-origin:50% 50%;}
+        #ep3_anakin{position: absolute;top: 50%;left: -20%;z-index: 4;margin-left: -900px;margin-top: -1040px;opacity: 0;}
+        #ep3_anakin>img{position: absolute;top: 0;left: 0;transition: 0.2s;}
+        #ep3_anakin>img:nth-child(1){opacity: 1;}
+        #ep3_anakin>img:nth-child(2){opacity: 0;mix-blend-mode: screen;}
+        #ep3_anakin>img:nth-child(3){opacity: 0;mix-blend-mode: screen;}
+        #ep3_obiwan{position: absolute;top: 50%;left: 120%;z-index: 4;margin-left: -580px;margin-top: -850px;opacity: 0;}
+        #ep3_obiwan>img{position: absolute;top: 0;left: 0;transition: 0.198s;}
+        #ep3_obiwan>img:nth-child(1){opacity: 1;mix-blend-mode: screen;}
+        #ep3_obiwan>img:nth-child(2){opacity: 1;mix-blend-mode: screen;z-index: 4;}
+        #ep3_obiwan>img:nth-child(3){opacity: 0;mix-blend-mode: screen;z-index: 4;}
+        #ep3_obiwan>img:nth-child(4){opacity: 0;mix-blend-mode: screen;z-index: 4;}
+        #ep4_vader{position: absolute;left: 50%;top: 50%;margin-top: -500px;margin-left: 500px;opacity: 0.6;mix-blend-mode: lighten;display: none;}
+        #ep4_obiwan{position: absolute;left: 50%;top: 50%;opacity: 0.6;mix-blend-mode: lighten;margin-top: -500px;margin-left: -1000px;width: 500px;display: none;}
+        #ep4_luke{position: absolute;left: 50%;top: 50%;margin-left: -98px;margin-top: 154px;display: none;}
+        #ep4_Xwing{position: absolute;left: 50%;top: 50%;margin-left: -700px;margin-top: -200px;opacity: 0;}
+        #ep4_tai{position: absolute;left: 50%;top: 50%;margin-left: 400px;margin-top: -350px;opacity: 0;}
+        #ep4_death_star{position: absolute;top: 50%;left: 50%;width: 270px;margin-left: -135px;margin-top: -345px;display: none;}
+        #ep5_atat_left{position: absolute;top: 50%;left: 50%;z-index: 2;margin-left: -500px;display: none;}
+        #ep5_atat_left>img{position: absolute;left: 0;top: 0;}
+        #ep5_atat_left>img:nth-child(2){display: none;}
+        #ep5_atat_right{position: absolute;top: 50%;left: 50%;z-index: 2;margin-left: 300px;margin-top: 60px;display: none;}
+        #ep5_atat_right>img{position: absolute;left: 0;top: 0;}
+        #ep5_atat_right>img:nth-child(2){display: none;}
+        .beam_line{height: 28px;width: 600px;transform: rotate(190deg);position: absolute;left: 0;top: 0;margin-left: -500px;margin-top: 102px;}
+        .beam_line>img{position: absolute;left: 0;top: 0;}
+        .beam_line2{height: 28px;width: 600px;position: absolute;left: 0;top: 0;margin-left: 254px;margin-top: 103px;}
+        .beam_line2>img{position: absolute;left: 0;top: 0;}
+        #ep5_starD_right{position: absolute;left: 50%;top: 50%;margin-left: 450px;margin-top: -350px;width: 174px;display: none;}
+        #ep5_starD_left{position: absolute;left: 50%;top: 50%;margin-left: -590px;margin-top: -390px;width: 200px;display: none;}
+        #ep5_vader_light{width: 110px;height: 90px;position: absolute;left: 50%;top: 50%;margin-left: -56px;margin-top: -153px;}
+        #ep5_vader_light>img{position: absolute;left: 0;top: 0;display: none;}
+        #ep5_vader_breath{position: absolute;left: 50%;top: 50%;margin-left: -110px;margin-top: -410px;}
+        #intro_box{width: 505px;height: 252px;background: url(image/home/home_intro.png) center no-repeat;position: absolute;left: -510px;bottom: 0px;z-index: 5;}
+        #intro_btn{position: absolute;width: 200px;height: 48px;position: absolute;top: 0;left: 0;}
+        #intro_text_box{background-color: transparent;width: 495px;height: 170px;position: absolute;bottom: 4px;left: 4px;}
+        #intro_text_box>video{width: 100%;}
+        #intro_text_box>p>span{font-size: 18px;}
+        #teaser_box{width: 505px;height: 252px;position: absolute;bottom: 0px;right: -510px;z-index: 5;}
+        #teaser_box>iframe{border: 4px solid #fff;position: absolute;bottom: 0;right: 0;}
+        #teaser_box>img{position: absolute;top: 0;right: 0;}
+
+        #series_on_ep3{width: 300px;height: 197px;position: absolute;top: 0;bottom: 0;left: 0;right: 0;margin: auto;z-index: 10;text-align: center;overflow: hidden;}
+        #series_on_ep4{width: 300px;height: 197px;position: absolute;top: 0;bottom: 0;left: 0;right: 0;margin: auto;z-index: 10;text-align: center;overflow: hidden;}
+        #series_on_ep5{width: 300px;height: 197px;position: absolute;top: 0;bottom: 0;left: 0;right: 0;margin: auto;z-index: 10;text-align: center;overflow: hidden;}
+        #on_1{display: none;}
+        #series_border{width: 260px;margin: auto;transition: 0.8s;position: relative;}
+        #series_border_bottom{position: absolute;width: 0%;bottom: 0;left: 0;height: 2px;background-color: #fff;}
+        #series_border_top{position: absolute;width: 0%;top: 0;right: 0;height: 2px;background-color: #fff;}
+
+        #series_border>img{padding-top: 4px;display: none;}
+        #on_3{position: absolute;left: 0;right: 0;bottom: -30px;margin: auto;}
+
+        #main_btn{width: 100%;height: 25px;z-index: 5;top: 0;bottom: 0;margin: auto;position: absolute;}
+        #next_btn{position: absolute;top: 0;right: -150px;cursor: pointer;}
+        #prev_btn{position: absolute;top: 0;left: -150px;cursor: pointer;}
+        #scroll{width: 170px;height: 80px;position: absolute;left: 0;right: 0;bottom: -200px;margin: auto;}
+        #scroll>h5{text-align: center;font-family: space;color: #fff;font-size: 18px;font-weight: 300;}
+        #scroll>img:nth-child(2){width: 25px;height: 25px;position: absolute;bottom: 22px;right: 0;left: 0;margin: auto;}
+
+        #info{height: 19600px;position: relative;margin-top: 970px;width: 100%;background: url(image/info/space_bg.png) center ;}
+        #info_inbox1{width: 100%;position: sticky;top: 0;left: 0;right: 0;margin: auto;height: 1000px;}
+        #info_title{position: absolute;top: 50%;left: 50%;right: 0;text-align: center;width: 1300px;z-index: 10;margin-left: -650px;margin-top: -350px;}
+        #info_title2{position: absolute;top: 50%;left: 50%;right: 0;text-align: center;width: 1300px;z-index: 10;margin-left: -650px;margin-top: -350px;}
+        #info_title3{position: absolute;top: 50%;left: 50%;right: 0;text-align: center;width: 1300px;z-index: 10;margin-left: -650px;margin-top: -350px;}
+        #info_title5{position: absolute;top: 50%;left: 50%;right: 0;text-align: center;width: 1300px;z-index: 10;margin-left: -650px;margin-top: -350px;}
+        .info_line{width: 0px;top: 0;bottom: 0;position: absolute;margin: auto;height: 4px;background-color: #fff;}
+        #info_title>img{display: none;}
+        #info_title2>img{display: none;}
+        #info_title3>img{display: none;}
+        #info_title5>img{display: none;}
+        #info_title>div:nth-child(1){left: 5px;}
+        #info_title>div:nth-child(3){right: 5px;}
+        #info_title2>div:nth-child(1){left: 5px;}
+        #info_title2>div:nth-child(3){right: 5px;}
+        #info_title3>div:nth-child(1){left: 5px;}
+        #info_title3>div:nth-child(3){right: 5px;}
+        #info_title5>div:nth-child(1){left: 5px;}
+        #info_title5>div:nth-child(3){right: 5px;}
+        #info_box1{width: 1300px;height: 715px;box-sizing: border-box;position: absolute;left: 50%;top: 50%;margin: auto;top: 20%;margin-left: -650px;margin-top: 0px;}
+        #info_box1_logo{position: absolute;left: 60px;top: 80px;width: 500px;display: none;}
+        #info_box1_img1{position: absolute;right: 140px;top: 80px;display: none;}
+        #info_box1_img2{width: 300px;position: absolute;top: 300px;right: 340px;display: none;}
+        #info_box1_img3{position: absolute;right: 155px;top: 310px;display: none;}
+        #info_box1_txt{color: #fff;font-size: 22px;font-family: space;text-align: center;position: absolute;left: 86px;top: 330px;display: none;width: 480px;height: 90px;}
+        #info_box1_txt>p:nth-child(1){opacity: 0;margin-top: 100px;}
+        #info_box1_txt>p:nth-child(2){margin-top: 100px;opacity: 0;}
+        #info_box1_txt>p:nth-child(3){margin-top: 100px;opacity: 0;}
+        #info_jet{width: 100%;position: sticky;top: 0;left: 0;height: 1000px;}
+        #info_jet>img:nth-child(1){opacity: 1;transform: scale(0.4);position: absolute;top: 0;bottom: 0;right: -700px;margin: auto;}
+        #info_jet>img:nth-child(2){opacity: 1;transform: scale(0.4);position: absolute;top: 0;bottom: 0;right: -700px;margin: auto;}
+        #info_inbox2{width: 100%;position: sticky;top: 0;left: 0;height: 1000px;}
+        #info_box2{width: 1300px;height: 715px;box-sizing: border-box;position: absolute;left: 50%;top: 50%;margin: auto;top: 20%;margin-left: -650px;margin-top: 0px;}
+        #info_box2_txt{color: #fff;font-size: 22px;font-family: space;text-align: center;position: absolute;left: 430px;top: 530px;height: 90px;}
+        #info_box2_txt>p:nth-child(1){margin-top: 100px;opacity: 0;}
+        #info_box2_txt>p:nth-child(2){margin-top: 100px;opacity: 0;}
+        #info_box2_txt>p:nth-child(3){margin-top: 100px;opacity: 0;}
+        #info_box2_poster{position: absolute;left: 0;top: 56px;width: 400px;display: none;}
+        #info_box2_jet1{position: absolute;right: 2000px;top: 150px;width: 200px; opacity: 0;}
+        #info_box2_jet2{position: absolute;right: 2000px;top: 150px;width: 300px;opacity: 0;}
+        #info_saber{width: 100%;position: sticky;top: 0;left: 0;height: 1000px;overflow: hidden;}
+        #saber1{position: absolute;top: 0;left: -2200px;}
+        #saber2{position: absolute;bottom: 0;right: -2200px;}
+        #saber_txt1{width: 2100px;height: 200px;position: absolute;right: -2130px;top: 250px;font-size: 94px;color: #fff;line-height: 200px;font-family:'Source Serif Pro', serif;text-align: center;}
+        #saber_txt2{width: 2100px;height: 200px;position: absolute;left: -2130px;bottom: 250px;font-size: 90px;color: #fff;line-height: 200px;font-family:'Source Serif Pro', serif;text-align: center;}
+        #info_inbox3{width: 100%;position: sticky;top: 0;left: 0;height: 1000px;}
+        #info_box3{width: 1300px;height: 715px;box-sizing: border-box;position: absolute;left: 50%;top: 50%;margin: auto;top: 20%;margin-left: -650px;margin-top: 0px;}
+        #info_box3_saber_box{position: absolute;top: 0;  left: 100px;width: 450px;height: 450px;}
+        #info_box3_saber_box>img{position: absolute;}
+        #info_box3_saber1{width: 600px;transform: rotate(-45deg);left: -490px;bottom: -220px;opacity: 0;}
+        #info_box3_saber2{width: 600px;transform: rotate(45deg);right: -490px;bottom: -220px;opacity: 0;}
+        #info_box3_txt{color: #fff;font-size: 22px;font-family: space;text-align: center;position: absolute;left: 430px;top: 560px;height: 90px;}
+        #info_box3_txt>p:nth-child(1){margin-top: 100px;opacity: 0;}
+        #info_box3_txt>p:nth-child(2){margin-top: 100px;opacity: 0;}
+        #info_box3_poster{width: 450px;height: 500px;position: absolute;right: 100px;top: 0;}
+        #info_box3_poster>li{float: left;width: 150px;height: 250px;display: none;}
+        #info_box3_poster>li>img{width: 100%;height: 100%;}
+        #info_inbox4{width: 1900px;position: sticky;top: 0;left: 0;height: 1000px;overflow: hidden;}
+        #info_box4{width: 350%;height: 100%;box-sizing: border-box;position: absolute;left: 2000px;right: 0;margin: auto;top: 0%;display: none;}
+        #info_box4_ep1{width: 1450px;height: 400px;position: absolute;top: 100px;left: 0;}
+        #ep1_race1{position: absolute;right: 910px;top: 100px;opacity: 0;}
+        #ep1_race2{position: absolute;right: 400px;top: 70px;width: 500px;opacity: 0;}
+        #info_box4_ep2{width: 1450px;height: 400px;position: absolute;bottom: 90px;left: 1000px;}
+        #ep2_object1{position: absolute;right: 190px;top: 100px;display: none;}
+        #ep2_object2{position: absolute;right: 70px;top: 0px;opacity: 0;}
+        #ep2_object3{position: absolute;right: 0px;top: 0px;width: 80px;opacity: 0;}
+        #info_box4_ep3{width: 1450px;height: 400px;position: absolute;top: 100px;left: 2000px;}
+        #ep3_object1{position: absolute;top: 70px;right: 80px;display: none;}
+        #ep3_object2{position: absolute;top: 30px;right: 640px;width: 70px;opacity: 0;}
+        #ep3_object3{position: absolute;top: 90px;right: 720px;width: 80px;opacity: 0;}
+        #info_box4_ep4{width: 1450px;height: 400px;position: absolute;bottom: 90px;left: 3000px;}
+        #ep4_object1{position: absolute;top: 90px;right: 200px;display: none;}
+        #ep4_object2{position: absolute;top: 170px;right: 830px;width: 100px;opacity: 0;}
+        #ep4_object3{position: absolute;top: 220px;right: 760px;width: 100px;opacity: 0;}
+        #ep4_object4{position: absolute;top: 280px;right: 860px;width: 100px;opacity: 0;}
+        #ep4_object5{position: absolute;top: 70px;right: -240px;width: 50px;opacity: 0;}
+        #ep4_object6{position: absolute;top: 30px;right: -270px;width: 50px;opacity: 0;}
+        #info_box4_ep5{width: 1450px;height: 400px;position: absolute;top: 100px;left: 4000px;}
+        #ep5_object1{position: absolute;top: 60px;right: 100px;width: 60px;opacity: 0;}
+        #ep5_object2{position: absolute;top: -0px;right: -0px;width: 250px;opacity: 0.6;display: none;}
+        #info_box4_ep6{width: 1450px;height: 400px;position: absolute;bottom: 90px;left: 5000px;}
+        #ep6_object{position: absolute;right: 270px;top: 30px;display: none;}
+        .poster_box{width: 250px;height: 350px;left: 300px;top: 0;opacity: 0;position: absolute;}
+        .poster_box>img{width: 100%;height: 100%;}
+        .info_box4_text{width: 500px;height: 260px;color: #fff;text-align: center;position: absolute;left: 560px;top: 0;  opacity: 0;}
+        .info_box4_text>h3{font-size: 28px;font-family: akira;}
+        .info_box4_text>p{font-size: 18px;font-family: space;margin-top: 20px;line-height: 28px;}
+        .info_box4_view{position: absolute;bottom: 80px;left: 463px;display: none;cursor: pointer;}
+        #info_inbox5{width: 100%;position: absolute;top: 18600px;left: 0;height: 1000px;}
+        #info_box5{width: 1300px;height: 715px;box-sizing: border-box;position: absolute;left: 0;right: 0;margin: auto;top: 20%;}
+        #series_map{position: absolute;position: absolute;left: 0;top: 0;right: 0;bottom: 0;margin: auto;display: none;}
+        #info_box5_episode1{width: 170px;position: absolute;left: 50%;top: 50%;margin-left: -495px;margin-top: 120px;display: none;cursor: pointer;z-index: 10;}
+        #info_box5_episode2{width: 170px;position: absolute;left: 50%;top: 50%;margin-top: -229px;margin-left: -350px;display: none;cursor: pointer;z-index: 10;}
+        #info_box5_episode3{width: 170px;position: absolute;left: 50%;top: 50%;margin-top: 120px;margin-left: -190px;display: none;cursor: pointer;z-index: 10;}
+        #info_box5_episode4{width: 170px;position: absolute;left: 50%;top: 50%;margin-top: -229px;margin-left: -30px;display: none;cursor: pointer;z-index: 10;}
+        #info_box5_episode5{width: 170px;position: absolute;left: 50%;top: 50%;margin-top: 120px;margin-left: 140px;display: none;cursor: pointer;z-index: 10;}
+        #info_box5_episode6{width: 170px;position: absolute;left: 50%;top: 50%;margin-top: -229px;margin-left: 308px;display: none;cursor: pointer;z-index: 10;}
+        #ship_door{width: 1920px;position: fixed;height: 970px;top: 0px;left: 0;z-index: 999;display: none;}
+        #door_cover{height: 100%;position: absolute;left: 0;right: 0;z-index: 2;top: 0;bottom: 0;margin: auto;z-index: 999;}
+        #right_door{position: absolute;right: -1200px;top: 66px;z-index: 1;z-index: 998;}
+        #left_door{position: absolute;left: -1200px;top: 66px;z-index: 998;}
+        #movie_screen{height: 970px;position: relative;width: 100%;background: url(image/series/bg_punnel.png) center ;overflow: hidden;}
+        #movie_poster_box{height: 970px;position: absolute;top: 0;left: -60px;width: 708px;}
+        #movie_screen_punel{height: 100%;z-index: 3;position: absolute;left: 0;top: 0;}
+        #movie_poster{height: 900px;position: absolute;z-index: 2;left: 100px;top: 30px;}
+        #movie_screen_btn_box{width: 1240px;height: 310px;position: absolute;right: 0;bottom: 0;border: 1px solid #fff;}
+        #screen_next{position: absolute;top: 140px;right: 0;}
+        #screen_prev{position: absolute;top: 140px;left: 0;}
+        #screen_char_box{position: absolute;left: 50%;top: 50%;width: 210px;height: 250px;margin-top: 227px;margin-left: 95px;}
+        #screen_gal_box{position: absolute;left: 50%;top: 50%;width: 210px;height: 250px;margin-left: 390px;margin-top: 227px;}
+        .projecter{position: absolute;left: 0;bottom: 0;right: 0;margin: auto;}
+        .projecter_holo{position: absolute;left: 0;bottom: 0;}
+        .projecter_btn{position: absolute;top: 0;left: 0;right: 0;margin: auto;cursor: pointer;}
+        #movie_char{height: 970px;width: 100%;overflow: hidden;position: absolute;left: 50%;top: 50%;margin-top: -485px;margin-left: -960px;}
+        #movie_char_box{width: 1500px;height: 700px;position: absolute;left: 50%;bottom: -700px;margin-left: -750px;border: 1px solid #fff;overflow: hidden;}
+        #movie_char_box>div{width: 340px;height: 700px;margin-right: 46px;border: 1px solid #fff;box-sizing: border-box;float: left;position: relative;}
+        #movie_char_box>div:nth-child(4){margin-right: 0;}
+        .holo_g{position: absolute;bottom: -20px;left: 0;right: 0;margin: auto;}
+        .char_hololight_back{position: absolute;left: -17px;bottom: -110px;z-index: 2;display: none;}
+        .char_holo_char{position: absolute;left: 0;right: 0;margin: auto;cursor: pointer;z-index: 3;cursor: pointer;display: none;}
+        .char_hololight_front{position: absolute;left: -17px;bottom: -110px;z-index: 4;display: none;cursor: pointer;}
+        .holo_name{position: absolute;left: 0;right: 0;top: 0;margin: auto;font-size: 32px;text-align: center;color: #fff;z-index: 5;font-family: space;line-height: 45px;display: none;}
+        #movie_char_holo1>.char_holo_char{bottom: 40px;opacity: 0.4;}
+        #movie_char_holo2>.char_holo_char{bottom: 40px;opacity: 0.4;}
+        #movie_char_holo3>.char_holo_char{bottom: 40px;opacity: 0.4;}
+        #movie_char_holo4>.char_holo_char{bottom: 40px;opacity: 0.4;}
+        #char_title{position: absolute;top: 50%;left: 50%;right: 0;text-align: center;width: 1300px;z-index: 10;margin-left: -650px;margin-top: -350px;display: none;}
+        #char_title>div:nth-child(1){left: 5px;}
+        #char_title>div:nth-child(3){right: 5px;}
+        .char_line{width: 430px;top: 0;bottom: 0;position: absolute;margin: auto;height: 4px;background-color: #fff;}
+        #char_info{height: 970px;position: relative;width: 100%;background: url(image/series/bg_punnel.png) center ;overflow: hidden;}
+        #char_info_title{position: absolute;top: 50%;left: 50%;right: 0;text-align: center;width: 1300px;z-index: 10;margin-left: -650px;margin-top: -350px;}
+        #char_info_title>div:nth-child(1){left: 5px;}
+        #char_info_title>div:nth-child(3){right: 5px;}
+        .char_info_line{width: 430px;top: 0;bottom: 0;position: absolute;margin: auto;height: 4px;background-color: #fff;}
+        #char_info_txt_box{width: 500px;height: 580px;position: absolute;left: 50%;top: 50%;margin-left: -650px;margin-top: -270px;}
+        #char_info_txt_box>div{background-color: #fff;font-size: 20px;font-family: space;margin-bottom: 20px;height: 30px;line-height: 30px;width: 0px;overflow: hidden;}
+        #char_info_txt_box>p{width: 500px;overflow: hidden;font-family: space;line-height: 26px;color: #fff;display: none;}
+        .small_title{float: left;}
+        .small_info{float: right;margin-right: 20px;}
+        #char_name{font-size: 33px;background-color: #fff;overflow: hidden;width: 0px;margin-bottom: 50px;text-align: center;overflow: hidden;}
+        #char_simbol{position: absolute;left: 50%;top: 50%;width: 500px;margin-top: -250px;margin-left: 50px;}
+        #char_standing{position: absolute;left: 50%;top: 50%;margin-left: -70px;margin-top: -270px;height: 900px;}
+        #char_moviecut1{position: absolute;left: 50%;top: 50%;width: 300px;margin-left: 330px;margin-top: 120px;}
+        #char_moviecut2{position: absolute;left: 50%;top: 50%;width: 300px;margin-left: 530px;margin-top: 230px;}
+        #char_info_close{position: absolute;left: 50%;top: 50%;margin-left: 600px;margin-top: -320px;cursor: pointer;}
+        #char_box_close{position: absolute;left: 50%;top: 50%;margin-left: 600px;margin-top: -320px;cursor: pointer;display: none;}
+    </style>
+    <title>STARWARS</title>
+</head>
+<body>
+
+    <h1 id="command"></h1>
+    <div id="menu_bg">
+    <ul id="menu">
+        <li>Home</li>
+        <li>info</li>
+        <li>series</li>
+        <li>Character</li>
+        <li>gallery</li>
+    </ul>
+    <h1 id="logo"><img src="image/home/maine logo.png" alt="메인로고"></h1>
+    <ul id="icon_menu">
+        <li><a href="#"><img src="image/home/icon_insta.png" alt="인스타그램 아이콘"></a></li>
+        <li><a href="#"><img src="image/home/icon_twiter.png" alt="트위터아이콘"></a></li>
+        <li><a href="#"><img src="image/home/icon_youtube.png" alt="유튜브 아이콘"></a></li>
+    </ul>
+</div>
+
+
+
+    <div id="main">
+        <div id="ep3_home">
+            <div id="series_on_ep3">
+                <img src="image/home/ep3/ep3_logo_1.png" alt="" id="on_1">
+               <div id="series_border">
+                    <div id="series_border_top"></div>
+                <img src="image/home/ep3/ep3_logo_2.png" alt="">
+                <div id="series_border_bottom"></div>
+            </div> 
+                <img src="image/home/ep3/ep3_logo_3.png" alt="" id="on_3">
+            </div>
+        <h2 id="series_logo_ep3"><img src="image/episode-3.pg" alt=""></h2>
+        <img src="image/home/ep3/ep3_vader_overlay.png" alt="다스베이더" id="ep3_vader" class="ep_3_object">
+        <img src="image/home/ep3/ep3_sidious.png" alt="다스시디어스" id="ep3_sidious" class="ep_3_object" >
+        <img src="image/home/ep3/ep3_yoda.png" alt="yoda" id="ep3_yoda" class="ep_3_object">
+        <img src="image/home/ep3/ep3_jedi_starfighter.png" alt="제다이스타파이터" id="ep3_starF" class="ep_3_object">
+       <div id="ep3_anakin" class="ep_3_object"><img src="image/home/ep3/ep3_anakin_1.png" alt="아나킨" >
+        <img src="image/home/ep3/ep3_anakin_only_2.png" alt=""><img src="image/home/ep3/ep3_anakin_only_3.png" alt=""></div>
+        <div id="ep3_obiwan"  class="ep_3_object"><img src="image/home/ep3/ep3_obiwan_1.png" alt="오비완" >
+        <img src="image/home/ep3/ep3_obiwan_only_1.png" alt=""><img src="image/home/ep3/ep3_obiwan_only_2.png" alt=""><img src="image/home/ep3/ep3_obiwan_only_3.png" alt=""></div>
+
+                <img src="image/home/ep3/ep3_backlight.png" alt="" id="back_light" class="ep_3_object"><img src="image/home/ep3/ep3_frontlight.png" alt="" id="front_light" class="ep_3_object">
+
+        </div>
+
+        <div id="ep4_home">
+            <div id="series_on_ep4">
+                <img src="image/home/ep4/ep4_logo_1.png" alt="" id="on_1">
+               <div id="series_border">
+                    <div id="series_border_top"></div>
+                <img src="image/home/ep4/ep4_logo_2.png" alt="">
+                <div id="series_border_bottom"></div>
+            </div> 
+                <img src="image/home/ep4/ep4_logo_3.png" alt="" id="on_3">
+            </div>
+            <img src="image/home/ep4/ep4_vader.png" alt="" id="ep4_vader">
+            <img src="image/home/ep4/ep4_obiwan.png" alt="" id="ep4_obiwan">
+            <img src="image/home/ep4/ep4_luke.png" alt="" id="ep4_luke">
+            <img src="image/home/ep4/ep4_Xwing.png" alt="" id="ep4_Xwing">
+            <img src="image/home/ep4/ep4_tai.png" alt="" id="ep4_tai">
+            <img src="image/home/ep4/ep4_death_star.png" alt="" id="ep4_death_star">
+        </div>
+
+        <div id="ep5_home">
+            <div id="series_on_ep5">
+                <img src="image/home/ep5/ep5_logo_1.png" alt="" id="on_1">
+               <div id="series_border">
+                    <div id="series_border_top"></div>
+                <img src="image/home/ep5/ep5_logo_2.png" alt="">
+                <div id="series_border_bottom"></div>
+            </div> 
+                <img src="image/home/ep5/ep5_logo_3.png" alt="" id="on_3">
+            </div>
+
+            <div id="ep5_atat_left"><img src="image/home/ep5/ep5_atat_left.png" alt="" ><img src="image/home/ep5/ep5_atat_left_eye.png" alt="">
+            <div class="beam_line"><img src="image/home/ep5/red_beam.png" alt=""></div></div>
+            <div id="ep5_atat_right"><img src="image/home/ep5/ep5_atat_right.png" alt="" ><img src="image/home/ep5/ep5_atat_right_eye.png" alt="">
+                <div class="beam_line2"><img src="image/home/ep5/horizonal_red_beam.png" alt=""></div></div>
+            
+            <img src="image/home/ep5/ep5_star_D_left.png" alt="" id="ep5_starD_left">
+            <img src="image/home/ep5/ep5_star_D_right.png" alt="" id="ep5_starD_right">
+            <img src="image/home/ep5/ep5_breath.png" alt="" id="ep5_vader_breath">
+            <div id="ep5_vader_light">
+                <img src="image/home/ep5/ep5_vader_light1.png" alt=""><img src="image/home/ep5/ep5_vader_light2.png" alt="">
+                <img src="image/home/ep5/ep5_vader_light3.png" alt=""><img src="image/home/ep5/ep5_vader_light4.png" alt="">
+            </div>
+        </div>
+
+        <div id="intro_box">
+            <div id="intro_btn"></div>
+            <div id="intro_text_box">
+                <video src="image/home/ep3/ep3.mp4" muted loop autoplay></video>
+            </div>
+        </div>
+
+        <div id="teaser_box">
+            <img src="image/home/home_inteaser.png" alt="" id="teaser_btn">
+
+            <iframe width="497" height="191" src="https://www.youtube.com/embed/5UnjrG_N8hU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+
+        <div id="main_btn">
+            <img src="image/home/next_btn.png" alt="다음버튼" id="next_btn">
+            <img src="image/home/prev_btn.png" alt="이전버튼" id="prev_btn">
+        </div>
+
+        <div id="scroll">
+            <h5>SCROLL DOWN</h5>
+            <img src="image/home/ep3/scroll_move.png" alt="스크롤움직이는 아이콘" id="scroll_move">
+        </div>
+
+    </div>
+
+    <section id="info">
+
+
+        <div id="info_inbox1">
+            <div id="info_title">
+                <div class="info_line"></div>
+                <img src="image/info/series_info.png" alt="">
+                <div class="info_line"></div>
+            </div>
+            <div id="info_box1">
+                    <img src="image/info/info_logo_big.png" alt="" id="info_box1_logo">
+                    <div id="info_box1_txt">
+                        <p>Star Wars is an American epic</p>
+                        <p>space-opera multimedia franchise</p>
+                        <p>created by George Lucas</p>
+                    </div>
+                    <img src="image/info/info1_2.png" alt="" id="info_box1_img1"><img src="image/info/info1_1.png" alt="" id="info_box1_img2"><img src="image/info/info1_3.png" alt="" id="info_box1_img3">
+            </div>
+
+        </div>
+        <div id="info_jet">
+            <img src="image/info/info_Xwing_h.png" alt="">
+            <img src="image/info/info_taifighter_h.png" alt="">
+        </div>
+        <div id="info_inbox2">
+            <div id="info_title2">
+                <div class="info_line"></div>
+                <img src="image/info/series_info.png" alt="">
+                <div class="info_line"></div>
+            </div>
+            <div id="info_box2">
+                <img src="image/info/poster_ep4.png" alt="" id="info_box2_poster">
+                <div id="info_box2_txt">
+                    <p>which began with the eponymous 1977</p>
+                    <p>filmand quickly became a worldwide</p>
+                    <p>pop-culture phenomenon.</p>
+                </div>
+                <img src="image/info/info_taifighter.png" alt="" id="info_box2_jet1"><img src="image/info/info_Xwing.png" alt="" id="info_box2_jet2">
+            </div>
+        </div>
+
+        <div id="info_saber">
+            <img src="image/info/light_b.png" alt="" id="saber1">
+            
+            <h3 id="saber_txt1">JEDI | LIGHT SIDE FORCE | THE CHOSEN ONE</h3>
+            <h3 id="saber_txt2">UNLIMITED POWER | DARK SIDE FORCE | SITH</h3>
+            
+            <img src="image/info/light_r.png" alt="" id="saber2">
+        </div>
+        <div id="info_inbox3">
+            <div id="info_title3">
+                <div class="info_line"></div>
+                <img src="image/info/series_info.png" alt="">
+                <div class="info_line"></div>
+            </div>
+            <div id="info_box3">
+                <div id="info_box3_saber_box"><img src="image/info/light_b.png" alt="" id="info_box3_saber1"><img src="image/info/light_r.png" alt="" id="info_box3_saber2"></div>
+                <div id="info_box3_txt">
+                    <p>The franchise has been expanded</p>
+                    <p>into various films and other media</p>
+             
+                </div>
+
+                <ul id="info_box3_poster">
+                    <li><img src="image/info/poster_ep4.png" alt=""></li>
+                    <li><img src="image/info/poster_ep5.jpg" alt=""></li>
+                    <li><img src="image/info/poster_ep6.png" alt=""></li>
+                    <li><img src="image/info/poster_ep1.png" alt=""></li>
+                    <li><img src="image/info/poster_ep2.png" alt=""></li>
+                    <li><img src="image/info/poster_ep3.png" alt=""></li>
+                </ul>
+
+
+
+            </div>
+
+        </div>
+        <div id="info_inbox4">
+            <div id="info_box4">
+                <div id="info_box4_ep1">
+                    <div class="poster_box"><img src="image/info/poster_ep1.png" alt=""></div>
+                    <div class="info_box4_text">
+                        <h3>THE PHANTOM <br>
+                            MENACE</h3>
+                        <p>Two Jedi escape a hostile blockade to find 
+                            allies and come across a young boy who may 
+                            bring balance to the Force, but the long dormant
+                            Sith resurface to claim their original glory</p>
+                    </div>
+                    <img src="image/info/view_info.png" alt="" class="info_box4_view">
+                    <img src="image/info/info_ep1_race1.png" alt="" id="ep1_race1"><img src="image/info/info_ep1_race2.png" alt="" id="ep1_race2">
+                </div>
+                <div id="info_box4_ep2">
+                    <div class="poster_box"><img src="image/info/poster_ep2.png" alt=""></div>
+                    <div class="info_box4_text">
+                        <h3>ATTACK OF<br>
+                            THE CLONE</h3>
+                        <p>Ten years after initially meeting, Anakin 
+                            Skywalkershares a forbidden romance 
+                            with Padmé Amidala, while Obi-Wan Kenobi
+                            investigates an assassinationattempt on 
+                            the senator and discovers a secret clone 
+                            army crafted for the Jedi..</p>
+                    </div>
+                    <img src="image/info/view_info.png" alt="" class="info_box4_view">
+                    <img src="image/info/info_ep2_clone.png" alt="" id="ep2_object1"><img src="image/info/info_ep2_droid.png" alt="" id="ep2_object2"><img src="image/info/info_ep2_droid.png" alt="" id="ep2_object3">
+                </div>
+                <div id="info_box4_ep3">
+                    <div class="poster_box"><img src="image/info/poster_ep3.png" alt=""></div>
+                    <div class="info_box4_text">
+                        <h3>REVENGE OF <br>
+                            THE SITH</h3>
+                        <p>Three years into the Clone Wars, the Jedi 
+                            rescue Palpatine from Count Dooku. As 
+                            Obi-Wan pursues a new threat, Anakin acts
+                            as a double agent between the Jedi Council
+                            and Palpatine and is lured into a sinister plan
+                            to rule the galaxy. </p>
+                    </div>
+                    <img src="image/info/view_info.png" alt="" class="info_box4_view">
+                    <img src="image/info/info_ep3_droid.png" alt="" id="ep3_object1"><img src="image/info/info_ep3_fighter1.jpg" alt="" id="ep3_object2"><img src="image/info/info_ep3_fighter2.png" alt="" id="ep3_object3">
+                </div>
+                <div id="info_box4_ep4">
+                    <div class="poster_box"><img src="image/info/poster_ep4.png" alt=""></div>
+                    <div class="info_box4_text">
+                        <h3>A NEW HOPE</h3>
+                        <p>Luke Skywalker joins forces with a Jedi Knight,
+                            a cocky pilot, a Wookiee and two droids to save
+                            the galaxy from the Empire's world-destroying
+                            battle station, while also attempting to rescue
+                            Princess Leia from the mysterious Darth Vader.</p>
+                    </div>
+                    <img src="image/info/view_info.png" alt="" class="info_box4_view">
+                    <img src="image/info/info_ep4_deathStar.png" alt="" id="ep4_object1"><img src="image/info/info_Xwing.png" alt="" id="ep4_object2"><img src="image/info/info_Xwing.png" alt="" id="ep4_object3"><img src="image/info/info_Xwing.png" alt="" id="ep4_object4"><img src="image/info/info_taifighter_h.png" alt="" id="ep4_object5"><img src="image/info/info_taifighter_h.png" alt="" id="ep4_object6">
+                </div>
+
+                <div id="info_box4_ep5">
+                    <div class="poster_box"><img src="image/info/poster_ep5.jpg" alt=""></div>
+                    <div class="info_box4_text">
+                        <h3>THE EMPIRE <br>
+                            STRIKS BACK</h3>
+                        <p>After the Rebels are brutally overpowered 
+                            by the Empire on the ice planet Hoth, Luke 
+                            Skywalker begins Jedi training with Yoda, 
+                            while his friends are pursued across the 
+                            galaxy by Darth Vader and bounty hunter Boba Fett.</p>
+                    </div>
+                    <img src="image/info/view_info.png" alt="" class="info_box4_view">
+                    <img src="image/info/info_ep5_milleniumFalcon.png" alt="" id="ep5_object1"><img src="image/info/info_ep5_star_D.png" alt="" id="ep5_object2">
+                </div>
+                <div id="info_box4_ep6">
+                    <div class="poster_box"><img src="image/info/poster_ep6.png" alt=""></div>
+                    <div class="info_box4_text">
+                        <h3>RETURN OF <br>
+                            THE JEDI</h3>
+                        <p>After a daring mission to rescue Han Solo
+                            from Jabba the Hutt, the Rebels dispatch 
+                            to Endor to destroy the second Death Star
+                            .Meanwhile, Luke struggles to help Darth 
+                            Vader back from the dark side without 
+                            falling into the Emperor's trap.</p>
+                    </div>
+                    <img src="image/info/view_info.png" alt="" class="info_box4_view">
+                    <img src="image/info/info_ep6_deathStar_II.png" alt="" id="ep6_object">
+                </div>
+
+
+            </div>
+        </div>
+        <div id="info_inbox5">
+            <div id="info_title5">
+                <div class="info_line"></div>
+                <img src="image/info/series.png" alt="">
+                <div class="info_line"></div>
+            </div>
+
+            <div id="info_box5">
+                <img src="image/info/series_map.png" alt="" id="series_map">
+                <img src="image/episode-1.png" alt="" id="info_box5_episode1">
+                <img src="image/episode-2.png" alt="" id="info_box5_episode2">
+                <img src="image/episode-3.png" alt="" id="info_box5_episode3">
+                <img src="image/episode-4.png" alt="" id="info_box5_episode4">
+                <img src="image/episode-5.png" alt="" id="info_box5_episode5">
+                <img src="image/episode-6.png" alt="" id="info_box5_episode6">
+            </div>   
+
+        </div>
+    </section>
+    <section id="movie_screen">
+        <section id="movie_char">
+            <div id="char_title">
+                <div class="char_line"></div>
+                <img src="image/character/character_txt.png" alt="">
+                <div class="char_line"></div>
+            </div>
+            <img src="image/character/close_btn.png" alt="" id="char_box_close">
+            <div id="movie_char_box">
+                
+                <div id="movie_char_holo1">
+                    <h3 class="holo_name">Darth <br> Sidious</h3>
+                    <img src="image/character/holo_generater.png" alt="" class="holo_g">
+                    <img src="image/character/red_light_high.png" alt="" class="char_hololight_back">
+                    <img src="image/character/red_light.png" alt="" class="char_hololight_front">
+                    <img src="image/character/info_3_1.png" alt="" class="char_holo_char">
+                </div>
+                <div id="movie_char_holo2">
+                    <h3 class="holo_name">Anakin <br> Skywalker</h3>
+                    <img src="image/character/holo_generater.png" alt="" class="holo_g">
+                    <img src="image/character/blue_light_high.png" alt="" class="char_hololight_back">
+                    <img src="image/character/blue_light.png" alt="" class="char_hololight_front">
+                    <img src="image/character/info_3_2.png" alt="" class="char_holo_char">
+                </div>
+                <div id="movie_char_holo3">
+                    <h3 class="holo_name">Obiwan <br> Kenobi</h3>
+                    <img src="image/character/holo_generater.png" alt="" class="holo_g">
+                    <img src="image/character/blue_light_high.png" alt="" class="char_hololight_back">
+                    <img src="image/character/blue_light.png" alt="" class="char_hololight_front">
+                    <img src="image/character/info_3_3.png" alt="" class="char_holo_char">
+                </div>
+                <div id="movie_char_holo4">
+                    <h3 class="holo_name">YODA</h3>
+                    <img src="image/character/holo_generater.png" alt="" class="holo_g">
+                    <img src="image/character/blue_light_high.png" alt="" class="char_hololight_back">
+                    <img src="image/character/blue_light.png" alt="" class="char_hololight_front">
+                    <img src="image/character/info_3_4.png" alt="" class="char_holo_char">
+                </div>
+            </div>
+        </section>
+        <div id="movie_poster_box">
+
+                    <img src="image/series/poster_cover.png" alt="" id="movie_screen_punel">
+                    <img src="image/series/poster_ep3.png" alt="" id="movie_poster">
+        </div>
+
+        <div id="movie_screen_btn_box">
+            <img src="image/series/next_btn.png" alt="" id="screen_next">
+            <img src="image/series/prev_btn.png" alt="" id="screen_prev">
+        </div>
+        <div id="screen_char_box">
+            <img src="image/series/series_holo_projecter.png" alt="" class="projecter">
+            <img src="image/series/series_holo_projecter_light.png" alt="" class="projecter_holo">
+            <img src="image/series/series_character_btn.png" alt="" class="projecter_btn">
+        </div>
+        <div id="screen_gal_box">
+            <img src="image/series/series_holo_projecter.png" alt="" class="projecter">
+            <img src="image/series/series_holo_projecter_light.png" alt="" class="projecter_holo">
+            <img src="image/series/series_gallery_btn.png" alt="" class="projecter_btn">
+        </div>
+    </section>
+    <section id="ship_door">
+        <img src="image/series/series_door_cover2.png" alt="" id="door_cover">
+        <img src="image/series/series_door_left2.png" alt="" id="right_door">
+        <img src="image/series/series_door_right2.png" alt="" id="left_door">
+    </section>
+
+    <div id="char_info">
+        <div id="char_info_title">
+            <div class="char_info_line"></div>
+            <img src="image/character/character_txt.png" alt="">
+            <div class="char_info_line"></div>
+        </div>
+        <img src="image/character/jedi_simbol.png" alt="" id="char_simbol">
+        <img src="image/character/Char_info_3_2.png" alt="" id="char_standing">
+        <img src="image/character/info_anakin.jpg" alt="" id="char_moviecut1"><img src="image/character/info_anakin2.jpg" alt="" id="char_moviecut2">
+        <img src="image/character/close_btn.png" alt="" id="char_info_close">
+        <div id="char_info_txt_box">
+            <h3 id="char_name">Anakin Skywalker</h3>
+            <div id="char_txt1">
+                <h4 class="small_title">GENDER</h4>
+                <h4 class="small_info">Male</h4>
+            </div>
+            <div id="char_txt2">
+                <h4 class="small_title">HEIGHT</h4>
+                <h4 class="small_info">1.85M</h4>
+            </div>
+            <div id="char_txt3">
+                <h4 class="small_title">SPACIES</h4>
+                <h4 class="small_info">Human</h4>
+            </div>
+
+            <div id="char_txt4">
+                <h4 class="small_title">LOCATION</h4>
+                <h4 class="small_info">Coruscant</h4>
+            </div>
+            <div id="char_txt5">
+                <h4 class="small_title">AFFILIATIONS</h4>
+                <h4 class="small_info">Jedi Order</h4>
+            </div>
+
+            
+
+            <p>Discovered as a slave on Tatooine by Qui-Gon Jinn and Obi-Wan Kenobi, Anakin Skywalker had the potential to become one of the most powerful Jedi ever. Some even believed he was the prophesied Chosen One who would bring balance to the Force. Always pushing the limits of his Jedi training, seeking to excel and live up to his reputation, Skywalker's passion often brought him into conflict with his mentor, Jedi Master Obi-Wan Kenobi. A hero of the Clone Wars, Anakin was caring and compassionate, but suffered from a deep fear of loss that would prove to be his downfall.</p>
+        </div>
+    </div>
+</body>
+</html>
