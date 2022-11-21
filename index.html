@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;900&family=Source+Serif+Pro:wght@600&display=swap" rel="stylesheet">
@@ -535,7 +535,7 @@ setInterval(function(){
                     
                     },1210)
                   }
-                  if(sc>10500){
+                  if(sc>10700){
                     $("#info_box4_ep2>.poster_box").animate({"left":0,"opacity":1},1000)
                     $("#info_box4_ep2>.info_box4_text").delay(500).animate({"left":"260px","opacity":1},1000)
                     $("#info_box4_ep2>.info_box4_view").delay(1500).fadeIn(1000)
@@ -548,7 +548,7 @@ setInterval(function(){
                     
                     },1210)                 
                 }
-                if(sc>11700){
+                if(sc>12200){
                     $("#info_box4_ep3>.poster_box").animate({"left":0,"opacity":1},1000)
                     $("#info_box4_ep3>.info_box4_text").delay(500).animate({"left":"260px","opacity":1},1000)
                    
@@ -561,7 +561,7 @@ setInterval(function(){
                     
                     },1210)
                 }
-                if(sc>12900){
+                if(sc>13500){
                     $("#info_box4_ep4>.poster_box").animate({"left":0,"opacity":1},1000)
                     $("#info_box4_ep4>.info_box4_text").delay(500).animate({"left":"260px","opacity":1},1000)
                     
@@ -577,7 +577,7 @@ setInterval(function(){
                     
                     },1210)
                 }
-                if(sc>14100){
+                if(sc>14600){
                     $("#info_box4_ep5>.poster_box").animate({"left":0,"opacity":1},1000)
                     $("#info_box4_ep5>.info_box4_text").delay(500).animate({"left":"260px","opacity":1},1000)
                     
@@ -589,7 +589,7 @@ setInterval(function(){
                     
                     },1210)
                 }
-                if(sc>15300){
+                if(sc>16700){
                     $("#info_box4_ep6>.poster_box").animate({"left":0,"opacity":1},1000)
                     $("#info_box4_ep6>.info_box4_text").delay(500).animate({"left":"260px","opacity":1},1000)
                     $("#info_box4_ep6>.info_box4_view").delay(1500).fadeIn(1000)
@@ -641,66 +641,100 @@ setInterval(function(){
                     $("#movie_char_holo3>.char_holo_char").attr({"src":"image/character/info_"+episode_num+"_3.png"})
                     $("#movie_char_holo4>.char_holo_char").attr({"src":"image/character/info_"+episode_num+"_4.png"})
                     $("#screen_movie_introduce>img").attr({"src":"image/episode-"+episode_num+".png"})
+                    if(episode_num == 1){
+                        $("#movie_char_holo1>.char_hololight_back").attr({"src":"image/character/blue_light_high.png"})
+                        $("#movie_char_holo1>.char_hololight_front").attr({"src":"image/character/blue_light.png"})
+                        $("#movie_char_holo2>.char_hololight_back").attr({"src":"image/character/blue_light_high.png"})
+                        $("#movie_char_holo2>.char_hololight_front").attr({"src":"image/character/blue_light.png"})
+                        $("#movie_char_holo3>.char_hololight_back").attr({"src":"image/character/blue_light_high.png"})
+                        $("#movie_char_holo3>.char_hololight_front").attr({"src":"image/character/blue_light.png"})
+                        $("#movie_char_holo4>.char_hololight_back").attr({"src":"image/character/red_light_high.png"})
+                        $("#movie_char_holo4>.char_hololight_front").attr({"src":"image/character/red_light.png"})                        
+                        $("#movie_char_holo1>.holo_name").html("Quaigon <br> Jin ")
+                        $("#movie_char_holo2>.holo_name").html("Obi-wan <br> Kenobi")
+                        $("#movie_char_holo3>.holo_name").html("Anakin <br> Skywalker")
+                        $("#movie_char_holo4>.holo_name").html("Darth <br> Maul")
+                        $("#screen_movie_introduce>h3").text("Two Jedi escape a hostile blockade to find allies and come across a young boy who may bring balance to the Force, but the long dormant Sith resurface to claim their original glory")
+
+                    }
+                    if(episode_num == 2){
+                        $("#movie_char_holo1>.char_hololight_back").attr({"src":"image/character/blue_light_high.png"})
+                        $("#movie_char_holo1>.char_hololight_front").attr({"src":"image/character/blue_light.png"})
+                        $("#movie_char_holo2>.char_hololight_back").attr({"src":"image/character/blue_light_high.png"})
+                        $("#movie_char_holo2>.char_hololight_front").attr({"src":"image/character/blue_light.png"})
+                        $("#movie_char_holo3>.char_hololight_back").attr({"src":"image/character/blue_light_high.png"})
+                        $("#movie_char_holo3>.char_hololight_front").attr({"src":"image/character/blue_light.png"})
+                        $("#movie_char_holo4>.char_hololight_back").attr({"src":"image/character/red_light_high.png"})
+                        $("#movie_char_holo4>.char_hololight_front").attr({"src":"image/character/red_light.png"})                        
+                        $("#movie_char_holo1>.holo_name").html("Anakin <br> Skywalker ")
+                        $("#movie_char_holo2>.holo_name").html("Obi-wan <br> Kenobi")
+                        $("#movie_char_holo3>.holo_name").html("Padme <br> amidla")
+                        $("#movie_char_holo4>.holo_name").html("Count <br> Duku")
+                        $("#screen_movie_introduce>h3").text("Ten years after initially meeting, Anakin Skywalkershares a forbidden romance with Padmé Amidala, while Obi-Wan Kenobi investigates an assassinationattempt on the senator and discovers a secret clone army crafted for the Jedi..")
+
+                    }
                     if(episode_num == 3){
                         $("#movie_char_holo1>.char_hololight_back").attr({"src":"image/character/red_light_high.png"})
-                        $("#movie_char_holo1>.char_hololight_front").attr({"src":"image/character/red_light_high.png"})
-                        $("#movie_char_holo4>.char_hololight_back").attr({"src":"image/character/blue_light_high.png"})
-                        $("#movie_char_holo4>.char_hololight_front").attr({"src":"image/character/blue_light_high.png"})
+                        $("#movie_char_holo1>.char_hololight_front").attr({"src":"image/character/red_light.png"})
                         $("#movie_char_holo2>.char_hololight_back").attr({"src":"image/character/blue_light_high.png"})
-                        $("#movie_char_holo2>.char_hololight_front").attr({"src":"image/character/blue_light_high.png"})
+                        $("#movie_char_holo2>.char_hololight_front").attr({"src":"image/character/blue_light.png"})
                         $("#movie_char_holo3>.char_hololight_back").attr({"src":"image/character/blue_light_high.png"})
-                        $("#movie_char_holo3>.char_hololight_front").attr({"src":"image/character/blue_light_high.png"})
+                        $("#movie_char_holo3>.char_hololight_front").attr({"src":"image/character/blue_light.png"})
+                        $("#movie_char_holo4>.char_hololight_back").attr({"src":"image/character/blue_light_high.png"})
+                        $("#movie_char_holo4>.char_hololight_front").attr({"src":"image/character/blue_light.png"})                        
                         $("#movie_char_holo1>.holo_name").html("Darth <br> Sidious ")
                         $("#movie_char_holo2>.holo_name").html("Anakin <br> Skywalker")
                         $("#movie_char_holo3>.holo_name").html("Obi-wan <br> Kenobi")
                         $("#movie_char_holo4>.holo_name").html("Yoda")
-
+                        $("#screen_movie_introduce>h3").text("Three years into the Clone Wars, the Jedi rescue Palpatine from Count Dooku. As Obi-Wan pursues a new threat, Anakin acts as a double agent between the Jedi Council and Palpatine and is lured into a sinister plan to rule the galaxy.")
                     }
                     if(episode_num == 4){
                         $("#movie_char_holo1>.char_hololight_back").attr({"src":"image/character/blue_light_high.png"})
-                        $("#movie_char_holo1>.char_hololight_front").attr({"src":"image/character/blue_light_high.png"})
-                        $("#movie_char_holo4>.char_hololight_back").attr({"src":"image/character/red_light_high.png"})
-                        $("#movie_char_holo4>.char_hololight_front").attr({"src":"image/character/red_light_high.png"})
+                        $("#movie_char_holo1>.char_hololight_front").attr({"src":"image/character/blue_light.png"})
                         $("#movie_char_holo2>.char_hololight_back").attr({"src":"image/character/blue_light_high.png"})
-                        $("#movie_char_holo2>.char_hololight_front").attr({"src":"image/character/blue_light_high.png"})
+                        $("#movie_char_holo2>.char_hololight_front").attr({"src":"image/character/blue_light.png"})
                         $("#movie_char_holo3>.char_hololight_back").attr({"src":"image/character/blue_light_high.png"})
-                        $("#movie_char_holo3>.char_hololight_front").attr({"src":"image/character/blue_light_high.png"})
+                        $("#movie_char_holo3>.char_hololight_front").attr({"src":"image/character/blue_light.png"})
+                        $("#movie_char_holo4>.char_hololight_back").attr({"src":"image/character/red_light_high.png"})
+                        $("#movie_char_holo4>.char_hololight_front").attr({"src":"image/character/red_light.png"})                        
                         $("#movie_char_holo1>.holo_name").html("Luke <br> Skywalker ")
                         $("#movie_char_holo2>.holo_name").html("Leia <br> Organa")
                         $("#movie_char_holo3>.holo_name").html("Obi-wan <br> Kenobi")
                         $("#movie_char_holo4>.holo_name").html("Darth <br> vader")
+                        $("#screen_movie_introduce>h3").text("Luke Skywalker joins forces with a Jedi Knight, a cocky pilot, a Wookiee and two droids to save the galaxy from the Empire's world-destroying battle station, while also attempting to rescue Princess Leia from the mysterious Darth Vader.")
                     }
 
                     if(episode_num == 5){
                         $("#movie_char_holo1>.char_hololight_back").attr({"src":"image/character/blue_light_high.png"})
-                        $("#movie_char_holo1>.char_hololight_front").attr({"src":"image/character/blue_light_high.png"})
-                        $("#movie_char_holo4>.char_hololight_back").attr({"src":"image/character/red_light_high.png"})
-                        $("#movie_char_holo4>.char_hololight_front").attr({"src":"image/character/red_light_high.png"})
+                        $("#movie_char_holo1>.char_hololight_front").attr({"src":"image/character/blue_light.png"})
                         $("#movie_char_holo2>.char_hololight_back").attr({"src":"image/character/blue_light_high.png"})
-                        $("#movie_char_holo2>.char_hololight_front").attr({"src":"image/character/blue_light_high.png"})
+                        $("#movie_char_holo2>.char_hololight_front").attr({"src":"image/character/blue_light.png"})
                         $("#movie_char_holo3>.char_hololight_back").attr({"src":"image/character/blue_light_high.png"})
-                        $("#movie_char_holo3>.char_hololight_front").attr({"src":"image/character/blue_light_high.png"})
+                        $("#movie_char_holo3>.char_hololight_front").attr({"src":"image/character/blue_light.png"})
+                        $("#movie_char_holo4>.char_hololight_back").attr({"src":"image/character/red_light_high.png"})
+                        $("#movie_char_holo4>.char_hololight_front").attr({"src":"image/character/red_light.png"})                        
                         $("#movie_char_holo1>.holo_name").html("Luke <br> Skywalker ")
                         $("#movie_char_holo2>.holo_name").html("Han <br> Solo")
                         $("#movie_char_holo3>.holo_name").html("Yoda")
                         $("#movie_char_holo4>.holo_name").html("Darth <br> vader")
-                        
+                        $("#screen_movie_introduce>h3").text("After the Rebels are brutally overpowered by the Empire on the ice planet Hoth, Luke Skywalker begins Jedi training with Yoda,  while his friends are pursued across the galaxy by Darth Vader and bounty hunter Boba Fett.")
+
                     }
 
                     if(episode_num == 6){
                         $("#movie_char_holo1>.char_hololight_back").attr({"src":"image/character/blue_light_high.png"})
-                        $("#movie_char_holo1>.char_hololight_front").attr({"src":"image/character/blue_light_high.png"})
-                        $("#movie_char_holo4>.char_hololight_back").attr({"src":"image/character/blue_light_high.png"})
-                        $("#movie_char_holo4>.char_hololight_front").attr({"src":"image/character/blue_light_high.png"})
+                        $("#movie_char_holo1>.char_hololight_front").attr({"src":"image/character/blue_light.png"})
                         $("#movie_char_holo2>.char_hololight_back").attr({"src":"image/character/red_light_high.png"})
-                        $("#movie_char_holo2>.char_hololight_front").attr({"src":"image/character/red_light_high.png"})
+                        $("#movie_char_holo2>.char_hololight_front").attr({"src":"image/character/red_light.png"})
                         $("#movie_char_holo3>.char_hololight_back").attr({"src":"image/character/red_light_high.png"})
-                        $("#movie_char_holo3>.char_hololight_front").attr({"src":"image/character/red_light_high.png"})
+                        $("#movie_char_holo3>.char_hololight_front").attr({"src":"image/character/red_light.png"})
+                        $("#movie_char_holo4>.char_hololight_back").attr({"src":"image/character/blue_light_high.png"})
+                        $("#movie_char_holo4>.char_hololight_front").attr({"src":"image/character/blue_light.png"})                        
                         $("#movie_char_holo1>.holo_name").html("Luke <br> Skywalker ")
                         $("#movie_char_holo2>.holo_name").html("Darth <br> Vader")
                         $("#movie_char_holo3>.holo_name").html("Darth <br> Sidious")
                         $("#movie_char_holo4>.holo_name").html("Yoda")
-                        
+                        $("#screen_movie_introduce>h3").text("After a daring mission to rescue Han Solo from Jabba the Hutt, the Rebels dispatch to Endor to destroy the second Death Star. Meanwhile, Luke struggles to help Darth Vader back from the dark side without falling into the Emperor's trap.")
                     }
                 })
                 $("#screen_prev").click(function(){
@@ -716,66 +750,100 @@ setInterval(function(){
                     $("#movie_char_holo3>.char_holo_char").attr({"src":"image/character/info_"+episode_num+"_3.png"})
                     $("#movie_char_holo4>.char_holo_char").attr({"src":"image/character/info_"+episode_num+"_4.png"})
                     $("#screen_movie_introduce>img").attr({"src":"image/episode-"+episode_num+".png"})
+                    if(episode_num == 1){
+                        $("#movie_char_holo1>.char_hololight_back").attr({"src":"image/character/blue_light_high.png"})
+                        $("#movie_char_holo1>.char_hololight_front").attr({"src":"image/character/blue_light.png"})
+                        $("#movie_char_holo2>.char_hololight_back").attr({"src":"image/character/blue_light_high.png"})
+                        $("#movie_char_holo2>.char_hololight_front").attr({"src":"image/character/blue_light.png"})
+                        $("#movie_char_holo3>.char_hololight_back").attr({"src":"image/character/blue_light_high.png"})
+                        $("#movie_char_holo3>.char_hololight_front").attr({"src":"image/character/blue_light.png"})
+                        $("#movie_char_holo4>.char_hololight_back").attr({"src":"image/character/red_light_high.png"})
+                        $("#movie_char_holo4>.char_hololight_front").attr({"src":"image/character/red_light.png"})                        
+                        $("#movie_char_holo1>.holo_name").html("Quaigon <br> Jin ")
+                        $("#movie_char_holo2>.holo_name").html("Obi-wan <br> Kenobi")
+                        $("#movie_char_holo3>.holo_name").html("Anakin <br> Skywalker")
+                        $("#movie_char_holo4>.holo_name").html("Darth <br> Maul")
+                        $("#screen_movie_introduce>h3").text("Two Jedi escape a hostile blockade to find allies and come across a young boy who may bring balance to the Force, but the long dormant Sith resurface to claim their original glory")
+
+                    }
+                    if(episode_num == 2){
+                        $("#movie_char_holo1>.char_hololight_back").attr({"src":"image/character/blue_light_high.png"})
+                        $("#movie_char_holo1>.char_hololight_front").attr({"src":"image/character/blue_light.png"})
+                        $("#movie_char_holo2>.char_hololight_back").attr({"src":"image/character/blue_light_high.png"})
+                        $("#movie_char_holo2>.char_hololight_front").attr({"src":"image/character/blue_light.png"})
+                        $("#movie_char_holo3>.char_hololight_back").attr({"src":"image/character/blue_light_high.png"})
+                        $("#movie_char_holo3>.char_hololight_front").attr({"src":"image/character/blue_light.png"})
+                        $("#movie_char_holo4>.char_hololight_back").attr({"src":"image/character/red_light_high.png"})
+                        $("#movie_char_holo4>.char_hololight_front").attr({"src":"image/character/red_light.png"})                        
+                        $("#movie_char_holo1>.holo_name").html("Anakin <br> Skywalker ")
+                        $("#movie_char_holo2>.holo_name").html("Obi-wan <br> Kenobi")
+                        $("#movie_char_holo3>.holo_name").html("Padme <br> amidla")
+                        $("#movie_char_holo4>.holo_name").html("Count <br> Duku")
+                        $("#screen_movie_introduce>h3").text("Ten years after initially meeting, Anakin Skywalkershares a forbidden romance with Padmé Amidala, while Obi-Wan Kenobi investigates an assassinationattempt on the senator and discovers a secret clone army crafted for the Jedi..")
+
+                    }
                     if(episode_num == 3){
                         $("#movie_char_holo1>.char_hololight_back").attr({"src":"image/character/red_light_high.png"})
-                        $("#movie_char_holo1>.char_hololight_front").attr({"src":"image/character/red_light_high.png"})
-                        $("#movie_char_holo4>.char_hololight_back").attr({"src":"image/character/blue_light_high.png"})
-                        $("#movie_char_holo4>.char_hololight_front").attr({"src":"image/character/blue_light_high.png"})
+                        $("#movie_char_holo1>.char_hololight_front").attr({"src":"image/character/red_light.png"})
                         $("#movie_char_holo2>.char_hololight_back").attr({"src":"image/character/blue_light_high.png"})
-                        $("#movie_char_holo2>.char_hololight_front").attr({"src":"image/character/blue_light_high.png"})
+                        $("#movie_char_holo2>.char_hololight_front").attr({"src":"image/character/blue_light.png"})
                         $("#movie_char_holo3>.char_hololight_back").attr({"src":"image/character/blue_light_high.png"})
-                        $("#movie_char_holo3>.char_hololight_front").attr({"src":"image/character/blue_light_high.png"})
+                        $("#movie_char_holo3>.char_hololight_front").attr({"src":"image/character/blue_light.png"})
+                        $("#movie_char_holo4>.char_hololight_back").attr({"src":"image/character/blue_light_high.png"})
+                        $("#movie_char_holo4>.char_hololight_front").attr({"src":"image/character/blue_light.png"})                        
                         $("#movie_char_holo1>.holo_name").html("Darth <br> Sidious ")
                         $("#movie_char_holo2>.holo_name").html("Anakin <br> Skywalker")
                         $("#movie_char_holo3>.holo_name").html("Obi-wan <br> Kenobi")
                         $("#movie_char_holo4>.holo_name").html("Yoda")
-
+                        $("#screen_movie_introduce>h3").text("Three years into the Clone Wars, the Jedi rescue Palpatine from Count Dooku. As Obi-Wan pursues a new threat, Anakin acts as a double agent between the Jedi Council and Palpatine and is lured into a sinister plan to rule the galaxy.")
                     }
                     if(episode_num == 4){
                         $("#movie_char_holo1>.char_hololight_back").attr({"src":"image/character/blue_light_high.png"})
-                        $("#movie_char_holo1>.char_hololight_front").attr({"src":"image/character/blue_light_high.png"})
-                        $("#movie_char_holo4>.char_hololight_back").attr({"src":"image/character/red_light_high.png"})
-                        $("#movie_char_holo4>.char_hololight_front").attr({"src":"image/character/red_light_high.png"})
+                        $("#movie_char_holo1>.char_hololight_front").attr({"src":"image/character/blue_light.png"})
                         $("#movie_char_holo2>.char_hololight_back").attr({"src":"image/character/blue_light_high.png"})
-                        $("#movie_char_holo2>.char_hololight_front").attr({"src":"image/character/blue_light_high.png"})
+                        $("#movie_char_holo2>.char_hololight_front").attr({"src":"image/character/blue_light.png"})
                         $("#movie_char_holo3>.char_hololight_back").attr({"src":"image/character/blue_light_high.png"})
-                        $("#movie_char_holo3>.char_hololight_front").attr({"src":"image/character/blue_light_high.png"})
+                        $("#movie_char_holo3>.char_hololight_front").attr({"src":"image/character/blue_light.png"})
+                        $("#movie_char_holo4>.char_hololight_back").attr({"src":"image/character/red_light_high.png"})
+                        $("#movie_char_holo4>.char_hololight_front").attr({"src":"image/character/red_light.png"})                        
                         $("#movie_char_holo1>.holo_name").html("Luke <br> Skywalker ")
                         $("#movie_char_holo2>.holo_name").html("Leia <br> Organa")
                         $("#movie_char_holo3>.holo_name").html("Obi-wan <br> Kenobi")
                         $("#movie_char_holo4>.holo_name").html("Darth <br> vader")
+                        $("#screen_movie_introduce>h3").text("Luke Skywalker joins forces with a Jedi Knight, a cocky pilot, a Wookiee and two droids to save the galaxy from the Empire's world-destroying battle station, while also attempting to rescue Princess Leia from the mysterious Darth Vader.")
                     }
 
                     if(episode_num == 5){
                         $("#movie_char_holo1>.char_hololight_back").attr({"src":"image/character/blue_light_high.png"})
-                        $("#movie_char_holo1>.char_hololight_front").attr({"src":"image/character/blue_light_high.png"})
-                        $("#movie_char_holo4>.char_hololight_back").attr({"src":"image/character/red_light_high.png"})
-                        $("#movie_char_holo4>.char_hololight_front").attr({"src":"image/character/red_light_high.png"})
+                        $("#movie_char_holo1>.char_hololight_front").attr({"src":"image/character/blue_light.png"})
                         $("#movie_char_holo2>.char_hololight_back").attr({"src":"image/character/blue_light_high.png"})
-                        $("#movie_char_holo2>.char_hololight_front").attr({"src":"image/character/blue_light_high.png"})
+                        $("#movie_char_holo2>.char_hololight_front").attr({"src":"image/character/blue_light.png"})
                         $("#movie_char_holo3>.char_hololight_back").attr({"src":"image/character/blue_light_high.png"})
-                        $("#movie_char_holo3>.char_hololight_front").attr({"src":"image/character/blue_light_high.png"})
+                        $("#movie_char_holo3>.char_hololight_front").attr({"src":"image/character/blue_light.png"})
+                        $("#movie_char_holo4>.char_hololight_back").attr({"src":"image/character/red_light_high.png"})
+                        $("#movie_char_holo4>.char_hololight_front").attr({"src":"image/character/red_light.png"})                        
                         $("#movie_char_holo1>.holo_name").html("Luke <br> Skywalker ")
                         $("#movie_char_holo2>.holo_name").html("Han <br> Solo")
                         $("#movie_char_holo3>.holo_name").html("Yoda")
                         $("#movie_char_holo4>.holo_name").html("Darth <br> vader")
-                        
+                        $("#screen_movie_introduce>h3").text("After the Rebels are brutally overpowered by the Empire on the ice planet Hoth, Luke Skywalker begins Jedi training with Yoda,  while his friends are pursued across the galaxy by Darth Vader and bounty hunter Boba Fett.")
+
                     }
 
                     if(episode_num == 6){
                         $("#movie_char_holo1>.char_hololight_back").attr({"src":"image/character/blue_light_high.png"})
-                        $("#movie_char_holo1>.char_hololight_front").attr({"src":"image/character/blue_light_high.png"})
-                        $("#movie_char_holo4>.char_hololight_back").attr({"src":"image/character/blue_light_high.png"})
-                        $("#movie_char_holo4>.char_hololight_front").attr({"src":"image/character/blue_light_high.png"})
+                        $("#movie_char_holo1>.char_hololight_front").attr({"src":"image/character/blue_light.png"})
                         $("#movie_char_holo2>.char_hololight_back").attr({"src":"image/character/red_light_high.png"})
-                        $("#movie_char_holo2>.char_hololight_front").attr({"src":"image/character/red_light_high.png"})
+                        $("#movie_char_holo2>.char_hololight_front").attr({"src":"image/character/red_light.png"})
                         $("#movie_char_holo3>.char_hololight_back").attr({"src":"image/character/red_light_high.png"})
-                        $("#movie_char_holo3>.char_hololight_front").attr({"src":"image/character/red_light_high.png"})
+                        $("#movie_char_holo3>.char_hololight_front").attr({"src":"image/character/red_light.png"})
+                        $("#movie_char_holo4>.char_hololight_back").attr({"src":"image/character/blue_light_high.png"})
+                        $("#movie_char_holo4>.char_hololight_front").attr({"src":"image/character/blue_light.png"})                        
                         $("#movie_char_holo1>.holo_name").html("Luke <br> Skywalker ")
                         $("#movie_char_holo2>.holo_name").html("Darth <br> Vader")
                         $("#movie_char_holo3>.holo_name").html("Darth <br> Sidious")
                         $("#movie_char_holo4>.holo_name").html("Yoda")
-                        
+                        $("#screen_movie_introduce>h3").text("After a daring mission to rescue Han Solo from Jabba the Hutt, the Rebels dispatch to Endor to destroy the second Death Star. Meanwhile, Luke struggles to help Darth Vader back from the dark side without falling into the Emperor's trap.")
                     }
                 })
                 //패럴랙스에서 에피소들를 선택했을 경우//
@@ -790,66 +858,100 @@ setInterval(function(){
                     $("#movie_char_holo4>.char_holo_char").attr({"src":"image/character/info_"+episode_num+"_4.png"})
                     $("#screen_movie_introduce>img").attr({"src":"image/episode-"+episode_num+".png"})
                     
+                    if(episode_num == 1){
+                        $("#movie_char_holo1>.char_hololight_back").attr({"src":"image/character/blue_light_high.png"})
+                        $("#movie_char_holo1>.char_hololight_front").attr({"src":"image/character/blue_light.png"})
+                        $("#movie_char_holo2>.char_hololight_back").attr({"src":"image/character/blue_light_high.png"})
+                        $("#movie_char_holo2>.char_hololight_front").attr({"src":"image/character/blue_light.png"})
+                        $("#movie_char_holo3>.char_hololight_back").attr({"src":"image/character/blue_light_high.png"})
+                        $("#movie_char_holo3>.char_hololight_front").attr({"src":"image/character/blue_light.png"})
+                        $("#movie_char_holo4>.char_hololight_back").attr({"src":"image/character/red_light_high.png"})
+                        $("#movie_char_holo4>.char_hololight_front").attr({"src":"image/character/red_light.png"})                        
+                        $("#movie_char_holo1>.holo_name").html("Quaigon <br> Jin ")
+                        $("#movie_char_holo2>.holo_name").html("Obi-wan <br> Kenobi")
+                        $("#movie_char_holo3>.holo_name").html("Anakin <br> Skywalker")
+                        $("#movie_char_holo4>.holo_name").html("Darth <br> Maul")
+                        $("#screen_movie_introduce>h3").text("Two Jedi escape a hostile blockade to find allies and come across a young boy who may bring balance to the Force, but the long dormant Sith resurface to claim their original glory")
+
+                    }
+                    if(episode_num == 2){
+                        $("#movie_char_holo1>.char_hololight_back").attr({"src":"image/character/blue_light_high.png"})
+                        $("#movie_char_holo1>.char_hololight_front").attr({"src":"image/character/blue_light.png"})
+                        $("#movie_char_holo2>.char_hololight_back").attr({"src":"image/character/blue_light_high.png"})
+                        $("#movie_char_holo2>.char_hololight_front").attr({"src":"image/character/blue_light.png"})
+                        $("#movie_char_holo3>.char_hololight_back").attr({"src":"image/character/blue_light_high.png"})
+                        $("#movie_char_holo3>.char_hololight_front").attr({"src":"image/character/blue_light.png"})
+                        $("#movie_char_holo4>.char_hololight_back").attr({"src":"image/character/red_light_high.png"})
+                        $("#movie_char_holo4>.char_hololight_front").attr({"src":"image/character/red_light.png"})                        
+                        $("#movie_char_holo1>.holo_name").html("Anakin <br> Skywalker ")
+                        $("#movie_char_holo2>.holo_name").html("Obi-wan <br> Kenobi")
+                        $("#movie_char_holo3>.holo_name").html("Padme <br> amidla")
+                        $("#movie_char_holo4>.holo_name").html("Count <br> Duku")
+                        $("#screen_movie_introduce>h3").text("Ten years after initially meeting, Anakin Skywalkershares a forbidden romance with Padmé Amidala, while Obi-Wan Kenobi investigates an assassinationattempt on the senator and discovers a secret clone army crafted for the Jedi..")
+
+                    }
                     if(episode_num == 3){
                         $("#movie_char_holo1>.char_hololight_back").attr({"src":"image/character/red_light_high.png"})
-                        $("#movie_char_holo1>.char_hololight_front").attr({"src":"image/character/red_light_high.png"})
-                        $("#movie_char_holo4>.char_hololight_back").attr({"src":"image/character/blue_light_high.png"})
-                        $("#movie_char_holo4>.char_hololight_front").attr({"src":"image/character/blue_light_high.png"})
+                        $("#movie_char_holo1>.char_hololight_front").attr({"src":"image/character/red_light.png"})
                         $("#movie_char_holo2>.char_hololight_back").attr({"src":"image/character/blue_light_high.png"})
-                        $("#movie_char_holo2>.char_hololight_front").attr({"src":"image/character/blue_light_high.png"})
+                        $("#movie_char_holo2>.char_hololight_front").attr({"src":"image/character/blue_light.png"})
                         $("#movie_char_holo3>.char_hololight_back").attr({"src":"image/character/blue_light_high.png"})
-                        $("#movie_char_holo3>.char_hololight_front").attr({"src":"image/character/blue_light_high.png"})
+                        $("#movie_char_holo3>.char_hololight_front").attr({"src":"image/character/blue_light.png"})
+                        $("#movie_char_holo4>.char_hololight_back").attr({"src":"image/character/blue_light_high.png"})
+                        $("#movie_char_holo4>.char_hololight_front").attr({"src":"image/character/blue_light.png"})                        
                         $("#movie_char_holo1>.holo_name").html("Darth <br> Sidious ")
                         $("#movie_char_holo2>.holo_name").html("Anakin <br> Skywalker")
                         $("#movie_char_holo3>.holo_name").html("Obi-wan <br> Kenobi")
                         $("#movie_char_holo4>.holo_name").html("Yoda")
-
+                        $("#screen_movie_introduce>h3").text("Three years into the Clone Wars, the Jedi rescue Palpatine from Count Dooku. As Obi-Wan pursues a new threat, Anakin acts as a double agent between the Jedi Council and Palpatine and is lured into a sinister plan to rule the galaxy.")
                     }
                     if(episode_num == 4){
                         $("#movie_char_holo1>.char_hololight_back").attr({"src":"image/character/blue_light_high.png"})
-                        $("#movie_char_holo1>.char_hololight_front").attr({"src":"image/character/blue_light_high.png"})
-                        $("#movie_char_holo4>.char_hololight_back").attr({"src":"image/character/red_light_high.png"})
-                        $("#movie_char_holo4>.char_hololight_front").attr({"src":"image/character/red_light_high.png"})
+                        $("#movie_char_holo1>.char_hololight_front").attr({"src":"image/character/blue_light.png"})
                         $("#movie_char_holo2>.char_hololight_back").attr({"src":"image/character/blue_light_high.png"})
-                        $("#movie_char_holo2>.char_hololight_front").attr({"src":"image/character/blue_light_high.png"})
+                        $("#movie_char_holo2>.char_hololight_front").attr({"src":"image/character/blue_light.png"})
                         $("#movie_char_holo3>.char_hololight_back").attr({"src":"image/character/blue_light_high.png"})
-                        $("#movie_char_holo3>.char_hololight_front").attr({"src":"image/character/blue_light_high.png"})
+                        $("#movie_char_holo3>.char_hololight_front").attr({"src":"image/character/blue_light.png"})
+                        $("#movie_char_holo4>.char_hololight_back").attr({"src":"image/character/red_light_high.png"})
+                        $("#movie_char_holo4>.char_hololight_front").attr({"src":"image/character/red_light.png"})                        
                         $("#movie_char_holo1>.holo_name").html("Luke <br> Skywalker ")
                         $("#movie_char_holo2>.holo_name").html("Leia <br> Organa")
                         $("#movie_char_holo3>.holo_name").html("Obi-wan <br> Kenobi")
                         $("#movie_char_holo4>.holo_name").html("Darth <br> vader")
+                        $("#screen_movie_introduce>h3").text("Luke Skywalker joins forces with a Jedi Knight, a cocky pilot, a Wookiee and two droids to save the galaxy from the Empire's world-destroying battle station, while also attempting to rescue Princess Leia from the mysterious Darth Vader.")
                     }
 
                     if(episode_num == 5){
                         $("#movie_char_holo1>.char_hololight_back").attr({"src":"image/character/blue_light_high.png"})
-                        $("#movie_char_holo1>.char_hololight_front").attr({"src":"image/character/blue_light_high.png"})
-                        $("#movie_char_holo4>.char_hololight_back").attr({"src":"image/character/red_light_high.png"})
-                        $("#movie_char_holo4>.char_hololight_front").attr({"src":"image/character/red_light_high.png"})
+                        $("#movie_char_holo1>.char_hololight_front").attr({"src":"image/character/blue_light.png"})
                         $("#movie_char_holo2>.char_hololight_back").attr({"src":"image/character/blue_light_high.png"})
-                        $("#movie_char_holo2>.char_hololight_front").attr({"src":"image/character/blue_light_high.png"})
+                        $("#movie_char_holo2>.char_hololight_front").attr({"src":"image/character/blue_light.png"})
                         $("#movie_char_holo3>.char_hololight_back").attr({"src":"image/character/blue_light_high.png"})
-                        $("#movie_char_holo3>.char_hololight_front").attr({"src":"image/character/blue_light_high.png"})
+                        $("#movie_char_holo3>.char_hololight_front").attr({"src":"image/character/blue_light.png"})
+                        $("#movie_char_holo4>.char_hololight_back").attr({"src":"image/character/red_light_high.png"})
+                        $("#movie_char_holo4>.char_hololight_front").attr({"src":"image/character/red_light.png"})                        
                         $("#movie_char_holo1>.holo_name").html("Luke <br> Skywalker ")
                         $("#movie_char_holo2>.holo_name").html("Han <br> Solo")
                         $("#movie_char_holo3>.holo_name").html("Yoda")
                         $("#movie_char_holo4>.holo_name").html("Darth <br> vader")
-                        
+                        $("#screen_movie_introduce>h3").text("After the Rebels are brutally overpowered by the Empire on the ice planet Hoth, Luke Skywalker begins Jedi training with Yoda,  while his friends are pursued across the galaxy by Darth Vader and bounty hunter Boba Fett.")
+
                     }
 
                     if(episode_num == 6){
                         $("#movie_char_holo1>.char_hololight_back").attr({"src":"image/character/blue_light_high.png"})
-                        $("#movie_char_holo1>.char_hololight_front").attr({"src":"image/character/blue_light_high.png"})
-                        $("#movie_char_holo4>.char_hololight_back").attr({"src":"image/character/blue_light_high.png"})
-                        $("#movie_char_holo4>.char_hololight_front").attr({"src":"image/character/blue_light_high.png"})
+                        $("#movie_char_holo1>.char_hololight_front").attr({"src":"image/character/blue_light.png"})
                         $("#movie_char_holo2>.char_hololight_back").attr({"src":"image/character/red_light_high.png"})
-                        $("#movie_char_holo2>.char_hololight_front").attr({"src":"image/character/red_light_high.png"})
+                        $("#movie_char_holo2>.char_hololight_front").attr({"src":"image/character/red_light.png"})
                         $("#movie_char_holo3>.char_hololight_back").attr({"src":"image/character/red_light_high.png"})
-                        $("#movie_char_holo3>.char_hololight_front").attr({"src":"image/character/red_light_high.png"})
+                        $("#movie_char_holo3>.char_hololight_front").attr({"src":"image/character/red_light.png"})
+                        $("#movie_char_holo4>.char_hololight_back").attr({"src":"image/character/blue_light_high.png"})
+                        $("#movie_char_holo4>.char_hololight_front").attr({"src":"image/character/blue_light.png"})                        
                         $("#movie_char_holo1>.holo_name").html("Luke <br> Skywalker ")
                         $("#movie_char_holo2>.holo_name").html("Darth <br> Vader")
                         $("#movie_char_holo3>.holo_name").html("Darth <br> Sidious")
                         $("#movie_char_holo4>.holo_name").html("Yoda")
-                        
+                        $("#screen_movie_introduce>h3").text("After a daring mission to rescue Han Solo from Jabba the Hutt, the Rebels dispatch to Endor to destroy the second Death Star. Meanwhile, Luke struggles to help Darth Vader back from the dark side without falling into the Emperor's trap.")
                     }
                     //전환 애니메이션//
                     $("#ship_door").fadeIn(1)
@@ -873,66 +975,100 @@ setInterval(function(){
                     $("#movie_char_holo3>.char_holo_char").attr({"src":"image/character/info_"+episode_num+"_3.png"})
                     $("#movie_char_holo4>.char_holo_char").attr({"src":"image/character/info_"+episode_num+"_4.png"})
                     $("#screen_movie_introduce>img").attr({"src":"image/episode-"+episode_num+".png"})
+                    if(episode_num == 1){
+                        $("#movie_char_holo1>.char_hololight_back").attr({"src":"image/character/blue_light_high.png"})
+                        $("#movie_char_holo1>.char_hololight_front").attr({"src":"image/character/blue_light.png"})
+                        $("#movie_char_holo2>.char_hololight_back").attr({"src":"image/character/blue_light_high.png"})
+                        $("#movie_char_holo2>.char_hololight_front").attr({"src":"image/character/blue_light.png"})
+                        $("#movie_char_holo3>.char_hololight_back").attr({"src":"image/character/blue_light_high.png"})
+                        $("#movie_char_holo3>.char_hololight_front").attr({"src":"image/character/blue_light.png"})
+                        $("#movie_char_holo4>.char_hololight_back").attr({"src":"image/character/red_light_high.png"})
+                        $("#movie_char_holo4>.char_hololight_front").attr({"src":"image/character/red_light.png"})                        
+                        $("#movie_char_holo1>.holo_name").html("Quaigon <br> Jin ")
+                        $("#movie_char_holo2>.holo_name").html("Obi-wan <br> Kenobi")
+                        $("#movie_char_holo3>.holo_name").html("Anakin <br> Skywalker")
+                        $("#movie_char_holo4>.holo_name").html("Darth <br> Maul")
+                        $("#screen_movie_introduce>h3").text("Two Jedi escape a hostile blockade to find allies and come across a young boy who may bring balance to the Force, but the long dormant Sith resurface to claim their original glory")
+
+                    }
+                    if(episode_num == 2){
+                        $("#movie_char_holo1>.char_hololight_back").attr({"src":"image/character/blue_light_high.png"})
+                        $("#movie_char_holo1>.char_hololight_front").attr({"src":"image/character/blue_light.png"})
+                        $("#movie_char_holo2>.char_hololight_back").attr({"src":"image/character/blue_light_high.png"})
+                        $("#movie_char_holo2>.char_hololight_front").attr({"src":"image/character/blue_light.png"})
+                        $("#movie_char_holo3>.char_hololight_back").attr({"src":"image/character/blue_light_high.png"})
+                        $("#movie_char_holo3>.char_hololight_front").attr({"src":"image/character/blue_light.png"})
+                        $("#movie_char_holo4>.char_hololight_back").attr({"src":"image/character/red_light_high.png"})
+                        $("#movie_char_holo4>.char_hololight_front").attr({"src":"image/character/red_light.png"})                        
+                        $("#movie_char_holo1>.holo_name").html("Anakin <br> Skywalker ")
+                        $("#movie_char_holo2>.holo_name").html("Obi-wan <br> Kenobi")
+                        $("#movie_char_holo3>.holo_name").html("Padme <br> amidla")
+                        $("#movie_char_holo4>.holo_name").html("Count <br> Duku")
+                        $("#screen_movie_introduce>h3").text("Ten years after initially meeting, Anakin Skywalkershares a forbidden romance with Padmé Amidala, while Obi-Wan Kenobi investigates an assassinationattempt on the senator and discovers a secret clone army crafted for the Jedi..")
+
+                    }
                     if(episode_num == 3){
                         $("#movie_char_holo1>.char_hololight_back").attr({"src":"image/character/red_light_high.png"})
-                        $("#movie_char_holo1>.char_hololight_front").attr({"src":"image/character/red_light_high.png"})
-                        $("#movie_char_holo4>.char_hololight_back").attr({"src":"image/character/blue_light_high.png"})
-                        $("#movie_char_holo4>.char_hololight_front").attr({"src":"image/character/blue_light_high.png"})
+                        $("#movie_char_holo1>.char_hololight_front").attr({"src":"image/character/red_light.png"})
                         $("#movie_char_holo2>.char_hololight_back").attr({"src":"image/character/blue_light_high.png"})
-                        $("#movie_char_holo2>.char_hololight_front").attr({"src":"image/character/blue_light_high.png"})
+                        $("#movie_char_holo2>.char_hololight_front").attr({"src":"image/character/blue_light.png"})
                         $("#movie_char_holo3>.char_hololight_back").attr({"src":"image/character/blue_light_high.png"})
-                        $("#movie_char_holo3>.char_hololight_front").attr({"src":"image/character/blue_light_high.png"})
+                        $("#movie_char_holo3>.char_hololight_front").attr({"src":"image/character/blue_light.png"})
+                        $("#movie_char_holo4>.char_hololight_back").attr({"src":"image/character/blue_light_high.png"})
+                        $("#movie_char_holo4>.char_hololight_front").attr({"src":"image/character/blue_light.png"})                        
                         $("#movie_char_holo1>.holo_name").html("Darth <br> Sidious ")
                         $("#movie_char_holo2>.holo_name").html("Anakin <br> Skywalker")
                         $("#movie_char_holo3>.holo_name").html("Obi-wan <br> Kenobi")
                         $("#movie_char_holo4>.holo_name").html("Yoda")
-
+                        $("#screen_movie_introduce>h3").text("Three years into the Clone Wars, the Jedi rescue Palpatine from Count Dooku. As Obi-Wan pursues a new threat, Anakin acts as a double agent between the Jedi Council and Palpatine and is lured into a sinister plan to rule the galaxy.")
                     }
                     if(episode_num == 4){
                         $("#movie_char_holo1>.char_hololight_back").attr({"src":"image/character/blue_light_high.png"})
-                        $("#movie_char_holo1>.char_hololight_front").attr({"src":"image/character/blue_light_high.png"})
-                        $("#movie_char_holo4>.char_hololight_back").attr({"src":"image/character/red_light_high.png"})
-                        $("#movie_char_holo4>.char_hololight_front").attr({"src":"image/character/red_light_high.png"})
+                        $("#movie_char_holo1>.char_hololight_front").attr({"src":"image/character/blue_light.png"})
                         $("#movie_char_holo2>.char_hololight_back").attr({"src":"image/character/blue_light_high.png"})
-                        $("#movie_char_holo2>.char_hololight_front").attr({"src":"image/character/blue_light_high.png"})
+                        $("#movie_char_holo2>.char_hololight_front").attr({"src":"image/character/blue_light.png"})
                         $("#movie_char_holo3>.char_hololight_back").attr({"src":"image/character/blue_light_high.png"})
-                        $("#movie_char_holo3>.char_hololight_front").attr({"src":"image/character/blue_light_high.png"})
+                        $("#movie_char_holo3>.char_hololight_front").attr({"src":"image/character/blue_light.png"})
+                        $("#movie_char_holo4>.char_hololight_back").attr({"src":"image/character/red_light_high.png"})
+                        $("#movie_char_holo4>.char_hololight_front").attr({"src":"image/character/red_light.png"})                        
                         $("#movie_char_holo1>.holo_name").html("Luke <br> Skywalker ")
                         $("#movie_char_holo2>.holo_name").html("Leia <br> Organa")
                         $("#movie_char_holo3>.holo_name").html("Obi-wan <br> Kenobi")
                         $("#movie_char_holo4>.holo_name").html("Darth <br> vader")
+                        $("#screen_movie_introduce>h3").text("Luke Skywalker joins forces with a Jedi Knight, a cocky pilot, a Wookiee and two droids to save the galaxy from the Empire's world-destroying battle station, while also attempting to rescue Princess Leia from the mysterious Darth Vader.")
                     }
 
                     if(episode_num == 5){
                         $("#movie_char_holo1>.char_hololight_back").attr({"src":"image/character/blue_light_high.png"})
-                        $("#movie_char_holo1>.char_hololight_front").attr({"src":"image/character/blue_light_high.png"})
-                        $("#movie_char_holo4>.char_hololight_back").attr({"src":"image/character/red_light_high.png"})
-                        $("#movie_char_holo4>.char_hololight_front").attr({"src":"image/character/red_light_high.png"})
+                        $("#movie_char_holo1>.char_hololight_front").attr({"src":"image/character/blue_light.png"})
                         $("#movie_char_holo2>.char_hololight_back").attr({"src":"image/character/blue_light_high.png"})
-                        $("#movie_char_holo2>.char_hololight_front").attr({"src":"image/character/blue_light_high.png"})
+                        $("#movie_char_holo2>.char_hololight_front").attr({"src":"image/character/blue_light.png"})
                         $("#movie_char_holo3>.char_hololight_back").attr({"src":"image/character/blue_light_high.png"})
-                        $("#movie_char_holo3>.char_hololight_front").attr({"src":"image/character/blue_light_high.png"})
+                        $("#movie_char_holo3>.char_hololight_front").attr({"src":"image/character/blue_light.png"})
+                        $("#movie_char_holo4>.char_hololight_back").attr({"src":"image/character/red_light_high.png"})
+                        $("#movie_char_holo4>.char_hololight_front").attr({"src":"image/character/red_light.png"})                        
                         $("#movie_char_holo1>.holo_name").html("Luke <br> Skywalker ")
                         $("#movie_char_holo2>.holo_name").html("Han <br> Solo")
                         $("#movie_char_holo3>.holo_name").html("Yoda")
                         $("#movie_char_holo4>.holo_name").html("Darth <br> vader")
-                        
+                        $("#screen_movie_introduce>h3").text("After the Rebels are brutally overpowered by the Empire on the ice planet Hoth, Luke Skywalker begins Jedi training with Yoda,  while his friends are pursued across the galaxy by Darth Vader and bounty hunter Boba Fett.")
+
                     }
 
                     if(episode_num == 6){
                         $("#movie_char_holo1>.char_hololight_back").attr({"src":"image/character/blue_light_high.png"})
-                        $("#movie_char_holo1>.char_hololight_front").attr({"src":"image/character/blue_light_high.png"})
-                        $("#movie_char_holo4>.char_hololight_back").attr({"src":"image/character/blue_light_high.png"})
-                        $("#movie_char_holo4>.char_hololight_front").attr({"src":"image/character/blue_light_high.png"})
+                        $("#movie_char_holo1>.char_hololight_front").attr({"src":"image/character/blue_light.png"})
                         $("#movie_char_holo2>.char_hololight_back").attr({"src":"image/character/red_light_high.png"})
-                        $("#movie_char_holo2>.char_hololight_front").attr({"src":"image/character/red_light_high.png"})
+                        $("#movie_char_holo2>.char_hololight_front").attr({"src":"image/character/red_light.png"})
                         $("#movie_char_holo3>.char_hololight_back").attr({"src":"image/character/red_light_high.png"})
-                        $("#movie_char_holo3>.char_hololight_front").attr({"src":"image/character/red_light_high.png"})
+                        $("#movie_char_holo3>.char_hololight_front").attr({"src":"image/character/red_light.png"})
+                        $("#movie_char_holo4>.char_hololight_back").attr({"src":"image/character/blue_light_high.png"})
+                        $("#movie_char_holo4>.char_hololight_front").attr({"src":"image/character/blue_light.png"})                        
                         $("#movie_char_holo1>.holo_name").html("Luke <br> Skywalker ")
                         $("#movie_char_holo2>.holo_name").html("Darth <br> Vader")
                         $("#movie_char_holo3>.holo_name").html("Darth <br> Sidious")
                         $("#movie_char_holo4>.holo_name").html("Yoda")
-                        
+                        $("#screen_movie_introduce>h3").text("After a daring mission to rescue Han Solo from Jabba the Hutt, the Rebels dispatch to Endor to destroy the second Death Star. Meanwhile, Luke struggles to help Darth Vader back from the dark side without falling into the Emperor's trap.")
                     }
 
 
@@ -980,8 +1116,8 @@ setInterval(function(){
                 //캐릭터 스탠드로 전환//
                 $("#screen_char_box>.projecter_btn").click(function(){
 
-                    $("#movie_poster_box").animate({"left":"-760px"},500)
-                    $("#movie_screen_btn_box").animate({"bottom":"-310px"},500)
+                    $("#movie_poster_box").animate({"left":"-50%"},500)
+                    $("#movie_screen_btn_box").animate({"top":"100%"},500)
                     $(" #screen_char_box").delay(00).animate({"margin-top":"484px"},100)
                     $(" #screen_gal_box").delay(00).animate({"margin-top":"484px"},100)
                     $(" #screen_movie_introduce").animate({"margin-top":"-1400px"},500)
@@ -995,8 +1131,8 @@ setInterval(function(){
                 //캐릭터 스탠드 닫기//
                 $("#char_box_close").click(function(){
 
-                    $("#movie_poster_box").animate({"left":"-40px"},500)
-                    $("#movie_screen_btn_box").animate({"bottom":"-0px"},500)
+                    $("#movie_poster_box").animate({"left":"50%"},500)
+                    $("#movie_screen_btn_box").animate({"top":"50%"},500)
                     $(" #screen_char_box").delay(00).animate({"margin-top":"227px"},500)
                     $(" #screen_gal_box").delay(00).animate({"margin-top":"227px"},500)
                     $(" #screen_movie_introduce").animate({"margin-top":"-400px"},500)
@@ -1407,21 +1543,21 @@ setInterval(function(){
                     $("html,body").animate({scrollTop:0},10) 
                 })
                 $("#menu>li:nth-child(2)").click(function(){
-                    $("html,body").animate({scrollTop:1570},10) 
+                    $("html,body").animate({scrollTop:$("#info").offset().top},10) 
                     
                 })
 
                 $("#menu>li:nth-child(3)").click(function(){
-                    $("html,body").animate({scrollTop:18170},10) 
+                    $("html,body").animate({scrollTop:$("#info_inbox5").offset().top},10) 
                     
                 })
 
                                 $("#menu>li:nth-child(4)").click(function(){
-                    $("html,body").animate({scrollTop:21150},10) 
+                    $("html,body").animate({scrollTop:$("#movie_screen").offset().top},10) 
                     
                 })
                 $("#menu>li:nth-child(5)").click(function(){
-                    $("html,body").animate({scrollTop:23130},10) 
+                    $("html,body").animate({scrollTop:$("#gallery").offset().top},10) 
                     
                 })
 
@@ -1467,6 +1603,7 @@ setInterval(function(){
                 
         })
     </script>
+    <link rel="shortcut icon" href="image/starwars_pabicon_1.ico">
     <style> 
         @font-face{src: url(font/Spaceport.otf); font-family: space;}
        @font-face {
@@ -1585,9 +1722,9 @@ setInterval(function(){
         #info_title5>div:nth-child(3){right: 5px;}
         #info_box1{width: 1300px;height: 715px;box-sizing: border-box;position: absolute;left: 50%;top: 50%;margin: auto;top: 20%;margin-left: -650px;margin-top: 0px;}
         #info_box1_logo{position: absolute;left: 60px;top: 80px;width: 500px;display: none;}
-        #info_box1_img1{position: absolute;right: 140px;top: 80px;display: none;}
-        #info_box1_img2{width: 300px;position: absolute;top: 300px;right: 340px;display: none;}
-        #info_box1_img3{position: absolute;right: 155px;top: 310px;display: none;}
+        #info_box1_img1{position: absolute;right: 200px;top: 80px;display: none;width: 350px;}
+        #info_box1_img2{width: 350px;position: absolute;top: 315px;right: 200px;display: none;}
+        
         #info_box1_txt{color: #fff;font-size: 22px;font-family: space;text-align: center;position: absolute;left: 86px;top: 330px;display: none;width: 480px;height: 90px;}
         #info_box1_txt>p:nth-child(1){opacity: 0;margin-top: 100px;}
         #info_box1_txt>p:nth-child(2){margin-top: 100px;opacity: 0;}
@@ -1668,13 +1805,13 @@ setInterval(function(){
         #right_door{position: absolute;right: -1200px;top: 66px;z-index: 1;z-index: 998;}
         #left_door{position: absolute;left: -1200px;top: 66px;z-index: 998;}
         #movie_screen{height: 970px;position: relative;width: 100%;background: url(image/series/bg_punnel.png) center ;overflow: hidden;}
-        #movie_poster_box{height: 870px;position: absolute;top: 70px;left: -60px;width: 708px;}
+        #movie_poster_box{height: 870px;position: absolute;top: 50%;left: 50%;width: 708px;margin-left: -1010px;margin-top: -380px;}
         #movie_screen_punel{height: 100%;z-index: 3;position: absolute;left: 0;top: 0;}
         #movie_poster{height: 770px;position: absolute;z-index: 2;left: 0;top: 0;bottom: 0;right: 0;margin: auto;}
-        #screen_movie_introduce{width: 1250px;height: 550px;border: 1px solid #fff;position: absolute;left: 50%;top: 50%;margin-left: -300px;margin-top: -400px;}
+        #screen_movie_introduce{width: 1100px;height: 550px;position: absolute;left: 50%;top: 50%;margin-left: -300px;margin-top: -380px;border: 3px solid #fff;box-sizing: border-box;}
         #screen_movie_introduce>img{position: absolute;top: 0;bottom: 0;left: 180px;margin: auto;width: 300px;}
         #screen_movie_introduce>h3{position: absolute;left: 540px;top: 180px;width: 500px;height: 300px;color: #fff;font-size: 22px;font-family: space;line-height: 31px;}
-        #movie_screen_btn_box{width: 1240px;height: 310px;position: absolute;right: 0;bottom: 0;border: 1px solid #fff;}
+        #movie_screen_btn_box{width: 1240px;height: 310px;position: absolute;top: 50%;left: 50%;margin-top: 170px;margin-left: -280px;}
         #screen_next{position: absolute;top: 140px;right: 0;cursor: pointer;}
         #screen_prev{position: absolute;top: 140px;left: 0;cursor: pointer;}
         #screen_char_box{position: absolute;left: 50%;top: 50%;width: 210px;height: 250px;margin-top: 227px;margin-left: 95px;}
@@ -1901,7 +2038,7 @@ setInterval(function(){
                         <p>space-opera multimedia franchise</p>
                         <p>created by George Lucas</p>
                     </div>
-                    <img src="image/info/info1_2.png" alt="" id="info_box1_img1"><img src="image/info/info1_1.png" alt="" id="info_box1_img2"><img src="image/info/info1_3.png" alt="" id="info_box1_img3">
+                    <img src="image/info/info1_2.png" alt="" id="info_box1_img1"><img src="image/info/info1_1.png" alt="" id="info_box1_img2">
             </div>
 
         </div>
@@ -1950,7 +2087,7 @@ setInterval(function(){
 
                 <ul id="info_box3_poster">
                     <li><img src="image/info/poster_ep4.png" alt=""></li>
-                    <li><img src="image/info/poster_ep5.jpg" alt=""></li>
+                    <li><img src="image/info/poster_ep5.png" alt=""></li>
                     <li><img src="image/info/poster_ep6.png" alt=""></li>
                     <li><img src="image/info/poster_ep1.png" alt=""></li>
                     <li><img src="image/info/poster_ep2.png" alt=""></li>
