@@ -583,42 +583,50 @@ setInterval(function(){
                     $("#info_box4_ep6>.info_box4_view").fadeIn(2000)
 
                 }
+                if(sc<=19100){
+
+                   
+                    
+                }
                 if(sc>19100){
-                    $("#info_title5>img").fadeIn(2000)
-                    $("#info_title5>.info_line").delay(1000).animate({'width':"430px"})
-                    $("#series_map").fadeIn(1000)
-                    $("#info_box5_episode1").delay(300).fadeIn(1000)
-                    $("#info_box5_episode2").delay(500).fadeIn(1000)
-                    $("#info_box5_episode3").delay(700).fadeIn(1000)
-                    $("#info_box5_episode4").delay(900).fadeIn(1000)
-                    $("#info_box5_episode5").delay(1100).fadeIn(1000)
-                    $("#info_box5_episode6").delay(1300).fadeIn(1000)
+
+                    $("#scroll").css({"display":"none"})
                     
                 }
 
                 })
                 $("#ship_door").animate({"scale":2})
 
-                //////////////에피소드 선택 변경에 따른 포스터 및 영화소개, 캐릭터 소개창 내용 변경 시작/////////////////
+                //////////////에피소드 선택 변경에 따른 포스터 및 영화소개, 캐릭터 소개창 내용 변경 /////////////////
 
                 episode_num = 3
-                poster_num = 1
-                $("#movie_posster_box_btn>li").click(function(){
-                    poster_num = $(this).index()+1
-                    $("#movie_poster").attr({"src":"image/series/poster_ep"+episode_num+"_"+poster_num+".jpg"})
 
-                })
 
 
                 //무비 스크린 영역에서 다음 이전 버튼을 사용할 경우//
-                $("#screen_next").click(function(){
+                $("#series_list_next").click(function(){
                     episode_num = episode_num + 1
                     if(episode_num == 7){
                         episode_num = 1
                     }
                     info_key = 0
 
-                    $("#movie_poster").attr({"src":"image/series/poster_ep"+episode_num+"_"+poster_num+".jpg"})
+                    $("#hologram_info_box").animate({"width":"0"},10)
+                    $("#R2D2_light").animate({"width":"0"},10)
+
+                    $(".poster_list>ul>li:nth-child(1)>img").delay(500).attr({"src":"image/series/poster_ep"+episode_num+"_1.jpg"})
+                    $(".poster_list>ul>li:nth-child(2)>img").delay(500).attr({"src":"image/series/poster_ep"+episode_num+"_2.jpg"})
+                    $(".poster_list>ul>li:nth-child(3)>img").delay(500).attr({"src":"image/series/poster_ep"+episode_num+"_3.jpg"})
+                    $(".poster_list>ul>li:nth-child(4)>img").delay(500).attr({"src":"image/series/poster_ep"+episode_num+"_1.jpg"})
+                    $("#now_episode").attr({"src":"image/series/episode-"+episode_num+".png"})
+
+
+                    $("#hologram_info_box").delay(500).animate({"width":"1300px"},300)
+                    $("#R2D2_light").delay(500).animate({"width":"1029px"},200)
+
+                    $("#episode_btn>li").eq(episode_num-1).css({"background-color":"#01ffff"})
+                    $("#episode_btn>li").eq(episode_num-1).siblings().css({"background-color":"transparent"})
+                   
                     $("#movie_char_holo1>.char_holo_char").attr({"src":"image/character/info_"+episode_num+"_1.png"})
                     $("#movie_char_holo2>.char_holo_char").attr({"src":"image/character/info_"+episode_num+"_2.png"})
                     $("#movie_char_holo3>.char_holo_char").attr({"src":"image/character/info_"+episode_num+"_3.png"})
@@ -637,7 +645,11 @@ setInterval(function(){
                         $("#movie_char_holo2>.holo_name").html("Obi-wan <br> Kenobi")
                         $("#movie_char_holo3>.holo_name").html("Anakin <br> Skywalker")
                         $("#movie_char_holo4>.holo_name").html("Darth <br> Maul")
-                        $("#screen_movie_introduce>h3").text("Two Jedi escape a hostile blockade to find allies and come across a young boy who may bring balance to the Force, but the long dormant Sith resurface to claim their original glory")
+                        $("#story_line>p").text("Two Jedi escape a hostile blockade to find allies and come across a young boy who may bring balance to the Force, but the long dormant Sith resurface to claim their original glory")
+                        $("#top_cast>p").html("Ewan McGregor - Obi-Wan Kenobi <br> Liam Neeson - Qui-Gon Jinn <br> Natalie Portman - Queen Amidala <br> Jake Lloyd - Anakin Skywalker")
+                        $("#critic>li:nth-child(1)>p").html("<span></span>6.5/10")
+                        $("#critic>li:nth-child(2)>p").text("51")
+                        $("#critic>li:nth-child(3)>p").text("51%")
 
                     }
                     if(episode_num == 2){
@@ -653,8 +665,11 @@ setInterval(function(){
                         $("#movie_char_holo2>.holo_name").html("Obi-wan <br> Kenobi")
                         $("#movie_char_holo3>.holo_name").html("Padme <br> amidla")
                         $("#movie_char_holo4>.holo_name").html("Count <br> Duku")
-                        $("#screen_movie_introduce>h3").text("Ten years after initially meeting, Anakin Skywalkershares a forbidden romance with Padmé Amidala, while Obi-Wan Kenobi investigates an assassinationattempt on the senator and discovers a secret clone army crafted for the Jedi..")
-
+                        $("#story_line>p").text("Ten years after initially meeting, Anakin Skywalkershares a forbidden romance with Padmé Amidala, while Obi-Wan Kenobi investigates an assassinationattempt on the senator and discovers a secret clone army crafted for the Jedi..")
+                        $("#top_cast>p").html("Hayden Christensen - Anakin Skywalker<br> Natalie Portman - Padme<br> Ewan McGregor - Obi-Wan Kenobi<br> Christopher Lee - Count Dooku")
+                        $("#critic>li:nth-child(1)>p").html("<span></span>6.6/10")
+                        $("#critic>li:nth-child(2)>p").text("54")
+                        $("#critic>li:nth-child(3)>p").text("65%")
                     }
                     if(episode_num == 3){
                         $("#movie_char_holo1>.char_hololight_back").attr({"src":"image/character/red_light_high.png"})
@@ -669,7 +684,11 @@ setInterval(function(){
                         $("#movie_char_holo2>.holo_name").html("Anakin <br> Skywalker")
                         $("#movie_char_holo3>.holo_name").html("Obi-wan <br> Kenobi")
                         $("#movie_char_holo4>.holo_name").html("Yoda")
-                        $("#screen_movie_introduce>h3").text("Three years into the Clone Wars, the Jedi rescue Palpatine from Count Dooku. As Obi-Wan pursues a new threat, Anakin acts as a double agent between the Jedi Council and Palpatine and is lured into a sinister plan to rule the galaxy.")
+                        $("#story_line>p").text("Three years into the Clone Wars, the Jedi rescue Palpatine from Count Dooku. As Obi-Wan pursues a new threat, Anakin acts as a double agent between the Jedi Council and Palpatine and is lured into a sinister plan to rule the galaxy.")
+                        $("#top_cast>p").html("Hayden Christensen - Anakin Skywalker <br>Natalie Portman - Padme <br> Ewan McGregor - Obi-Wan Kenobi <br>")
+                        $("#critic>li:nth-child(1)>p").html("<span></span>7.9/10")
+                        $("#critic>li:nth-child(2)>p").text("68")
+                        $("#critic>li:nth-child(3)>p").text("79%")
                     }
                     if(episode_num == 4){
                         $("#movie_char_holo1>.char_hololight_back").attr({"src":"image/character/blue_light_high.png"})
@@ -684,7 +703,11 @@ setInterval(function(){
                         $("#movie_char_holo2>.holo_name").html("Leia <br> Organa")
                         $("#movie_char_holo3>.holo_name").html("Obi-wan <br> Kenobi")
                         $("#movie_char_holo4>.holo_name").html("Darth <br> vader")
-                        $("#screen_movie_introduce>h3").text("Luke Skywalker joins forces with a Jedi Knight, a cocky pilot, a Wookiee and two droids to save the galaxy from the Empire's world-destroying battle station, while also attempting to rescue Princess Leia from the mysterious Darth Vader.")
+                        $("#story_line>p").text("Luke Skywalker joins forces with a Jedi Knight, a cocky pilot, a Wookiee and two droids to save the galaxy from the Empire's world-destroying battle station, while also attempting to rescue Princess Leia from the mysterious Darth Vader.")
+                        $("#top_cast>p").html("Mark Hamill - Luke Skywalker <br> Harrison Ford - Han Solo <br>  Carrie Fisher - Princess Leia Organa  <br> Alec Guinness - Ben Obi-Wan Kenobi")
+                        $("#critic>li:nth-child(1)>p").html("<span></span>8.6/10")
+                        $("#critic>li:nth-child(2)>p").text("90")
+                        $("#critic>li:nth-child(3)>p").text("93%")
                     }
 
                     if(episode_num == 5){
@@ -700,8 +723,11 @@ setInterval(function(){
                         $("#movie_char_holo2>.holo_name").html("Han <br> Solo")
                         $("#movie_char_holo3>.holo_name").html("Yoda")
                         $("#movie_char_holo4>.holo_name").html("Darth <br> vader")
-                        $("#screen_movie_introduce>h3").text("After the Rebels are brutally overpowered by the Empire on the ice planet Hoth, Luke Skywalker begins Jedi training with Yoda,  while his friends are pursued across the galaxy by Darth Vader and bounty hunter Boba Fett.")
-
+                        $("#story_line>p").text("After the Rebels are brutally overpowered by the Empire on the ice planet Hoth, Luke Skywalker begins Jedi training with Yoda,  while his friends are pursued across the galaxy by Darth Vader and bounty hunter Boba Fett.")
+                        $("#top_cast>p").html("Mark Hamill - Luke Skywalker <br>Harrison Ford - Han Solo<br> Carrie Fisher - Princess Leia<br> Billy Dee Williams - Lando Calrissian")
+                        $("#critic>li:nth-child(1)>p").html("<span></span>8.7/10")
+                        $("#critic>li:nth-child(2)>p").text("82")
+                        $("#critic>li:nth-child(3)>p").text("93%")
                     }
 
                     if(episode_num == 6){
@@ -717,17 +743,37 @@ setInterval(function(){
                         $("#movie_char_holo2>.holo_name").html("Darth <br> Vader")
                         $("#movie_char_holo3>.holo_name").html("Darth <br> Sidious")
                         $("#movie_char_holo4>.holo_name").html("Yoda")
-                        $("#screen_movie_introduce>h3").text("After a daring mission to rescue Han Solo from Jabba the Hutt, the Rebels dispatch to Endor to destroy the second Death Star. Meanwhile, Luke struggles to help Darth Vader back from the dark side without falling into the Emperor's trap.")
+                        $("#story_line>p").text("After a daring mission to rescue Han Solo from Jabba the Hutt, the Rebels dispatch to Endor to destroy the second Death Star. Meanwhile, Luke struggles to help Darth Vader back from the dark side without falling into the Emperor's trap.")
+                        $("#top_cast>p").html("Mark Hamill - Luke Skywalker <br>Harrison Ford - Han Solo<br> Carrie Fisher - Princess Leia<br> Billy Dee Williams - Lando Calrissian")
+                        $("#critic>li:nth-child(1)>p").html("<span></span>8.3/10")
+                        $("#critic>li:nth-child(2)>p").text("90")
+                        $("#critic>li:nth-child(3)>p").text("93%")
                     }
                 })
-                $("#screen_prev").click(function(){
+                $("#series_list_prev").click(function(){
                     episode_num = episode_num - 1
+
                     if(episode_num == 0){
                         episode_num = 6
                     }
                     info_key = 0
 
-                    $("#movie_poster").attr({"src":"image/series/poster_ep"+episode_num+"_"+poster_num+".jpg"})
+                    $("#hologram_info_box").animate({"width":"0"},10)
+                    $("#R2D2_light").animate({"width":"0"},10)
+
+                    $(".poster_list>ul>li:nth-child(1)>img").delay(500).attr({"src":"image/series/poster_ep"+episode_num+"_1.jpg"})
+                    $(".poster_list>ul>li:nth-child(2)>img").delay(500).attr({"src":"image/series/poster_ep"+episode_num+"_2.jpg"})
+                    $(".poster_list>ul>li:nth-child(3)>img").delay(500).attr({"src":"image/series/poster_ep"+episode_num+"_3.jpg"})
+                    $(".poster_list>ul>li:nth-child(4)>img").delay(500).attr({"src":"image/series/poster_ep"+episode_num+"_1.jpg"})
+                    $("#now_episode").attr({"src":"image/series/episode-"+episode_num+".png"})
+
+
+                    $("#hologram_info_box").delay(500).animate({"width":"1300px"},300)
+                    $("#R2D2_light").delay(500).animate({"width":"1029px"},200)
+
+                    $("#episode_btn>li").eq(episode_num-1).css({"background-color":"#01ffff"})
+                    $("#episode_btn>li").eq(episode_num-1).siblings().css({"background-color":"transparent"})
+                   
                     $("#movie_char_holo1>.char_holo_char").attr({"src":"image/character/info_"+episode_num+"_1.png"})
                     $("#movie_char_holo2>.char_holo_char").attr({"src":"image/character/info_"+episode_num+"_2.png"})
                     $("#movie_char_holo3>.char_holo_char").attr({"src":"image/character/info_"+episode_num+"_3.png"})
@@ -746,7 +792,11 @@ setInterval(function(){
                         $("#movie_char_holo2>.holo_name").html("Obi-wan <br> Kenobi")
                         $("#movie_char_holo3>.holo_name").html("Anakin <br> Skywalker")
                         $("#movie_char_holo4>.holo_name").html("Darth <br> Maul")
-                        $("#screen_movie_introduce>h3").text("Two Jedi escape a hostile blockade to find allies and come across a young boy who may bring balance to the Force, but the long dormant Sith resurface to claim their original glory")
+                        $("#story_line>p").text("Two Jedi escape a hostile blockade to find allies and come across a young boy who may bring balance to the Force, but the long dormant Sith resurface to claim their original glory")
+                        $("#top_cast>p").html("Ewan McGregor - Obi-Wan Kenobi <br> Liam Neeson - Qui-Gon Jinn <br> Natalie Portman - Queen Amidala <br> Jake Lloyd - Anakin Skywalker")
+                        $("#critic>li:nth-child(1)>p").html("<span></span>6.5/10")
+                        $("#critic>li:nth-child(2)>p").text("51")
+                        $("#critic>li:nth-child(3)>p").text("51%")
 
                     }
                     if(episode_num == 2){
@@ -762,8 +812,11 @@ setInterval(function(){
                         $("#movie_char_holo2>.holo_name").html("Obi-wan <br> Kenobi")
                         $("#movie_char_holo3>.holo_name").html("Padme <br> amidla")
                         $("#movie_char_holo4>.holo_name").html("Count <br> Duku")
-                        $("#screen_movie_introduce>h3").text("Ten years after initially meeting, Anakin Skywalkershares a forbidden romance with Padmé Amidala, while Obi-Wan Kenobi investigates an assassinationattempt on the senator and discovers a secret clone army crafted for the Jedi..")
-
+                        $("#story_line>p").text("Ten years after initially meeting, Anakin Skywalkershares a forbidden romance with Padmé Amidala, while Obi-Wan Kenobi investigates an assassinationattempt on the senator and discovers a secret clone army crafted for the Jedi..")
+                        $("#top_cast>p").html("Hayden Christensen - Anakin Skywalker<br> Natalie Portman - Padme<br> Ewan McGregor - Obi-Wan Kenobi<br> Christopher Lee - Count Dooku")
+                        $("#critic>li:nth-child(1)>p").html("<span></span>6.6/10")
+                        $("#critic>li:nth-child(2)>p").text("54")
+                        $("#critic>li:nth-child(3)>p").text("65%")
                     }
                     if(episode_num == 3){
                         $("#movie_char_holo1>.char_hololight_back").attr({"src":"image/character/red_light_high.png"})
@@ -778,7 +831,11 @@ setInterval(function(){
                         $("#movie_char_holo2>.holo_name").html("Anakin <br> Skywalker")
                         $("#movie_char_holo3>.holo_name").html("Obi-wan <br> Kenobi")
                         $("#movie_char_holo4>.holo_name").html("Yoda")
-                        $("#screen_movie_introduce>h3").text("Three years into the Clone Wars, the Jedi rescue Palpatine from Count Dooku. As Obi-Wan pursues a new threat, Anakin acts as a double agent between the Jedi Council and Palpatine and is lured into a sinister plan to rule the galaxy.")
+                        $("#story_line>p").text("Three years into the Clone Wars, the Jedi rescue Palpatine from Count Dooku. As Obi-Wan pursues a new threat, Anakin acts as a double agent between the Jedi Council and Palpatine and is lured into a sinister plan to rule the galaxy.")
+                        $("#top_cast>p").html("Hayden Christensen - Anakin Skywalker <br>Natalie Portman - Padme <br> Ewan McGregor - Obi-Wan Kenobi <br>")
+                        $("#critic>li:nth-child(1)>p").html("<span></span>7.9/10")
+                        $("#critic>li:nth-child(2)>p").text("68")
+                        $("#critic>li:nth-child(3)>p").text("79%")
                     }
                     if(episode_num == 4){
                         $("#movie_char_holo1>.char_hololight_back").attr({"src":"image/character/blue_light_high.png"})
@@ -793,7 +850,11 @@ setInterval(function(){
                         $("#movie_char_holo2>.holo_name").html("Leia <br> Organa")
                         $("#movie_char_holo3>.holo_name").html("Obi-wan <br> Kenobi")
                         $("#movie_char_holo4>.holo_name").html("Darth <br> vader")
-                        $("#screen_movie_introduce>h3").text("Luke Skywalker joins forces with a Jedi Knight, a cocky pilot, a Wookiee and two droids to save the galaxy from the Empire's world-destroying battle station, while also attempting to rescue Princess Leia from the mysterious Darth Vader.")
+                        $("#story_line>p").text("Luke Skywalker joins forces with a Jedi Knight, a cocky pilot, a Wookiee and two droids to save the galaxy from the Empire's world-destroying battle station, while also attempting to rescue Princess Leia from the mysterious Darth Vader.")
+                        $("#top_cast>p").html("Mark Hamill - Luke Skywalker <br> Harrison Ford - Han Solo <br>  Carrie Fisher - Princess Leia Organa  <br> Alec Guinness - Ben Obi-Wan Kenobi")
+                        $("#critic>li:nth-child(1)>p").html("<span></span>8.6/10")
+                        $("#critic>li:nth-child(2)>p").text("90")
+                        $("#critic>li:nth-child(3)>p").text("93%")
                     }
 
                     if(episode_num == 5){
@@ -809,8 +870,11 @@ setInterval(function(){
                         $("#movie_char_holo2>.holo_name").html("Han <br> Solo")
                         $("#movie_char_holo3>.holo_name").html("Yoda")
                         $("#movie_char_holo4>.holo_name").html("Darth <br> vader")
-                        $("#screen_movie_introduce>h3").text("After the Rebels are brutally overpowered by the Empire on the ice planet Hoth, Luke Skywalker begins Jedi training with Yoda,  while his friends are pursued across the galaxy by Darth Vader and bounty hunter Boba Fett.")
-
+                        $("#story_line>p").text("After the Rebels are brutally overpowered by the Empire on the ice planet Hoth, Luke Skywalker begins Jedi training with Yoda,  while his friends are pursued across the galaxy by Darth Vader and bounty hunter Boba Fett.")
+                        $("#top_cast>p").html("Mark Hamill - Luke Skywalker <br>Harrison Ford - Han Solo<br> Carrie Fisher - Princess Leia<br> Billy Dee Williams - Lando Calrissian")
+                        $("#critic>li:nth-child(1)>p").html("<span></span>8.7/10")
+                        $("#critic>li:nth-child(2)>p").text("82")
+                        $("#critic>li:nth-child(3)>p").text("93%")
                     }
 
                     if(episode_num == 6){
@@ -826,7 +890,11 @@ setInterval(function(){
                         $("#movie_char_holo2>.holo_name").html("Darth <br> Vader")
                         $("#movie_char_holo3>.holo_name").html("Darth <br> Sidious")
                         $("#movie_char_holo4>.holo_name").html("Yoda")
-                        $("#screen_movie_introduce>h3").text("After a daring mission to rescue Han Solo from Jabba the Hutt, the Rebels dispatch to Endor to destroy the second Death Star. Meanwhile, Luke struggles to help Darth Vader back from the dark side without falling into the Emperor's trap.")
+                        $("#story_line>p").text("After a daring mission to rescue Han Solo from Jabba the Hutt, the Rebels dispatch to Endor to destroy the second Death Star. Meanwhile, Luke struggles to help Darth Vader back from the dark side without falling into the Emperor's trap.")
+                        $("#top_cast>p").html("Mark Hamill - Luke Skywalker <br>Harrison Ford - Han Solo<br> Carrie Fisher - Princess Leia<br> Billy Dee Williams - Lando Calrissian")
+                        $("#critic>li:nth-child(1)>p").html("<span></span>8.3/10")
+                        $("#critic>li:nth-child(2)>p").text("90")
+                        $("#critic>li:nth-child(3)>p").text("93%")
                     }
                 })
                 //패럴랙스에서 에피소들를 선택했을 경우//
@@ -834,13 +902,26 @@ setInterval(function(){
                     episode_num = $(this).parent().index()
                     info_key = 0
 
-                    $("#movie_poster").attr({"src":"image/series/poster_ep"+episode_num+"_"+poster_num+".jpg"})
+                    
+             
+
+                    $(".poster_list>ul>li:nth-child(1)>img").delay(500).attr({"src":"image/series/poster_ep"+episode_num+"_1.jpg"})
+                    $(".poster_list>ul>li:nth-child(2)>img").delay(500).attr({"src":"image/series/poster_ep"+episode_num+"_2.jpg"})
+                    $(".poster_list>ul>li:nth-child(3)>img").delay(500).attr({"src":"image/series/poster_ep"+episode_num+"_3.jpg"})
+                    $(".poster_list>ul>li:nth-child(4)>img").delay(500).attr({"src":"image/series/poster_ep"+episode_num+"_1.jpg"})
+                    $("#now_episode").attr({"src":"image/series/episode-"+episode_num+".png"})
+
+
+             
+
+                    $("#episode_btn>li").eq(episode_num-1).css({"background-color":"#01ffff"})
+                    $("#episode_btn>li").eq(episode_num-1).siblings().css({"background-color":"transparent"})
+                   
                     $("#movie_char_holo1>.char_holo_char").attr({"src":"image/character/info_"+episode_num+"_1.png"})
                     $("#movie_char_holo2>.char_holo_char").attr({"src":"image/character/info_"+episode_num+"_2.png"})
                     $("#movie_char_holo3>.char_holo_char").attr({"src":"image/character/info_"+episode_num+"_3.png"})
                     $("#movie_char_holo4>.char_holo_char").attr({"src":"image/character/info_"+episode_num+"_4.png"})
                     $("#screen_movie_introduce>img").attr({"src":"image/episode-"+episode_num+".png"})
-                    
                     if(episode_num == 1){
                         $("#movie_char_holo1>.char_hololight_back").attr({"src":"image/character/blue_light_high.png"})
                         $("#movie_char_holo1>.char_hololight_front").attr({"src":"image/character/blue_light.png"})
@@ -854,7 +935,11 @@ setInterval(function(){
                         $("#movie_char_holo2>.holo_name").html("Obi-wan <br> Kenobi")
                         $("#movie_char_holo3>.holo_name").html("Anakin <br> Skywalker")
                         $("#movie_char_holo4>.holo_name").html("Darth <br> Maul")
-                        $("#screen_movie_introduce>h3").text("Two Jedi escape a hostile blockade to find allies and come across a young boy who may bring balance to the Force, but the long dormant Sith resurface to claim their original glory")
+                        $("#story_line>p").text("Two Jedi escape a hostile blockade to find allies and come across a young boy who may bring balance to the Force, but the long dormant Sith resurface to claim their original glory")
+                        $("#top_cast>p").html("Ewan McGregor - Obi-Wan Kenobi <br> Liam Neeson - Qui-Gon Jinn <br> Natalie Portman - Queen Amidala <br> Jake Lloyd - Anakin Skywalker")
+                        $("#critic>li:nth-child(1)>p").html("<span></span>6.5/10")
+                        $("#critic>li:nth-child(2)>p").text("51")
+                        $("#critic>li:nth-child(3)>p").text("51%")
 
                     }
                     if(episode_num == 2){
@@ -870,8 +955,11 @@ setInterval(function(){
                         $("#movie_char_holo2>.holo_name").html("Obi-wan <br> Kenobi")
                         $("#movie_char_holo3>.holo_name").html("Padme <br> amidla")
                         $("#movie_char_holo4>.holo_name").html("Count <br> Duku")
-                        $("#screen_movie_introduce>h3").text("Ten years after initially meeting, Anakin Skywalkershares a forbidden romance with Padmé Amidala, while Obi-Wan Kenobi investigates an assassinationattempt on the senator and discovers a secret clone army crafted for the Jedi..")
-
+                        $("#story_line>p").text("Ten years after initially meeting, Anakin Skywalkershares a forbidden romance with Padmé Amidala, while Obi-Wan Kenobi investigates an assassinationattempt on the senator and discovers a secret clone army crafted for the Jedi..")
+                        $("#top_cast>p").html("Hayden Christensen - Anakin Skywalker<br> Natalie Portman - Padme<br> Ewan McGregor - Obi-Wan Kenobi<br> Christopher Lee - Count Dooku")
+                        $("#critic>li:nth-child(1)>p").html("<span></span>6.6/10")
+                        $("#critic>li:nth-child(2)>p").text("54")
+                        $("#critic>li:nth-child(3)>p").text("65%")
                     }
                     if(episode_num == 3){
                         $("#movie_char_holo1>.char_hololight_back").attr({"src":"image/character/red_light_high.png"})
@@ -886,7 +974,11 @@ setInterval(function(){
                         $("#movie_char_holo2>.holo_name").html("Anakin <br> Skywalker")
                         $("#movie_char_holo3>.holo_name").html("Obi-wan <br> Kenobi")
                         $("#movie_char_holo4>.holo_name").html("Yoda")
-                        $("#screen_movie_introduce>h3").text("Three years into the Clone Wars, the Jedi rescue Palpatine from Count Dooku. As Obi-Wan pursues a new threat, Anakin acts as a double agent between the Jedi Council and Palpatine and is lured into a sinister plan to rule the galaxy.")
+                        $("#story_line>p").text("Three years into the Clone Wars, the Jedi rescue Palpatine from Count Dooku. As Obi-Wan pursues a new threat, Anakin acts as a double agent between the Jedi Council and Palpatine and is lured into a sinister plan to rule the galaxy.")
+                        $("#top_cast>p").html("Hayden Christensen - Anakin Skywalker <br>Natalie Portman - Padme <br> Ewan McGregor - Obi-Wan Kenobi <br>")
+                        $("#critic>li:nth-child(1)>p").html("<span></span>7.9/10")
+                        $("#critic>li:nth-child(2)>p").text("68")
+                        $("#critic>li:nth-child(3)>p").text("79%")
                     }
                     if(episode_num == 4){
                         $("#movie_char_holo1>.char_hololight_back").attr({"src":"image/character/blue_light_high.png"})
@@ -901,7 +993,11 @@ setInterval(function(){
                         $("#movie_char_holo2>.holo_name").html("Leia <br> Organa")
                         $("#movie_char_holo3>.holo_name").html("Obi-wan <br> Kenobi")
                         $("#movie_char_holo4>.holo_name").html("Darth <br> vader")
-                        $("#screen_movie_introduce>h3").text("Luke Skywalker joins forces with a Jedi Knight, a cocky pilot, a Wookiee and two droids to save the galaxy from the Empire's world-destroying battle station, while also attempting to rescue Princess Leia from the mysterious Darth Vader.")
+                        $("#story_line>p").text("Luke Skywalker joins forces with a Jedi Knight, a cocky pilot, a Wookiee and two droids to save the galaxy from the Empire's world-destroying battle station, while also attempting to rescue Princess Leia from the mysterious Darth Vader.")
+                        $("#top_cast>p").html("Mark Hamill - Luke Skywalker <br> Harrison Ford - Han Solo <br>  Carrie Fisher - Princess Leia Organa  <br> Alec Guinness - Ben Obi-Wan Kenobi")
+                        $("#critic>li:nth-child(1)>p").html("<span></span>8.6/10")
+                        $("#critic>li:nth-child(2)>p").text("90")
+                        $("#critic>li:nth-child(3)>p").text("93%")
                     }
 
                     if(episode_num == 5){
@@ -917,8 +1013,11 @@ setInterval(function(){
                         $("#movie_char_holo2>.holo_name").html("Han <br> Solo")
                         $("#movie_char_holo3>.holo_name").html("Yoda")
                         $("#movie_char_holo4>.holo_name").html("Darth <br> vader")
-                        $("#screen_movie_introduce>h3").text("After the Rebels are brutally overpowered by the Empire on the ice planet Hoth, Luke Skywalker begins Jedi training with Yoda,  while his friends are pursued across the galaxy by Darth Vader and bounty hunter Boba Fett.")
-
+                        $("#story_line>p").text("After the Rebels are brutally overpowered by the Empire on the ice planet Hoth, Luke Skywalker begins Jedi training with Yoda,  while his friends are pursued across the galaxy by Darth Vader and bounty hunter Boba Fett.")
+                        $("#top_cast>p").html("Mark Hamill - Luke Skywalker <br>Harrison Ford - Han Solo<br> Carrie Fisher - Princess Leia<br> Billy Dee Williams - Lando Calrissian")
+                        $("#critic>li:nth-child(1)>p").html("<span></span>8.7/10")
+                        $("#critic>li:nth-child(2)>p").text("82")
+                        $("#critic>li:nth-child(3)>p").text("93%")
                     }
 
                     if(episode_num == 6){
@@ -934,25 +1033,104 @@ setInterval(function(){
                         $("#movie_char_holo2>.holo_name").html("Darth <br> Vader")
                         $("#movie_char_holo3>.holo_name").html("Darth <br> Sidious")
                         $("#movie_char_holo4>.holo_name").html("Yoda")
-                        $("#screen_movie_introduce>h3").text("After a daring mission to rescue Han Solo from Jabba the Hutt, the Rebels dispatch to Endor to destroy the second Death Star. Meanwhile, Luke struggles to help Darth Vader back from the dark side without falling into the Emperor's trap.")
+                        $("#story_line>p").text("After a daring mission to rescue Han Solo from Jabba the Hutt, the Rebels dispatch to Endor to destroy the second Death Star. Meanwhile, Luke struggles to help Darth Vader back from the dark side without falling into the Emperor's trap.")
+                        $("#top_cast>p").html("Mark Hamill - Luke Skywalker <br>Harrison Ford - Han Solo<br> Carrie Fisher - Princess Leia<br> Billy Dee Williams - Lando Calrissian")
+                        $("#critic>li:nth-child(1)>p").html("<span></span>8.3/10")
+                        $("#critic>li:nth-child(2)>p").text("90")
+                        $("#critic>li:nth-child(3)>p").text("93%")
                     }
                     //전환 애니메이션//
                     $("#ship_door").fadeIn(1)
                     $("#ship_door").animate({"scale":1})
-                    $("#left_door").delay(500).animate({"left":"235px"},700)
-                    $("#right_door").delay(500).animate({"right":"212px"},700)
-                    $("html,body").delay(1500).animate({scrollTop:$("#movie_screen").offset().top},10)
-                    $("#left_door").delay(2000).animate({"left":"-1200px"},700)
-                    $("#right_door").delay(2000).animate({"right":"-1200px"},700)
-                    $("#ship_door").delay(3500).animate({"scale":2})
+                    $("#left_door").delay(200).animate({"left":"235px"},400)
+                    $("#right_door").delay(200).animate({"right":"212px"},400)
+                    $("html,body").delay(600).animate({scrollTop:$("#movie_screen").offset().top},10)
+                    $("#left_door").delay(610).animate({"left":"-1200px"},400)
+                    $("#right_door").delay(610).animate({"right":"-1200px"},400)
+                    $("#ship_door").delay(700).animate({"scale":2})
                     $("#ship_door").fadeOut(1)
                 })
-                //에피소드 표에서 선택했을 경우//
-                $("#info_box5_episode1,#info_box5_episode2,#info_box5_episode3,#info_box5_episode4,#info_box5_episode5,#info_box5_episode6").click(function(){
-                    episode_num = $(this).index()
-                    info_key = 0
 
-                    $("#movie_poster").attr({"src":"image/series/poster_ep"+episode_num+"_"+poster_num+".jpg"})
+                 /////////////////시리즈 목록 기능///////////////////
+                
+
+                //포스터 확대//
+                $(".poster_big").click(function(){
+                    $("#poster_big_box").css({"display":"block"})
+                })
+                $("#big_poster_close").click(function(){
+                    $("#poster_big_box").css({"display":"none"})
+                })
+                //포스터 넘기기//
+                poster_num = 0
+                $(".poster_next").click(function(){
+                    
+                    if(poster_num >=3){
+                        poster_num = 0
+                        $(".poster_list>ul").css({"left":"0"})
+                       
+                    }
+
+                    poster_num = poster_num + 1
+                    $(".poster_list>ul").stop().animate({"left":poster_num*-100+"%"})
+                    if(poster_num == 3){
+                        $(".hologram_poster_btn>li:nth-child(1)").css({"transform":"scale(1.5)"})
+                        $(".hologram_poster_btn>li:nth-child(1)").siblings().css({"transform":"scale(1)"})
+                    }                    
+                    $(".hologram_poster_btn>li").eq(poster_num).css({"transform":"scale(1.5)"})
+                    $(".hologram_poster_btn>li").eq(poster_num).siblings().css({"transform":"scale(1)"})
+                })
+                $(".poster_prev").click(function(){
+                    
+                    if(poster_num <=0){
+                        
+                        $(".poster_list>ul").css({"left":"-300%"})
+                       poster_num = 3
+                    }
+
+                    poster_num = poster_num - 1
+                    $(".poster_list>ul").stop().animate({"left":poster_num*-100+"%"})
+                    if(poster_num == 3){
+                        $(".hologram_poster_btn>li:nth-child(1)").css({"transform":"scale(1.5)"})
+                        $(".hologram_poster_btn>li:nth-child(1)").siblings().css({"transform":"scale(1)"})
+                    }                    
+                    $(".hologram_poster_btn>li").eq(poster_num).css({"transform":"scale(1.5)"})
+                    $(".hologram_poster_btn>li").eq(poster_num).siblings().css({"transform":"scale(1)"})
+                })
+                $(".hologram_poster_btn>li").click(function(){
+                    poster_num = $(this).index()
+                    $(".poster_list>ul").stop().animate({"left":poster_num*-100+"%"})
+                    if(poster_num == 3){
+                        $(".hologram_poster_btn>li:nth-child(1)").css({"transform":"scale(1.5)"})
+                        $(".hologram_poster_btn>li:nth-child(1)").siblings().css({"transform":"scale(1)"})
+                    }                    
+                    $(".hologram_poster_btn>li").eq(poster_num).css({"transform":"scale(1.5)"})
+                    $(".hologram_poster_btn>li").eq(poster_num).siblings().css({"transform":"scale(1)"})
+                })
+
+
+
+
+                //기타 효과//
+                $("#episode_btn>li").click(function(){
+                   episode_num = $(this).index() + 1
+
+                   $("#hologram_info_box").animate({"width":"0"},10)
+                    $("#R2D2_light").animate({"width":"0"},10)
+
+                    $(".poster_list>ul>li:nth-child(1)>img").delay(500).attr({"src":"image/series/poster_ep"+episode_num+"_1.jpg"})
+                    $(".poster_list>ul>li:nth-child(2)>img").delay(500).attr({"src":"image/series/poster_ep"+episode_num+"_2.jpg"})
+                    $(".poster_list>ul>li:nth-child(3)>img").delay(500).attr({"src":"image/series/poster_ep"+episode_num+"_3.jpg"})
+                    $(".poster_list>ul>li:nth-child(4)>img").delay(500).attr({"src":"image/series/poster_ep"+episode_num+"_1.jpg"})
+                    $("#now_episode").attr({"src":"image/series/episode-"+episode_num+".png"})
+
+
+                    $("#hologram_info_box").delay(500).animate({"width":"1300px"},300)
+                    $("#R2D2_light").delay(500).animate({"width":"1029px"},200)
+
+                    $("#episode_btn>li").eq(episode_num-1).css({"background-color":"#01ffff"})
+                    $("#episode_btn>li").eq(episode_num-1).siblings().css({"background-color":"transparent"})
+                   
                     $("#movie_char_holo1>.char_holo_char").attr({"src":"image/character/info_"+episode_num+"_1.png"})
                     $("#movie_char_holo2>.char_holo_char").attr({"src":"image/character/info_"+episode_num+"_2.png"})
                     $("#movie_char_holo3>.char_holo_char").attr({"src":"image/character/info_"+episode_num+"_3.png"})
@@ -971,7 +1149,11 @@ setInterval(function(){
                         $("#movie_char_holo2>.holo_name").html("Obi-wan <br> Kenobi")
                         $("#movie_char_holo3>.holo_name").html("Anakin <br> Skywalker")
                         $("#movie_char_holo4>.holo_name").html("Darth <br> Maul")
-                        $("#screen_movie_introduce>h3").text("Two Jedi escape a hostile blockade to find allies and come across a young boy who may bring balance to the Force, but the long dormant Sith resurface to claim their original glory")
+                        $("#story_line>p").text("Two Jedi escape a hostile blockade to find allies and come across a young boy who may bring balance to the Force, but the long dormant Sith resurface to claim their original glory")
+                        $("#top_cast>p").html("Ewan McGregor - Obi-Wan Kenobi <br> Liam Neeson - Qui-Gon Jinn <br> Natalie Portman - Queen Amidala <br> Jake Lloyd - Anakin Skywalker")
+                        $("#critic>li:nth-child(1)>p").html("<span></span>6.5/10")
+                        $("#critic>li:nth-child(2)>p").text("51")
+                        $("#critic>li:nth-child(3)>p").text("51%")
 
                     }
                     if(episode_num == 2){
@@ -987,8 +1169,11 @@ setInterval(function(){
                         $("#movie_char_holo2>.holo_name").html("Obi-wan <br> Kenobi")
                         $("#movie_char_holo3>.holo_name").html("Padme <br> amidla")
                         $("#movie_char_holo4>.holo_name").html("Count <br> Duku")
-                        $("#screen_movie_introduce>h3").text("Ten years after initially meeting, Anakin Skywalkershares a forbidden romance with Padmé Amidala, while Obi-Wan Kenobi investigates an assassinationattempt on the senator and discovers a secret clone army crafted for the Jedi..")
-
+                        $("#story_line>p").text("Ten years after initially meeting, Anakin Skywalkershares a forbidden romance with Padmé Amidala, while Obi-Wan Kenobi investigates an assassinationattempt on the senator and discovers a secret clone army crafted for the Jedi..")
+                        $("#top_cast>p").html("Hayden Christensen - Anakin Skywalker<br> Natalie Portman - Padme<br> Ewan McGregor - Obi-Wan Kenobi<br> Christopher Lee - Count Dooku")
+                        $("#critic>li:nth-child(1)>p").html("<span></span>6.6/10")
+                        $("#critic>li:nth-child(2)>p").text("54")
+                        $("#critic>li:nth-child(3)>p").text("65%")
                     }
                     if(episode_num == 3){
                         $("#movie_char_holo1>.char_hololight_back").attr({"src":"image/character/red_light_high.png"})
@@ -1003,7 +1188,11 @@ setInterval(function(){
                         $("#movie_char_holo2>.holo_name").html("Anakin <br> Skywalker")
                         $("#movie_char_holo3>.holo_name").html("Obi-wan <br> Kenobi")
                         $("#movie_char_holo4>.holo_name").html("Yoda")
-                        $("#screen_movie_introduce>h3").text("Three years into the Clone Wars, the Jedi rescue Palpatine from Count Dooku. As Obi-Wan pursues a new threat, Anakin acts as a double agent between the Jedi Council and Palpatine and is lured into a sinister plan to rule the galaxy.")
+                        $("#story_line>p").text("Three years into the Clone Wars, the Jedi rescue Palpatine from Count Dooku. As Obi-Wan pursues a new threat, Anakin acts as a double agent between the Jedi Council and Palpatine and is lured into a sinister plan to rule the galaxy.")
+                        $("#top_cast>p").html("Hayden Christensen - Anakin Skywalker <br>Natalie Portman - Padme <br> Ewan McGregor - Obi-Wan Kenobi <br>")
+                        $("#critic>li:nth-child(1)>p").html("<span></span>7.9/10")
+                        $("#critic>li:nth-child(2)>p").text("68")
+                        $("#critic>li:nth-child(3)>p").text("79%")
                     }
                     if(episode_num == 4){
                         $("#movie_char_holo1>.char_hololight_back").attr({"src":"image/character/blue_light_high.png"})
@@ -1018,7 +1207,11 @@ setInterval(function(){
                         $("#movie_char_holo2>.holo_name").html("Leia <br> Organa")
                         $("#movie_char_holo3>.holo_name").html("Obi-wan <br> Kenobi")
                         $("#movie_char_holo4>.holo_name").html("Darth <br> vader")
-                        $("#screen_movie_introduce>h3").text("Luke Skywalker joins forces with a Jedi Knight, a cocky pilot, a Wookiee and two droids to save the galaxy from the Empire's world-destroying battle station, while also attempting to rescue Princess Leia from the mysterious Darth Vader.")
+                        $("#story_line>p").text("Luke Skywalker joins forces with a Jedi Knight, a cocky pilot, a Wookiee and two droids to save the galaxy from the Empire's world-destroying battle station, while also attempting to rescue Princess Leia from the mysterious Darth Vader.")
+                        $("#top_cast>p").html("Mark Hamill - Luke Skywalker <br> Harrison Ford - Han Solo <br>  Carrie Fisher - Princess Leia Organa  <br> Alec Guinness - Ben Obi-Wan Kenobi")
+                        $("#critic>li:nth-child(1)>p").html("<span></span>8.6/10")
+                        $("#critic>li:nth-child(2)>p").text("90")
+                        $("#critic>li:nth-child(3)>p").text("93%")
                     }
 
                     if(episode_num == 5){
@@ -1034,8 +1227,11 @@ setInterval(function(){
                         $("#movie_char_holo2>.holo_name").html("Han <br> Solo")
                         $("#movie_char_holo3>.holo_name").html("Yoda")
                         $("#movie_char_holo4>.holo_name").html("Darth <br> vader")
-                        $("#screen_movie_introduce>h3").text("After the Rebels are brutally overpowered by the Empire on the ice planet Hoth, Luke Skywalker begins Jedi training with Yoda,  while his friends are pursued across the galaxy by Darth Vader and bounty hunter Boba Fett.")
-
+                        $("#story_line>p").text("After the Rebels are brutally overpowered by the Empire on the ice planet Hoth, Luke Skywalker begins Jedi training with Yoda,  while his friends are pursued across the galaxy by Darth Vader and bounty hunter Boba Fett.")
+                        $("#top_cast>p").html("Mark Hamill - Luke Skywalker <br>Harrison Ford - Han Solo<br> Carrie Fisher - Princess Leia<br> Billy Dee Williams - Lando Calrissian")
+                        $("#critic>li:nth-child(1)>p").html("<span></span>8.7/10")
+                        $("#critic>li:nth-child(2)>p").text("82")
+                        $("#critic>li:nth-child(3)>p").text("93%")
                     }
 
                     if(episode_num == 6){
@@ -1051,25 +1247,12 @@ setInterval(function(){
                         $("#movie_char_holo2>.holo_name").html("Darth <br> Vader")
                         $("#movie_char_holo3>.holo_name").html("Darth <br> Sidious")
                         $("#movie_char_holo4>.holo_name").html("Yoda")
-                        $("#screen_movie_introduce>h3").text("After a daring mission to rescue Han Solo from Jabba the Hutt, the Rebels dispatch to Endor to destroy the second Death Star. Meanwhile, Luke struggles to help Darth Vader back from the dark side without falling into the Emperor's trap.")
+                        $("#story_line>p").text("After a daring mission to rescue Han Solo from Jabba the Hutt, the Rebels dispatch to Endor to destroy the second Death Star. Meanwhile, Luke struggles to help Darth Vader back from the dark side without falling into the Emperor's trap.")
+                        $("#top_cast>p").html("Mark Hamill - Luke Skywalker <br>Harrison Ford - Han Solo<br> Carrie Fisher - Princess Leia<br> Billy Dee Williams - Lando Calrissian")
+                        $("#critic>li:nth-child(1)>p").html("<span></span>8.3/10")
+                        $("#critic>li:nth-child(2)>p").text("90")
+                        $("#critic>li:nth-child(3)>p").text("93%")
                     }
-
-
-
-
-
-
-
-                    //전환 애니메이션//
-                    $("#ship_door").fadeIn(1)
-                    $("#ship_door").animate({"scale":1})
-                    $("#left_door").delay(500).animate({"left":"235px"},700)
-                    $("#right_door").delay(500).animate({"right":"212px"},700)
-                    $("html,body").delay(1500).animate({scrollTop:$("#movie_screen").offset().top},10)
-                    $("#left_door").delay(2000).animate({"left":"-1200px"},700)
-                    $("#right_door").delay(2000).animate({"right":"-1200px"},700)
-                    $("#ship_door").delay(3500).animate({"scale":2})
-                    $("#ship_door").fadeOut(1)
                 })
 
                 /////////////////////////////시리즈 갤러리 캐릭터 전환//////////////////////////////////
@@ -1077,27 +1260,29 @@ setInterval(function(){
 
 
                 //갤러리로 이동//
-                $("#screen_gal_box>.projecter_btn").click(function(){
+                $("#hologram_gall_btn").click(function(){
+
+
                     $("#ship_door").fadeIn(1)
                     $("#ship_door").animate({"scale":1})
-                    $("#left_door").delay(500).animate({"left":"235px"},700)
-                    $("#right_door").delay(500).animate({"right":"212px"},700)
-                    $("html,body").delay(1500).animate({scrollTop:$("#gallery").offset().top},10)
-                    $("#left_door").delay(2000).animate({"left":"-1200px"},700)
-                    $("#right_door").delay(2000).animate({"right":"-1200px"},700)
-                    $("#ship_door").delay(3500).animate({"scale":2})
+                    $("#left_door").delay(200).animate({"left":"235px"},400)
+                    $("#right_door").delay(200).animate({"right":"212px"},400)
+                    $("html,body").delay(600).animate({scrollTop:$("#gallery").offset().top},1)
+                    $("#left_door").delay(610).animate({"left":"-1200px"},400)
+                    $("#right_door").delay(610).animate({"right":"-1200px"},400)
+                    $("#ship_door").delay(700).animate({"scale":2})
                     $("#ship_door").fadeOut(1)
 
                 })
 
                 //캐릭터 스탠드로 전환//
-                $("#screen_char_box>.projecter_btn").click(function(){
+                $("#hologram_char_btn").click(function(){
 
-                    $("#movie_poster_box").animate({"left":"-50%"},500)
-                    $("#movie_screen_btn_box").animate({"top":"100%"},500)
-                    $(" #screen_char_box").delay(00).animate({"margin-top":"484px"},100)
-                    $(" #screen_gal_box").delay(00).animate({"margin-top":"484px"},100)
-                    $(" #screen_movie_introduce").animate({"margin-top":"-1400px"},500)
+                    $("#hologram_info_box").animate({"width":"0"},300)
+                    $("#R2D2_light").animate({"width":"0"},200)
+                    $("#R2D2").delay(200).animate({"margin-top":"500px"},200)
+                    $("#series_list_next").animate({"right":"-200px"})
+                    $("#series_list_prev").animate({"left":"-200px"})
                     $("#movie_char_box").delay(500).animate({"bottom":"00px"},500)
                     $("#char_title").delay(500).fadeIn(1000)
                     $("#movie_char_box>div>.char_holo_char").delay(1000).fadeIn(1000)
@@ -1108,16 +1293,17 @@ setInterval(function(){
                 //캐릭터 스탠드 닫기//
                 $("#char_box_close").click(function(){
 
-                    $("#movie_poster_box").animate({"left":"50%"},500)
-                    $("#movie_screen_btn_box").animate({"top":"50%"},500)
-                    $(" #screen_char_box").delay(00).animate({"margin-top":"227px"},500)
-                    $(" #screen_gal_box").delay(00).animate({"margin-top":"227px"},500)
-                    $(" #screen_movie_introduce").animate({"margin-top":"-400px"},500)
                     $("#movie_char_box").delay(00).animate({"bottom":"-800px"},500)
                     $("#char_title").delay(0).fadeOut(100)
                     $("#movie_char_box>div>.char_holo_char").delay(1000).fadeOut(100)
                     $(".holo_name").delay(1000).fadeOut(100)
                     $("#char_box_close").delay(0).fadeOut(100)
+                    $("#R2D2").delay(200).animate({"margin-top":"246px"},200)
+                    $("#hologram_info_box").delay(500).animate({"width":"1300px"},300)
+ 
+                    $("#R2D2_light").delay(500).animate({"width":"1029px"},200)
+                    $("#series_list_next").animate({"right":"0"})
+                    $("#series_list_prev").animate({"left":"0"})
                 })
                 $("#movie_char_box>div").mouseenter(function(){
                     $(this).children(".char_holo_char").animate({"opacity":"1"},100)
@@ -1363,23 +1549,35 @@ setInterval(function(){
 
                 //시리즈 인포에서 갤러리로 진입할시///
                 gallery_ep_num = 3
-                $("#screen_gal_box>.projecter_btn").click(function(){
+                $("#hologram_gall_btn").click(function(){
                     gallery_ep_num = episode_num                
                     
                     $("#episode_select_box>ul>li").eq(gall_img_num-1).css({"opacity":"1"})
                     $("#episode_select_box>ul>li").eq(gall_img_num-1).siblings().css({"opacity":"0.5"})
-                    $("#content_list1>li:nth-child(1)>img").attr({"src":"image/gallery/gall_ep"+gallery_ep_num+"_1.jpg"})
-                    $("#content_list1>li:nth-child(2)>img").attr({"src":"image/gallery/gall_ep"+gallery_ep_num+"_2.jpg"})
-                    $("#content_list1>li:nth-child(3)>img").attr({"src":"image/gallery/gall_ep"+gallery_ep_num+"_3.jpg"})
-                    $("#content_list1>li:nth-child(4)>img").attr({"src":"image/gallery/gall_ep"+gallery_ep_num+"_4.jpg"})
-                    $("#content_list1>li:nth-child(5)>img").attr({"src":"image/gallery/gall_ep"+gallery_ep_num+"_5.jpg"})
+                    $("#content_img_box>ul>li>img").eq(gallery_ep_num-1).css({"display":"block"})
+                    $("#content_img_box>ul>li>img").eq(gallery_ep_num-1).siblings().css({"display":"none"})
+                    $("#content_img_box>ul>li:nth-child(2)>img").eq(gallery_ep_num-1).css({"display":"block"})
+                    $("#content_img_box>ul>li:nth-child(2)>img").eq(gallery_ep_num-1).siblings().css({"display":"none"})
+                    $("#content_img_box>ul>li:nth-child(3)>img").eq(gallery_ep_num-1).css({"display":"block"})
+                    $("#content_img_box>ul>li:nth-child(3)>img").eq(gallery_ep_num-1).siblings().css({"display":"none"})
+                    $("#content_img_box>ul>li:nth-child(4)>img").eq(gallery_ep_num-1).css({"display":"block"})
+                    $("#content_img_box>ul>li:nth-child(4)>img").eq(gallery_ep_num-1).siblings().css({"display":"none"})
+                    $("#content_img_box>ul>li:nth-child(5)>img").eq(gallery_ep_num-1).css({"display":"block"})
+                    $("#content_img_box>ul>li:nth-child(5)>img").eq(gallery_ep_num-1).siblings().css({"display":"none"})
+                    $("#content_img_box>ul>li:nth-child(6)>img").eq(gallery_ep_num-1).css({"display":"block"})
+                    $("#content_img_box>ul>li:nth-child(6)>img").eq(gallery_ep_num-1).siblings().css({"display":"none"})
+                    $("#content_list1>li>img").eq(gallery_ep_num-1).css({"display":"block"})
+                    $("#content_list1>li>img").eq(gallery_ep_num-1).siblings().css({"display":"none"})
+                    $("#content_list1>li:nth-child(2)>img").eq(gallery_ep_num-1).css({"display":"block"})
+                    $("#content_list1>li:nth-child(2)>img").eq(gallery_ep_num-1).siblings().css({"display":"none"})
+                    $("#content_list1>li:nth-child(3)>img").eq(gallery_ep_num-1).css({"display":"block"})
+                    $("#content_list1>li:nth-child(3)>img").eq(gallery_ep_num-1).siblings().css({"display":"none"})
+                    $("#content_list1>li:nth-child(4)>img").eq(gallery_ep_num-1).css({"display":"block"})
+                    $("#content_list1>li:nth-child(4)>img").eq(gallery_ep_num-1).siblings().css({"display":"none"})
+                    $("#content_list1>li:nth-child(5)>img").eq(gallery_ep_num-1).css({"display":"block"})
+                    $("#content_list1>li:nth-child(5)>img").eq(gallery_ep_num-1).siblings().css({"display":"none"})
+                    
                     $("#selected_episode").attr({"src":"image/episode-"+gallery_ep_num+".png"})
-                    $("#content_img_box>ul>li:nth-child(1)>img").attr({"src":"image/gallery/gall_ep"+gallery_ep_num+"_1.jpg"})
-                    $("#content_img_box>ul>li:nth-child(2)>img").attr({"src":"image/gallery/gall_ep"+gallery_ep_num+"_2.jpg"})
-                    $("#content_img_box>ul>li:nth-child(3)>img").attr({"src":"image/gallery/gall_ep"+gallery_ep_num+"_3.jpg"})
-                    $("#content_img_box>ul>li:nth-child(4)>img").attr({"src":"image/gallery/gall_ep"+gallery_ep_num+"_4.jpg"})
-                    $("#content_img_box>ul>li:nth-child(5)>img").attr({"src":"image/gallery/gall_ep"+gallery_ep_num+"_5.jpg"})
-                    $("#content_img_box>ul>li:nth-child(6)>img").attr({"src":"image/gallery/gall_ep"+gallery_ep_num+"_1.jpg"})
                     if(gallery_ep_num == 1){
                         $("#content_box>iframe").attr({"src":"https://www.youtube.com/embed/bD7bpG-zDJQ"})
                     }
@@ -1440,11 +1638,29 @@ setInterval(function(){
                     gallery_ep_num = $(this).index() + 1
                     $(this).css({"opacity":"1"})
                     $(this).siblings().css({"opacity":"0.5"})
-                    $("#content_list1>li:nth-child(1)>img").attr({"src":"image/gallery/gall_ep"+gallery_ep_num+"_1.jpg"})
-                    $("#content_list1>li:nth-child(2)>img").attr({"src":"image/gallery/gall_ep"+gallery_ep_num+"_2.jpg"})
-                    $("#content_list1>li:nth-child(3)>img").attr({"src":"image/gallery/gall_ep"+gallery_ep_num+"_3.jpg"})
-                    $("#content_list1>li:nth-child(4)>img").attr({"src":"image/gallery/gall_ep"+gallery_ep_num+"_4.jpg"})
-                    $("#content_list1>li:nth-child(5)>img").attr({"src":"image/gallery/gall_ep"+gallery_ep_num+"_5.jpg"})
+                    $("#content_img_box>ul>li>img").eq(gallery_ep_num-1).css({"display":"block"})
+                    $("#content_img_box>ul>li>img").eq(gallery_ep_num-1).siblings().css({"display":"none"})
+                    $("#content_img_box>ul>li:nth-child(2)>img").eq(gallery_ep_num-1).css({"display":"block"})
+                    $("#content_img_box>ul>li:nth-child(2)>img").eq(gallery_ep_num-1).siblings().css({"display":"none"})
+                    $("#content_img_box>ul>li:nth-child(3)>img").eq(gallery_ep_num-1).css({"display":"block"})
+                    $("#content_img_box>ul>li:nth-child(3)>img").eq(gallery_ep_num-1).siblings().css({"display":"none"})
+                    $("#content_img_box>ul>li:nth-child(4)>img").eq(gallery_ep_num-1).css({"display":"block"})
+                    $("#content_img_box>ul>li:nth-child(4)>img").eq(gallery_ep_num-1).siblings().css({"display":"none"})
+                    $("#content_img_box>ul>li:nth-child(5)>img").eq(gallery_ep_num-1).css({"display":"block"})
+                    $("#content_img_box>ul>li:nth-child(5)>img").eq(gallery_ep_num-1).siblings().css({"display":"none"})
+                    $("#content_img_box>ul>li:nth-child(6)>img").eq(gallery_ep_num-1).css({"display":"block"})
+                    $("#content_img_box>ul>li:nth-child(6)>img").eq(gallery_ep_num-1).siblings().css({"display":"none"})
+                    $("#content_list1>li>img").eq(gallery_ep_num-1).css({"display":"block"})
+                    $("#content_list1>li>img").eq(gallery_ep_num-1).siblings().css({"display":"none"})
+                    $("#content_list1>li:nth-child(2)>img").eq(gallery_ep_num-1).css({"display":"block"})
+                    $("#content_list1>li:nth-child(2)>img").eq(gallery_ep_num-1).siblings().css({"display":"none"})
+                    $("#content_list1>li:nth-child(3)>img").eq(gallery_ep_num-1).css({"display":"block"})
+                    $("#content_list1>li:nth-child(3)>img").eq(gallery_ep_num-1).siblings().css({"display":"none"})
+                    $("#content_list1>li:nth-child(4)>img").eq(gallery_ep_num-1).css({"display":"block"})
+                    $("#content_list1>li:nth-child(4)>img").eq(gallery_ep_num-1).siblings().css({"display":"none"})
+                    $("#content_list1>li:nth-child(5)>img").eq(gallery_ep_num-1).css({"display":"block"})
+                    $("#content_list1>li:nth-child(5)>img").eq(gallery_ep_num-1).siblings().css({"display":"none"})
+                    
                     $("#selected_episode").attr({"src":"image/episode-"+gallery_ep_num+".png"})
                     if(gallery_ep_num == 1){
                         $("#content_box>iframe").attr({"src":"https://www.youtube.com/embed/bD7bpG-zDJQ"})
@@ -1466,6 +1682,7 @@ setInterval(function(){
                     }
 
                 })
+                
                 //갤러리-사진 슬라이드//
                 $("#gallery_next").click(function(){
                     
@@ -1502,17 +1719,7 @@ setInterval(function(){
                     $("#content_list1>li").eq(gall_img_num-1).css({"opacity":"1","border": "1px solid #fff"})
                     $("#content_list1>li").eq(gall_img_num-1).siblings().css({"opacity":"0.6","border": "1px solid transparent"})
                 })
-                $("#episode_select_box>ul>li").click(function(){
 
-                    $("#content_img_box>ul>li:nth-child(1)>img").attr({"src":"image/gallery/gall_ep"+gallery_ep_num+"_1.jpg"})
-                    $("#content_img_box>ul>li:nth-child(2)>img").attr({"src":"image/gallery/gall_ep"+gallery_ep_num+"_2.jpg"})
-                    $("#content_img_box>ul>li:nth-child(3)>img").attr({"src":"image/gallery/gall_ep"+gallery_ep_num+"_3.jpg"})
-                    $("#content_img_box>ul>li:nth-child(4)>img").attr({"src":"image/gallery/gall_ep"+gallery_ep_num+"_4.jpg"})
-                    $("#content_img_box>ul>li:nth-child(5)>img").attr({"src":"image/gallery/gall_ep"+gallery_ep_num+"_5.jpg"})
-                    $("#content_img_box>ul>li:nth-child(6)>img").attr({"src":"image/gallery/gall_ep"+gallery_ep_num+"_1.jpg"})
-
-
-                })
 
                 //상단메뉴 요소 클릭에 따른 스크롤//
 
@@ -1684,11 +1891,11 @@ setInterval(function(){
         #main_btn{width: 100%;height: 25px;z-index: 5;top: 0;bottom: 0;margin: auto;position: absolute;}
         #next_btn{position: absolute;top: 0;right: -150px;cursor: pointer;}
         #prev_btn{position: absolute;top: 0;left: -150px;cursor: pointer;}
-        #scroll{width: 170px;height: 80px;position: absolute;left: 0;right: 0;bottom: -200px;margin: auto;}
+        #scroll{width: 170px;height: 80px;position:fixed;left: 0;right: 0;bottom: -200px;margin: auto;z-index: 999;}
         #scroll>h5{text-align: center;font-family: space;color: #fff;font-size: 18px;font-weight: 300;}
         #scroll>img:nth-child(2){width: 25px;height: 25px;position: absolute;bottom: 22px;right: 0;left: 0;margin: auto;}
 
-        #info{height: 21080px;position: relative;margin-top: 970px;width: 100%;background: url(image/info/space_bg.png) center ;}
+        #info{height: 20780px;position: relative;margin-top: 970px;width: 100%;background: url(image/info/space_bg.png) center ;}
         #info_inbox1{width: 100%;position: sticky;top: 0;left: 0;right: 0;margin: auto;height: 1000px;}
         #info_title{position: absolute;top: 50%;left: 50%;right: 0;text-align: center;width: 1300px;z-index: 10;margin-left: -650px;margin-top: -350px;}
         #info_title2{position: absolute;top: 50%;left: 50%;right: 0;text-align: center;width: 1300px;z-index: 10;margin-left: -650px;margin-top: -350px;}
@@ -1778,34 +1985,61 @@ setInterval(function(){
         .info_box4_text>p{font-size: 16px;font-family: space;margin-top: 20px;line-height: 28px;}
         .info_box4_view{position: absolute;bottom: 60px;left: 403px;cursor: pointer;transition: 0.1s;opacity: 1;display: none;}
         #info_box4_ep1>.info_box4_view{bottom:120px;}
-        #info_inbox5{width: 100%;position: absolute;top: 20000px;left: 0;height: 1000px;}
-        #info_box5{width: 1300px;height: 715px;box-sizing: border-box;position: absolute;left: 0;right: 0;margin: auto;top: 20%;}
-        #series_map{position: absolute;position: absolute;left: 0;top: 0;right: 0;bottom: 0;margin: auto;display: none;}
-        #info_box5_episode1{width: 170px;position: absolute;left: 50%;top: 50%;margin-left: -495px;margin-top: 120px;display: none;cursor: pointer;z-index: 10;}
-        #info_box5_episode2{width: 170px;position: absolute;left: 50%;top: 50%;margin-top: -229px;margin-left: -350px;display: none;cursor: pointer;z-index: 10;}
-        #info_box5_episode3{width: 170px;position: absolute;left: 50%;top: 50%;margin-top: 120px;margin-left: -190px;display: none;cursor: pointer;z-index: 10;}
-        #info_box5_episode4{width: 170px;position: absolute;left: 50%;top: 50%;margin-top: -229px;margin-left: -30px;display: none;cursor: pointer;z-index: 10;}
-        #info_box5_episode5{width: 170px;position: absolute;left: 50%;top: 50%;margin-top: 120px;margin-left: 140px;display: none;cursor: pointer;z-index: 10;}
-        #info_box5_episode6{width: 170px;position: absolute;left: 50%;top: 50%;margin-top: -229px;margin-left: 308px;display: none;cursor: pointer;z-index: 10;}
+
         #ship_door{width: 1920px;position: fixed;height: 970px;top: 0px;left: 0;z-index: 999;display: none;}
         #door_cover{height: 100%;position: absolute;left: 0;right: 0;z-index: 2;top: 0;bottom: 0;margin: auto;z-index: 999;}
         #right_door{position: absolute;right: -1200px;top: 66px;z-index: 1;z-index: 998;}
         #left_door{position: absolute;left: -1200px;top: 66px;z-index: 998;}
         #movie_screen{height: 970px;position: relative;width: 100%;background: url(image/series/bg_punnel.png) center ;overflow: hidden;}
-        #movie_poster_box{height: 870px;position: absolute;top: 50%;left: 50%;width: 708px;margin-left: -1010px;margin-top: -380px;}
-        #movie_screen_punel{height: 100%;z-index: 3;position: absolute;left: 0;top: 0;}
-        #movie_poster{height: 770px;position: absolute;z-index: 2;left: 0;top: 0;bottom: 0;right: 0;margin: auto;}
-        #screen_movie_introduce{width: 1100px;height: 550px;position: absolute;left: 50%;top: 50%;margin-left: -300px;margin-top: -380px;border: 3px solid #fff;box-sizing: border-box;}
-        #screen_movie_introduce>img{position: absolute;top: 0;bottom: 0;left: 180px;margin: auto;width: 300px;}
-        #screen_movie_introduce>h3{position: absolute;left: 540px;top: 180px;width: 500px;height: 300px;color: #fff;font-size: 22px;font-family: space;line-height: 31px;}
-        #movie_screen_btn_box{width: 1240px;height: 310px;position: absolute;top: 50%;left: 50%;margin-top: 170px;margin-left: -280px;}
-        #screen_next{position: absolute;top: 140px;right: 0;cursor: pointer;}
-        #screen_prev{position: absolute;top: 140px;left: 0;cursor: pointer;}
-        #screen_char_box{position: absolute;left: 50%;top: 50%;width: 210px;height: 250px;margin-top: 227px;margin-left: 95px;}
-        #screen_gal_box{position: absolute;left: 50%;top: 50%;width: 210px;height: 250px;margin-left: 390px;margin-top: 227px;}
-        .projecter{position: absolute;left: 0;bottom: 0;right: 0;margin: auto;}
-        .projecter_holo{position: absolute;left: 0;bottom: 0;}
-        .projecter_btn{position: absolute;top: 0;left: 0;right: 0;margin: auto;cursor: pointer;}
+        #hologram_info_box{background: url(image/series/hologoram_cover.png) center no-repeat;width: 1300px;height: 703px;position: absolute;top: 50%;left: 50%;margin-left: -650px;margin-top: -360px;z-index: 3;overflow: hidden;}
+
+        #R2D2{width: 280px;position: absolute;left: 50%;top: 50%;margin-left: -827px;margin-top: 246px;z-index: 1;}
+       #R2D2_light{position: absolute;left: 50%;bottom: 50%;margin-bottom: -395px;margin-left: -672px;z-index: 2;width: 1029px;}
+       .poster_list{width: 300px;height: 460px;position: absolute;top: 120px;left: 40px;background-color: #000;overflow: hidden;}
+       .poster_list>ul{width: 400%;height: 100%;position: absolute;left: 0;top: 0;}
+       .poster_list>ul>li{width: 25%;height: 100%;float: left;}
+       .poster_list>ul>li>img{width: 100%;height: 100%;}
+       #now_episode{width: 250px;position: absolute;top: 50px;left: 430px;}
+       #episode_btn{width: 350px;height: 36px;position: absolute;left: 440px;top: 660px;}
+       #episode_btn>li{width: 36px;height: 36px;margin-right: 26px;float: left;border: 1px solid #01ffff;box-sizing: border-box;cursor: pointer;}
+       #episode_btn>li:hover{background-color: #01ffff !important;}
+       #episode_btn>li:nth-child(3){background-color: #01ffff;}
+       #episode_btn>li:nth-last-child(1){margin-right: 0;}
+       .hologram_title{font-size: 22px;color: #01ffff;font-family: space;letter-spacing: 2px;font-weight: 300;}
+       .hologram_title>span{width: 10px;height: 10px;border-radius: 5px;background-color: #01ffff;display: inline-block;margin-bottom: 3px;margin-right: 10px;}
+       #story_line{width: 570px;overflow: hidden;position: absolute;left: 430px;top: 250px;font-family: space;}
+       #story_line>p{font-size: 16px;color: #fff;margin-top: 10px;margin-left: 20px;line-height: 24px;font-weight: 300;letter-spacing: 1px;}
+       #top_cast{width: 570px;overflow: hidden;position: absolute;left: 430px;top: 430px;font-family: space;}
+       #top_cast>p{font-size: 16px;color: #fff;margin-top: 10px;margin-left: 20px;line-height: 24px;font-weight: 300;letter-spacing: 1px;}
+       #char_gall_btn_box{width: 345px;height: 56px;position: absolute;left: 920px;top: 525px;}
+       #char_gall_btn_box>img{float: left;height: 56px;cursor: pointer;}
+       #hologram_gall_btn{margin-left: 14px;}
+       .hologram_poster_btn{width: 50px;height: 20px;position: absolute;top: 600px;left: 165px;}
+       .hologram_poster_btn>li{width: 10px;height: 10px;background-color: #01ffff;float: left;margin-right: 10px;border-radius: 5px;cursor: pointer;transition: 0.3s;}
+       .hologram_poster_btn>li:nth-child(1){transform: scale(1.5);}
+       .hologram_poster_btn>li:nth-child(3){margin-right: 0;}
+       .poster_next{position: absolute;top: 0;bottom: 0;right: 10px;margin: auto;opacity: 0.5;transition: 0.3s;cursor: pointer;}
+       .poster_prev{position: absolute;top: 0;bottom: 0;left: 10px;margin: auto;opacity: 0.5;transition: 0.3s;cursor: pointer;}
+       .poster_big{position: absolute;top: 0;bottom: 0;left: 0px;right: 0;margin: auto;opacity: 0;transition: 0.3s;cursor: pointer;}
+       .poster_list:hover>.poster_big{opacity: 1;}
+       .poster_list:hover>.poster_next{opacity: 1;}
+       .poster_list:hover>.poster_prev{opacity: 1;}
+       #critic{width: 510px;height: 70px;position: absolute;left: 730px;top: 110px;}
+       #critic>li{width: 170px;height: 70px;float: left;margin-right: 00px;font-family: space;}
+       #critic>li:nth-child(3){margin-right: 0;}
+       #critic>li>h4{font-size: 16px;color: #01ffff;width: 100%;text-align: center;}
+       #critic>li:nth-child(1)>p{font-size: 26px;color: #01ffff;text-align: center;line-height: 49px;margin-top: 10px;margin-left: 30px;}
+       #critic>li:nth-child(1)>p>span{background: url(image/series/imdb_score.png) center no-repeat;display: inline-block;width: 41px;height: 39px;position: absolute;left: 12px;top: 18px;bottom: 0;margin: auto;}
+       #critic>li:nth-child(2)>p{font-size: 26px;color: rgb(255, 255, 255);text-align: center;width: 54px;height: 54px;margin: auto;line-height: 54px;margin-top: 10px;background-color: #01ffff;border-radius: 5px;}
+       #critic>li:nth-child(3)>p{font-size: 26px;color: #01ffff;text-align: center;line-height: 49px;margin-top: 10px;}
+       #series_list_prev{position: absolute;left: 0;top: 0;bottom: 0;margin: auto;cursor: pointer;}
+       #series_list_next{position: absolute;right: 0;top: 0;bottom: 0;margin: auto;cursor: pointer;}
+       #poster_big_box{position: fixed;left: 0;top: 0;z-index: 99;background-color: rgba(0, 0, 0, 0.9);width: 100%;height: 100%;display: none;}
+       #poster_big_box>.poster_list{width: 560px;height: 820px;position: absolute;top: 90px;left: 0px;right: 0;background-color: #000;overflow: hidden;margin: auto;}
+       #big_poster_close{position: absolute;left: 0;top: 20px;right: 0;margin: auto;opacity: 0.7;cursor: pointer;}
+       #big_poster_close:hover{opacity: 1;}
+
+
 
 
 
@@ -1859,14 +2093,16 @@ setInterval(function(){
         #gallery_next{position: absolute;top: 0;bottom: 0;right: 240px;margin: auto;z-index: 5;height: 90px;cursor: pointer;}
         #gallery_prev{position: absolute;top: 0;bottom: 0;left: 240px;margin: auto;z-index: 5;height: 90px;cursor: pointer;}
         #content_list1{width: 1090px;height: 113px;position: absolute;left: 0;right: 0;margin: auto;bottom: 40px;z-index: 3;}
-        #content_list1>li{float: left;margin-right: 20px;border: 1px solid transparent;width: 200px;height: 113px;opacity: 0.6;cursor: pointer;}
+        #content_list1>li{float: left;margin-right: 20px;border: 1px solid transparent;width: 200px;height: 113px;opacity: 0.6;cursor: pointer;position: relative;}
+
         #content_list1>li:nth-child(3){border: 1px solid #fff;opacity: 1;}
         #content_list1>li:last-child{margin-right: 0;}
-        #content_list1>li>img{width: 100%;height: 100%;}
+        #content_list1>li>img{width: 100%;height: 100%;position: absolute;display: none;}
+        #content_list1>li>img:nth-child(3){display: block;}
         #episode_select_box{width: 200px;position: absolute;top: 200px;bottom: 0;left: 80px;z-index: 3;}
         #selected_episode{width: 150px;margin: auto;text-align: center;margin-top: 30px;}
-        #episode_select_box>ul{width: 120px;height: 840px;margin-top: 10px;margin-left: 15px;display: none;}
-        #episode_select_box>ul>li{width: 120px;height: 79px;margin-bottom: 8px;opacity: 0.5;cursor: pointer;}
+        #episode_select_box>ul{width: 155px;height: 840px;margin-top: 20px;display: none;}
+        #episode_select_box>ul>li{width: 155px;height: 30px;margin-bottom: 20px;opacity: 0.5;cursor: pointer;}
         #episode_select_box>ul>li:nth-child(3){opacity: 1;}
         #episode_select_box>ul>li:hover{opacity: 1;}
         #episode_select_box>ul>li>img{width: 100%;}
@@ -1876,8 +2112,9 @@ setInterval(function(){
 
         #content_img_box{width: 1200px;height: 600px;position: absolute;top: 0;bottom: 0;left: 0;right: 0;margin: auto;overflow: hidden;}
         #content_img_box>ul{width: 600%;height: 600px;position: absolute;left: -200%;top: 0;}
-        #content_img_box>ul>li{width: 1200px;height: 600px;float: left;}
-        #content_img_box>ul>li>img{width: 100%;height: 100%;}
+        #content_img_box>ul>li{width: 1200px;height: 600px;float: left;position: relative;}
+        #content_img_box>ul>li>img{width: 100%;height: 100%;position: absolute;left: 0;right: 0;display: none;}
+        #content_img_box>ul>li>img:nth-child(3){display: block;}
        #content_box>iframe{width: 1200px;height: 600px;position: absolute;top: 0;bottom: 0;left: 0;right: 0;margin: auto;display: none;z-index: 5;}
         #content_list2{width: 646px;height: 113px;position: absolute;left: 0;right: 0;margin: auto;bottom: 40px;z-index: 3;display: none;}
         #content_list2>li{float: left;margin-right: 20px;border: 1px solid transparent;width: 200px;height: 113px;opacity: 0.6;}
@@ -2002,12 +2239,16 @@ setInterval(function(){
             <img src="image/home/prev_btn.png" alt="이전버튼" id="prev_btn">
         </div>
 
+
+
+    </div>
+
+
         <div id="scroll">
             <h5>SCROLL DOWN</h5>
             <img src="image/home/ep3/scroll_move.png" alt="스크롤움직이는 아이콘" id="scroll_move">
         </div>
 
-    </div>
 <!--------------------info 스크롤 시작------------------------->
     <section id="info">
 
@@ -2179,24 +2420,7 @@ setInterval(function(){
 
             </div>
         </div>
-        <div id="info_inbox5">
-            <div id="info_title5">
-                <div class="info_line"></div>
-                <img src="image/info/series.png" alt="">
-                <div class="info_line"></div>
-            </div>
 
-            <div id="info_box5">
-                <img src="image/info/series_map.png" alt="" id="series_map">
-                <img src="image/episode-1.png" alt="" id="info_box5_episode1">
-                <img src="image/episode-2.png" alt="" id="info_box5_episode2">
-                <img src="image/episode-3.png" alt="" id="info_box5_episode3">
-                <img src="image/episode-4.png" alt="" id="info_box5_episode4">
-                <img src="image/episode-5.png" alt="" id="info_box5_episode5">
-                <img src="image/episode-6.png" alt="" id="info_box5_episode6">
-            </div>   
-
-        </div>
     </section>
     <!---------------------시리즈 박스 시작------------------------>
     <section id="movie_screen">
@@ -2282,37 +2506,92 @@ setInterval(function(){
             </div>
         </section>
         <!--------------------포스터 박스 및 영화 정보------------------------->
-        <div id="movie_poster_box">
-
-                    <img src="image/series/poster_cover.png" alt="" id="movie_screen_punel">
-                    <img src="image/series/poster_ep3.png" alt="" id="movie_poster">
-                    <ul id="movie_posster_box_btn">
-                        <li><img src="image/series/poster1_btn.png" alt=""><img src="image/series/poster1_btn.png" alt=""></li>
-                        <li><img src="image/series/poster2_btn.png" alt=""><img src="image/series/poster2_btn.png" alt=""></li>
-                        <li><img src="image/series/poster3_btn.png" alt=""><img src="image/series/poster3_btn.png" alt=""></li>
+         <img src="image/series/r2_hologram_light.png" alt="" id="R2D2_light">
+        <img src="image/series/R2_hologram_1.png" alt="" id="R2D2">
+       
+        <div id="hologram_info_box">
+            <img src="image/series/episode-3.png" alt="" id="now_episode">
+            <div class="poster_list">
+                <ul>
+                    <li><img src="image/series/poster_ep3_1.jpg" alt=""></li>
+                    <li><img src="image/series/poster_ep3_2.jpg" alt=""></li>
+                    <li><img src="image/series/poster_ep3_3.jpg" alt=""></li>
+                    <li><img src="image/series/poster_ep3_1.jpg" alt=""></li>
+                </ul>
+                <img src="image/series/poster_next.png" alt="" class="poster_next">
+                <img src="image/series/poster_prev.png" alt="" class="poster_prev">
+                <img src="image/series/big_scale.png" alt="" class="poster_big">
+            </div>
+            <ul class="hologram_poster_btn">
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+                    <ul id="episode_btn">
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
                     </ul>
+                <div id="story_line">
+                    <h2 class="hologram_title"><span></span>STORY LINE</h2>
+                    <p>Three years into the Clone Wars, the Jedi rescue 
+Palpatine from Count Dooku. As Obi-Wan pursues 
+a new threat, Anakin acts as a double agent between 
+the Jedi Council and Palpatine and is lured into a sinister 
+plan to rule the galaxy</p>
+                </div>
+                <div id="top_cast">
+                    <h2 class="hologram_title"><span></span>TOP CAST</h2>
+                    <p>
+                        
+Hayden Christensen - Anakin Skywalker <br>
+Natalie Portma - Padme <br>
+Ewan McGregor - Obi-Wan Kenobi <br>
+                    </p>
+                </div>
+                <ul id="critic">
+                    <li>
+                        <h4>IMDb RATING</h4>
+                        <p><span></span>7.6/10</p>
+                    </li>
+                    <li>
+                        <h4>METACRITIC</h4>
+                        <p>68</p>
+                    </li>
+                    <li>
+                        <h4>TOMATOMETER</h4>
+                        <p>79%</p>
+                    </li>
+                </ul>
+                <div id="char_gall_btn_box">
+                    <img src="image/series/series_character_btn.png" alt="" id="hologram_char_btn">
+                    <img src="image/series/series_gallery_btn.png" alt="" id="hologram_gall_btn">
+                </div>
         </div>
-        <div id="screen_movie_introduce">
-            <img src="image/episode-3.png" alt="">
-            <h3>
-                Three years into the Clone Wars, the Jedi rescue Palpatine from Count Dooku. As Obi-Wan pursues a new threat, Anakin acts as a double agent between the Jedi Council and Palpatine and is lured into a sinister plan to rule the galaxy.
-            </h3>
+        <div id="poster_big_box">
+            <div class="poster_list">
+                <ul>
+                    <li><img src="image/series/poster_ep3_1.jpg" alt=""></li>
+                    <li><img src="image/series/poster_ep3_2.jpg" alt=""></li>
+                    <li><img src="image/series/poster_ep3_3.jpg" alt=""></li>
+                    <li><img src="image/series/poster_ep3_1.jpg" alt=""></li>
+                </ul>
+                <img src="image/series/poster_next.png" alt="" class="poster_next">
+                <img src="image/series/poster_prev.png" alt="" class="poster_prev">
+                
+            </div>
+        <img src="image/series/close_btn.png" alt="" id="big_poster_close">
         </div>
+        
+        <img src="image/series/prev_btn.png" alt="" id="series_list_prev">
+        <img src="image/series/next_btn.png" alt="" id="series_list_next">
+
+
         <!--------------------홀로그램 버튼 박스------------------------->
-        <div id="movie_screen_btn_box">
-            <img src="image/series/next_btn.png" alt="" id="screen_next">
-            <img src="image/series/prev_btn.png" alt="" id="screen_prev">
-        </div>
-        <div id="screen_char_box">
-            <img src="image/series/series_holo_projecter.png" alt="" class="projecter">
-            <img src="image/series/series_holo_projecter_light.png" alt="" class="projecter_holo">
-            <img src="image/series/series_character_btn.png" alt="" class="projecter_btn">
-        </div>
-        <div id="screen_gal_box">
-            <img src="image/series/series_holo_projecter.png" alt="" class="projecter">
-            <img src="image/series/series_holo_projecter_light.png" alt="" class="projecter_holo">
-            <img src="image/series/series_gallery_btn.png" alt="" class="projecter_btn">
-        </div>
+
     </section>
     <section id="ship_door">
         <img src="image/series/series_door_cover2.png" alt="" id="door_cover">
@@ -2340,12 +2619,55 @@ setInterval(function(){
                 <h3 id="content_mode"></h3>
                 <div id="content_img_box">
                     <ul>
-                        <li><img src="image/gallery/gall_ep3_1.jpg" alt=""></li>
-                        <li><img src="image/gallery/gall_ep3_2.jpg" alt=""></li>
-                        <li><img src="image/gallery/gall_ep3_3.jpg" alt=""></li>
-                        <li><img src="image/gallery/gall_ep3_4.jpg" alt=""></li>
-                        <li><img src="image/gallery/gall_ep3_5.jpg" alt=""></li>
-                        <li><img src="image/gallery/gall_ep3_1.jpg" alt=""></li>
+                        <li>
+                            <img src="image/gallery/gall_ep1_1.jpg" alt="">
+                            <img src="image/gallery/gall_ep2_1.jpg" alt="">
+                            <img src="image/gallery/gall_ep3_1.jpg" alt="">
+                            <img src="image/gallery/gall_ep4_1.jpg" alt="">
+                            <img src="image/gallery/gall_ep5_1.jpg" alt="">
+                            <img src="image/gallery/gall_ep6_1.jpg" alt="">
+                        </li>
+                        <li>
+                            <img src="image/gallery/gall_ep1_2.jpg" alt="">
+                            <img src="image/gallery/gall_ep2_2.jpg" alt="">
+                            <img src="image/gallery/gall_ep3_2.jpg" alt="">
+                            <img src="image/gallery/gall_ep4_2.jpg" alt="">
+                            <img src="image/gallery/gall_ep5_2.jpg" alt="">
+                            <img src="image/gallery/gall_ep6_2.jpg" alt="">
+                            
+                        </li>
+                        <li>
+                            <img src="image/gallery/gall_ep1_3.jpg" alt="">
+                            <img src="image/gallery/gall_ep2_3.jpg" alt="">
+                            <img src="image/gallery/gall_ep3_3.jpg" alt="">
+                            <img src="image/gallery/gall_ep4_3.jpg" alt="">
+                            <img src="image/gallery/gall_ep5_3.jpg" alt="">
+                            <img src="image/gallery/gall_ep6_3.jpg" alt="">
+                        </li>
+                        <li>
+                            <img src="image/gallery/gall_ep1_4.jpg" alt="">
+                            <img src="image/gallery/gall_ep2_4.jpg" alt="">
+                            <img src="image/gallery/gall_ep3_4.jpg" alt="">
+                            <img src="image/gallery/gall_ep4_4.jpg" alt="">
+                            <img src="image/gallery/gall_ep5_4.jpg" alt="">
+                            <img src="image/gallery/gall_ep6_4.jpg" alt="">
+                        </li>
+                        <li>
+                            <img src="image/gallery/gall_ep1_5.jpg" alt="">
+                            <img src="image/gallery/gall_ep2_5.jpg" alt="">
+                            <img src="image/gallery/gall_ep3_5.jpg" alt="">
+                            <img src="image/gallery/gall_ep4_5.jpg" alt="">
+                            <img src="image/gallery/gall_ep5_5.jpg" alt="">
+                            <img src="image/gallery/gall_ep6_5.jpg" alt="">
+                        </li>
+                        <li>
+                            <img src="image/gallery/gall_ep1_1.jpg" alt="">
+                            <img src="image/gallery/gall_ep2_1.jpg" alt="">
+                            <img src="image/gallery/gall_ep3_1.jpg" alt="">
+                            <img src="image/gallery/gall_ep4_1.jpg" alt="">
+                            <img src="image/gallery/gall_ep5_1.jpg" alt="">
+                            <img src="image/gallery/gall_ep6_1.jpg" alt="">
+                        </li>
                     </ul>
                 </div>
                 <iframe width="1200" height="600" src="https://www.youtube.com/embed/5UnjrG_N8hU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -2356,11 +2678,48 @@ setInterval(function(){
                 <li></li>
             </ul>
             <ul id="content_list1">
-                <li><img src="image/gallery/gall_ep3_1.jpg" alt=""></li>
-                <li><img src="image/gallery/gall_ep3_2.jpg" alt=""></li>
-                <li><img src="image/gallery/gall_ep3_3.jpg" alt=""></li>
-                <li><img src="image/gallery/gall_ep3_4.jpg" alt=""></li>
-                <li><img src="image/gallery/gall_ep3_5.jpg" alt=""></li>
+                <li>
+                <img src="image/gallery/gall_ep1_1.jpg" alt="">
+                <img src="image/gallery/gall_ep2_1.jpg" alt="">
+                <img src="image/gallery/gall_ep3_1.jpg" alt="">
+                <img src="image/gallery/gall_ep4_1.jpg" alt="">
+                <img src="image/gallery/gall_ep5_1.jpg" alt="">
+                <img src="image/gallery/gall_ep6_1.jpg" alt="">
+            </li>
+            <li>
+                <img src="image/gallery/gall_ep1_2.jpg" alt="">
+                <img src="image/gallery/gall_ep2_2.jpg" alt="">
+                <img src="image/gallery/gall_ep3_2.jpg" alt="">
+                <img src="image/gallery/gall_ep4_2.jpg" alt="">
+                <img src="image/gallery/gall_ep5_2.jpg" alt="">
+                <img src="image/gallery/gall_ep6_2.jpg" alt="">
+                
+            </li>
+            <li>
+                <img src="image/gallery/gall_ep1_3.jpg" alt="">
+                <img src="image/gallery/gall_ep2_3.jpg" alt="">
+                <img src="image/gallery/gall_ep3_3.jpg" alt="">
+                <img src="image/gallery/gall_ep4_3.jpg" alt="">
+                <img src="image/gallery/gall_ep5_3.jpg" alt="">
+                <img src="image/gallery/gall_ep6_3.jpg" alt="">
+            </li>
+            <li>
+                <img src="image/gallery/gall_ep1_4.jpg" alt="">
+                <img src="image/gallery/gall_ep2_4.jpg" alt="">
+                <img src="image/gallery/gall_ep3_4.jpg" alt="">
+                <img src="image/gallery/gall_ep4_4.jpg" alt="">
+                <img src="image/gallery/gall_ep5_4.jpg" alt="">
+                <img src="image/gallery/gall_ep6_4.jpg" alt="">
+            </li>
+            <li>
+                <img src="image/gallery/gall_ep1_5.jpg" alt="">
+                <img src="image/gallery/gall_ep2_5.jpg" alt="">
+                <img src="image/gallery/gall_ep3_5.jpg" alt="">
+                <img src="image/gallery/gall_ep4_5.jpg" alt="">
+                <img src="image/gallery/gall_ep5_5.jpg" alt="">
+                <img src="image/gallery/gall_ep6_5.jpg" alt="">
+            </li>
+
 
             </ul>
 
@@ -2373,12 +2732,12 @@ setInterval(function(){
                 <img src="image/gallery/episode_on_tri.png" alt="" id="episode_title_tri">
                 <img src="image/episode-3.png" alt="" id="selected_episode">
                 <ul>
-                    <li><img src="image/episode-1.png" alt=""></li>
-                    <li><img src="image/episode-2.png" alt=""></li>
-                    <li><img src="image/episode-3.png" alt=""></li>
-                    <li><img src="image/episode-4.png" alt=""></li>
-                    <li><img src="image/episode-5.png" alt=""></li>
-                    <li><img src="image/episode-6.png" alt=""></li>
+                    <li><img src="image/gallery/episode-1_title.png" alt=""></li>
+                    <li><img src="image/gallery/episode-2_title.png" alt=""></li>
+                    <li><img src="image/gallery/episode-3_title.png" alt=""></li>
+                    <li><img src="image/gallery/episode-4_title.png" alt=""></li>
+                    <li><img src="image/gallery/episode-5_title.png" alt=""></li>
+                    <li><img src="image/gallery/episode-6_title.png" alt=""></li>
                 </ul>
             </div>
 
