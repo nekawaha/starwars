@@ -407,7 +407,7 @@ setInterval(function(){
                 }
             })
 
-            setInterval(function(){
+                setInterval(function(){
                
                 $("#scroll_round").css({'opacity':'1','top':'7px'})
                 $("#scroll_round").animate({'opacity':'0','top':'46px'},600)
@@ -417,6 +417,12 @@ setInterval(function(){
                     $("#scroll_move").animate({bottom:16},300)
                     $("#scroll_move").animate({bottom:22},300)
                 })
+                setInterval(function(){
+                    $("#next_btn").animate({"width":"150px"},400)
+                    $("#next_btn").animate({"width":"106px"},400)
+                    $("#prev_btn").animate({"width":"150px"},400)
+                    $("#prev_btn").animate({"width":"106px"},400)
+                },3000)
 
 
 
@@ -583,12 +589,12 @@ setInterval(function(){
                     $("#info_box4_ep6>.info_box4_view").fadeIn(2000)
 
                 }
-                if(sc<=19100){
+                if(sc<=20785){
 
-                   
+                    $("#scroll").css({"display":"block"})
                     
                 }
-                if(sc>19100){
+                if(sc>20785){
 
                     $("#scroll").css({"display":"none"})
                     
@@ -611,16 +617,17 @@ setInterval(function(){
                     }
                     info_key = 0
 
-                    $("#hologram_info_box").animate({"width":"0"},10)
-                    $("#R2D2_light").animate({"width":"0"},10)
-
+                    $("#hologram_info_box").animate({"width":"0"},100)
+                    $("#R2D2_light").animate({"width":"0"},100)
+                    $(".poster_list").fadeOut(10)
                     $(".poster_list>ul>li:nth-child(1)>img").delay(500).attr({"src":"image/series/poster_ep"+episode_num+"_1.jpg"})
                     $(".poster_list>ul>li:nth-child(2)>img").delay(500).attr({"src":"image/series/poster_ep"+episode_num+"_2.jpg"})
                     $(".poster_list>ul>li:nth-child(3)>img").delay(500).attr({"src":"image/series/poster_ep"+episode_num+"_3.jpg"})
                     $(".poster_list>ul>li:nth-child(4)>img").delay(500).attr({"src":"image/series/poster_ep"+episode_num+"_1.jpg"})
                     $("#now_episode").attr({"src":"image/series/episode-"+episode_num+".png"})
-
-
+                    $("#R2D2>img:nth-child(2)").fadeOut(200)
+                    $("#R2D2>img:nth-child(2)").delay(400).fadeIn(100)
+                    $(".poster_list").delay(200).fadeIn(10)
                     $("#hologram_info_box").delay(500).animate({"width":"1300px"},300)
                     $("#R2D2_light").delay(500).animate({"width":"1029px"},200)
 
@@ -758,15 +765,19 @@ setInterval(function(){
                     }
                     info_key = 0
 
-                    $("#hologram_info_box").animate({"width":"0"},10)
-                    $("#R2D2_light").animate({"width":"0"},10)
+                    $("#hologram_info_box").animate({"width":"0"},100)
+                    $("#R2D2_light").animate({"width":"0"},100)
 
+                    $(".poster_list").fadeOut(10)
                     $(".poster_list>ul>li:nth-child(1)>img").delay(500).attr({"src":"image/series/poster_ep"+episode_num+"_1.jpg"})
                     $(".poster_list>ul>li:nth-child(2)>img").delay(500).attr({"src":"image/series/poster_ep"+episode_num+"_2.jpg"})
                     $(".poster_list>ul>li:nth-child(3)>img").delay(500).attr({"src":"image/series/poster_ep"+episode_num+"_3.jpg"})
                     $(".poster_list>ul>li:nth-child(4)>img").delay(500).attr({"src":"image/series/poster_ep"+episode_num+"_1.jpg"})
                     $("#now_episode").attr({"src":"image/series/episode-"+episode_num+".png"})
 
+                    $(".poster_list").delay(200).fadeIn(10)
+                    $("#R2D2>img:nth-child(2)").fadeOut(200)
+                    $("#R2D2>img:nth-child(2)").delay(400).fadeIn(100)
 
                     $("#hologram_info_box").delay(500).animate({"width":"1300px"},300)
                     $("#R2D2_light").delay(500).animate({"width":"1029px"},200)
@@ -1115,15 +1126,19 @@ setInterval(function(){
                 $("#episode_btn>li").click(function(){
                    episode_num = $(this).index() + 1
 
-                   $("#hologram_info_box").animate({"width":"0"},10)
-                    $("#R2D2_light").animate({"width":"0"},10)
+                   $("#hologram_info_box").animate({"width":"0"},100)
+                    $("#R2D2_light").animate({"width":"0"},100)
 
+                    $(".poster_list").fadeOut(10)
                     $(".poster_list>ul>li:nth-child(1)>img").delay(500).attr({"src":"image/series/poster_ep"+episode_num+"_1.jpg"})
                     $(".poster_list>ul>li:nth-child(2)>img").delay(500).attr({"src":"image/series/poster_ep"+episode_num+"_2.jpg"})
                     $(".poster_list>ul>li:nth-child(3)>img").delay(500).attr({"src":"image/series/poster_ep"+episode_num+"_3.jpg"})
                     $(".poster_list>ul>li:nth-child(4)>img").delay(500).attr({"src":"image/series/poster_ep"+episode_num+"_1.jpg"})
                     $("#now_episode").attr({"src":"image/series/episode-"+episode_num+".png"})
 
+                    $(".poster_list").delay(200).fadeIn(10)
+                    $("#R2D2>img:nth-child(2)").fadeOut(200)
+                    $("#R2D2>img:nth-child(2)").delay(400).fadeIn(100)
 
                     $("#hologram_info_box").delay(500).animate({"width":"1300px"},300)
                     $("#R2D2_light").delay(500).animate({"width":"1029px"},200)
@@ -1731,16 +1746,13 @@ setInterval(function(){
                     
                 })
 
-                $("#menu>li:nth-child(3)").click(function(){
-                    $("html,body").animate({scrollTop:$("#info_inbox5").offset().top},10) 
-                    
-                })
 
-                                $("#menu>li:nth-child(4)").click(function(){
+
+                                $("#menu>li:nth-child(3)").click(function(){
                     $("html,body").animate({scrollTop:$("#movie_screen").offset().top},10) 
                     
                 })
-                $("#menu>li:nth-child(5)").click(function(){
+                $("#menu>li:nth-child(4)").click(function(){
                     $("html,body").animate({scrollTop:$("#gallery").offset().top},10) 
                     
                 })
@@ -1889,9 +1901,11 @@ setInterval(function(){
         #on_3{position: absolute;left: 0;right: 0;bottom: -30px;margin: auto;}
 
         #main_btn{width: 100%;height: 25px;z-index: 5;top: 0;bottom: 0;margin: auto;position: absolute;}
-        #next_btn{position: absolute;top: 0;right: -150px;cursor: pointer;}
-        #prev_btn{position: absolute;top: 0;left: -150px;cursor: pointer;}
-        #scroll{width: 170px;height: 80px;position:fixed;left: 0;right: 0;bottom: -200px;margin: auto;z-index: 999;}
+        #next_btn{position: absolute;top: 0;right: -150px;cursor: pointer;width: 106px;border-bottom: 2px solid #fff;box-sizing: border-box;}
+        #next_btn>img{float: left;}
+        #prev_btn{position: absolute;top: 0;left: -150px;cursor: pointer;width: 106px;border-bottom: 2px solid #fff;box-sizing: border-box;}
+        #prev_btn>img{float: right;}
+        #scroll{width: 170px;height: 80px;position:fixed;left: 0;right: 0;bottom: -200px;margin: auto;z-index: 999;transition: 0.5s;}
         #scroll>h5{text-align: center;font-family: space;color: #fff;font-size: 18px;font-weight: 300;}
         #scroll>img:nth-child(2){width: 25px;height: 25px;position: absolute;bottom: 22px;right: 0;left: 0;margin: auto;}
 
@@ -1994,6 +2008,7 @@ setInterval(function(){
         #hologram_info_box{background: url(image/series/hologoram_cover.png) center no-repeat;width: 1300px;height: 703px;position: absolute;top: 50%;left: 50%;margin-left: -650px;margin-top: -360px;z-index: 3;overflow: hidden;}
 
         #R2D2{width: 280px;position: absolute;left: 50%;top: 50%;margin-left: -827px;margin-top: 246px;z-index: 1;}
+        #R2D2>img{width: 100%;position: absolute;}
        #R2D2_light{position: absolute;left: 50%;bottom: 50%;margin-bottom: -395px;margin-left: -672px;z-index: 2;width: 1029px;}
        .poster_list{width: 300px;height: 460px;position: absolute;top: 120px;left: 40px;background-color: #000;overflow: hidden;}
        .poster_list>ul{width: 400%;height: 100%;position: absolute;left: 0;top: 0;}
@@ -2138,7 +2153,6 @@ setInterval(function(){
         <li>Home</li>
         <li>info</li>
         <li>series</li>
-        <li>Character</li>
         <li>gallery</li>
     </ul>
 
@@ -2235,8 +2249,14 @@ setInterval(function(){
         </div>
 
         <div id="main_btn">
-            <img src="image/home/next_btn.png" alt="다음버튼" id="next_btn">
-            <img src="image/home/prev_btn.png" alt="이전버튼" id="prev_btn">
+            <div id="next_btn">
+                <img src="image/home/next_btn.png" alt="다음버튼" >
+            </div>
+            <div id="prev_btn">
+                <img src="image/home/prev_btn.png" alt="이전버튼" >
+            </div>
+           
+            
         </div>
 
 
@@ -2507,7 +2527,11 @@ setInterval(function(){
         </section>
         <!--------------------포스터 박스 및 영화 정보------------------------->
          <img src="image/series/r2_hologram_light.png" alt="" id="R2D2_light">
-        <img src="image/series/R2_hologram_1.png" alt="" id="R2D2">
+         <div id="R2D2">
+            <img src="image/series/R2_hologram_1.png" alt="" >
+            <img src="image/series/R2_hologram_2.png" alt="" >
+         </div>
+        
        
         <div id="hologram_info_box">
             <img src="image/series/episode-3.png" alt="" id="now_episode">
