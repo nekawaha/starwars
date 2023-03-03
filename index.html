@@ -610,7 +610,7 @@ setInterval(function(){
 
 
                 //무비 스크린 영역에서 다음 이전 버튼을 사용할 경우//
-                $("#series_list_next").click(function(){
+                $(".series_list_next").click(function(){
                     episode_num = episode_num + 1
                     if(episode_num == 7){
                         episode_num = 1
@@ -648,8 +648,8 @@ setInterval(function(){
                         $("#movie_char_holo3>.char_hololight_front").attr({"src":"image/character/blue_light.png"})
                         $("#movie_char_holo4>.char_hololight_back").attr({"src":"image/character/red_light_high.png"})
                         $("#movie_char_holo4>.char_hololight_front").attr({"src":"image/character/red_light.png"})                        
-                        $("#movie_char_holo1>.holo_name").html("Quaigon <br> Jin ")
-                        $("#movie_char_holo2>.holo_name").html("Obi-wan <br> Kenobi")
+                        $("#movie_char_holo1>.holo_name").html("Obi-wan <br> Kenobi ")
+                        $("#movie_char_holo2>.holo_name").html("Quaigon <br> Jin ")
                         $("#movie_char_holo3>.holo_name").html("Anakin <br> Skywalker")
                         $("#movie_char_holo4>.holo_name").html("Darth <br> Maul")
                         $("#story_line>p").text("Two Jedi escape a hostile blockade to find allies and come across a young boy who may bring balance to the Force, but the long dormant Sith resurface to claim their original glory")
@@ -757,7 +757,7 @@ setInterval(function(){
                         $("#critic>li:nth-child(3)>p").text("93%")
                     }
                 })
-                $("#series_list_prev").click(function(){
+                $(".series_list_prev").click(function(){
                     episode_num = episode_num - 1
 
                     if(episode_num == 0){
@@ -765,6 +765,10 @@ setInterval(function(){
                     }
                     info_key = 0
 
+                    $(".char_holo_char").fadeOut(10)
+                    $(".char_holo_char").fadeIn(1000)
+                    $(".holo_name").fadeOut(10)
+                    $(".holo_name").fadeIn(1000)
                     $("#hologram_info_box").animate({"width":"0"},100)
                     $("#R2D2_light").animate({"width":"0"},100)
 
@@ -799,8 +803,8 @@ setInterval(function(){
                         $("#movie_char_holo3>.char_hololight_front").attr({"src":"image/character/blue_light.png"})
                         $("#movie_char_holo4>.char_hololight_back").attr({"src":"image/character/red_light_high.png"})
                         $("#movie_char_holo4>.char_hololight_front").attr({"src":"image/character/red_light.png"})                        
-                        $("#movie_char_holo1>.holo_name").html("Quaigon <br> Jin ")
-                        $("#movie_char_holo2>.holo_name").html("Obi-wan <br> Kenobi")
+                        $("#movie_char_holo1>.holo_name").html("Obi-wan <br> Kenobi ")
+                        $("#movie_char_holo2>.holo_name").html("Quaigon <br> Jin")
                         $("#movie_char_holo3>.holo_name").html("Anakin <br> Skywalker")
                         $("#movie_char_holo4>.holo_name").html("Darth <br> Maul")
                         $("#story_line>p").text("Two Jedi escape a hostile blockade to find allies and come across a young boy who may bring balance to the Force, but the long dormant Sith resurface to claim their original glory")
@@ -942,8 +946,8 @@ setInterval(function(){
                         $("#movie_char_holo3>.char_hololight_front").attr({"src":"image/character/blue_light.png"})
                         $("#movie_char_holo4>.char_hololight_back").attr({"src":"image/character/red_light_high.png"})
                         $("#movie_char_holo4>.char_hololight_front").attr({"src":"image/character/red_light.png"})                        
-                        $("#movie_char_holo1>.holo_name").html("Quaigon <br> Jin ")
-                        $("#movie_char_holo2>.holo_name").html("Obi-wan <br> Kenobi")
+                        $("#movie_char_holo1>.holo_name").html("Obi-wan <br> Kenobi")
+                        $("#movie_char_holo2>.holo_name").html("Quaigon <br> Jin ")
                         $("#movie_char_holo3>.holo_name").html("Anakin <br> Skywalker")
                         $("#movie_char_holo4>.holo_name").html("Darth <br> Maul")
                         $("#story_line>p").text("Two Jedi escape a hostile blockade to find allies and come across a young boy who may bring balance to the Force, but the long dormant Sith resurface to claim their original glory")
@@ -1160,8 +1164,8 @@ setInterval(function(){
                         $("#movie_char_holo3>.char_hololight_front").attr({"src":"image/character/blue_light.png"})
                         $("#movie_char_holo4>.char_hololight_back").attr({"src":"image/character/red_light_high.png"})
                         $("#movie_char_holo4>.char_hololight_front").attr({"src":"image/character/red_light.png"})                        
-                        $("#movie_char_holo1>.holo_name").html("Quaigon <br> Jin ")
-                        $("#movie_char_holo2>.holo_name").html("Obi-wan <br> Kenobi")
+                        $("#movie_char_holo1>.holo_name").html("Obi-wan <br> Kenobi ")
+                        $("#movie_char_holo2>.holo_name").html("Quaigon <br> Jin ")
                         $("#movie_char_holo3>.holo_name").html("Anakin <br> Skywalker")
                         $("#movie_char_holo4>.holo_name").html("Darth <br> Maul")
                         $("#story_line>p").text("Two Jedi escape a hostile blockade to find allies and come across a young boy who may bring balance to the Force, but the long dormant Sith resurface to claim their original glory")
@@ -1292,17 +1296,15 @@ setInterval(function(){
 
                 //캐릭터 스탠드로 전환//
                 $("#hologram_char_btn").click(function(){
-
-                    $("#hologram_info_box").animate({"width":"0"},300)
-                    $("#R2D2_light").animate({"width":"0"},200)
-                    $("#R2D2").delay(200).animate({"margin-top":"500px"},200)
-                    $("#series_list_next").animate({"right":"-200px"})
-                    $("#series_list_prev").animate({"left":"-200px"})
-                    $("#movie_char_box").delay(500).animate({"bottom":"00px"},500)
-                    $("#char_title").delay(500).fadeIn(1000)
-                    $("#movie_char_box>div>.char_holo_char").delay(1000).fadeIn(1000)
-                    $("#char_box_close").delay(1000).fadeIn(1000)
-                    $(".holo_name").delay(1000).fadeIn(1000)
+                    $("#ship_door").fadeIn(1)
+                    $("#ship_door").animate({"scale":1})
+                    $("#left_door").delay(200).animate({"left":"235px"},400)
+                    $("#right_door").delay(200).animate({"right":"212px"},400)
+                    $("html,body").delay(600).animate({scrollTop:$("#movie_char").offset().top},1)
+                    $("#left_door").delay(610).animate({"left":"-1200px"},400)
+                    $("#right_door").delay(610).animate({"right":"-1200px"},400)
+                    $("#ship_door").delay(700).animate({"scale":2})
+                    $("#ship_door").fadeOut(1)
                 })
 
                 //캐릭터 스탠드 닫기//
@@ -1333,6 +1335,30 @@ setInterval(function(){
 
                 //////////////////////////////////캐릭터 선택에 따른 세부소개 전환///////////////////////////
                 $("#movie_char_holo1").click(function(){
+                    if(episode_num == 1){
+                        $("#char_name").text("obi-wan kenobi")
+                        $("#char_txt1>.small_info").text("Male")
+                        $("#char_txt2>.small_info").text("1.85M")
+                        $("#char_txt3>.small_info").text("Human")
+                        $("#char_txt4>.small_info").text("Coruscant")
+                        $("#char_txt5>.small_info").text("Jedi Order")
+                        $("#char_info_txt_box>p").text("He is a Padawan of Quagon and has the level of a Jedi knight. He is wary of the dangers of Anakin, arguing that he should follow the council's opinion on Quagon's behavior of accepting Anakin as a disciple, even going against the Jedi Council.")
+                        $("#char_standing").attr({"src":"image/character/Char_info_1_1.png"})
+                        $("#char_simbol").attr({"src":"image/character/jedi_simbol.png"})
+
+                    }
+                    if(episode_num == 2){
+                        $("#char_name").text("Anakin Skywaler")
+                        $("#char_txt1>.small_info").text("Male")
+                        $("#char_txt2>.small_info").text("1.85M")
+                        $("#char_txt3>.small_info").text("Human")
+                        $("#char_txt4>.small_info").text("Coruscant")
+                        $("#char_txt5>.small_info").text("Jedi Order")
+                        $("#char_info_txt_box>p").text("Anakin, who has been practicing as a Padawan for 10 years, has grown beyond recognition, both physically and physically. While protecting Padme, who is on the verge of assassination, Anakin sees his mother's danger through the Force and visits Wato, his hometown of Tattooin, to free his mother from Watto, who once enslaved her. And you're faced with a shocking reality.")
+                        $("#char_standing").attr({"src":"image/character/Char_info_2_1.png"})
+                        $("#char_simbol").attr({"src":"image/character/jedi_simbol.png"})
+
+                    }
 
                     if(episode_num == 3){
                         $("#char_name").text("Darth Sidious")
@@ -1383,7 +1409,30 @@ setInterval(function(){
 
                  })
                 $("#movie_char_holo2").click(function(){
+                    if(episode_num == 1){
+                        $("#char_name").text("Quaigon Jin")
+                        $("#char_txt1>.small_info").text("Male")
+                        $("#char_txt2>.small_info").text("1.88M")
+                        $("#char_txt3>.small_info").text("Human")
+                        $("#char_txt4>.small_info").text("Coruscant")
+                        $("#char_txt5>.small_info").text("Jedi Order")
+                        $("#char_info_txt_box>p").text("Quigon Jin is a Jedi master. As the trade union blocks trade routes and sends combat ships and combat droids to isolate the Nabu planet in protest of the Republic's new tax policy, Republican Chairman Finis Ballorum sends them to the ambassador under his authority to resolve the dispute.Meet Anakin Skywalker, a slave, and learn Anakin's qualities as a Jedi. After that, Anakin was freed and sent to the Jedi Council to train as a Jedi in earnest.")
+                        $("#char_standing").attr({"src":"image/character/Char_info_1_2.png"})
+                        $("#char_simbol").attr({"src":"image/character/jedi_simbol.png"})
 
+                    }
+                    if(episode_num == 2){
+                        $("#char_name").text("obi-wan kenobi")
+                        $("#char_txt1>.small_info").text("Male")
+                        $("#char_txt2>.small_info").text("1.85M")
+                        $("#char_txt3>.small_info").text("Human")
+                        $("#char_txt4>.small_info").text("Coruscant")
+                        $("#char_txt5>.small_info").text("Jedi Order")
+                        $("#char_info_txt_box>p").text("As Anakin Skywalker's teacher, he tries to care about his student who likes to show off in many ways.While escorting Padme, he prevents an assassination attempt against her, and while chasing the assassin, he accidentally finds out about the existence of a clone Trooper in Camino. Chango Pet, the mother of Clone Trooper")
+                        $("#char_standing").attr({"src":"image/character/Char_info_2_2.png"})
+                        $("#char_simbol").attr({"src":"image/character/jedi_simbol.png"})
+
+                    }
                     if(episode_num == 3){
                         $("#char_name").text("Anakin Skywalker")
                         $("#char_txt1>.small_info").text("Male")
@@ -1435,7 +1484,30 @@ setInterval(function(){
 
                     })
                 $("#movie_char_holo3").click(function(){
+                    if(episode_num == 1){
+                        $("#char_name").text("Anakin Skywalker")
+                        $("#char_txt1>.small_info").text("Male")
+                        $("#char_txt2>.small_info").text("1.12M")
+                        $("#char_txt3>.small_info").text("Human")
+                        $("#char_txt4>.small_info").text("Tatuin")
+                        $("#char_txt5>.small_info").text("Wato's slave")
+                        $("#char_info_txt_box>p").text("Wato's slave living in Tattooine. He meets Kwai-gon and Obi-Wan, becomes a Jedi, and tries to free his mother from slavery. And the whole universe is going to shake...")
+                        $("#char_standing").attr({"src":"image/character/Char_info_1_3.png"})
+                        $("#char_simbol").attr({"src":"image/character/jedi_simbl.png"})
 
+                    }
+                    if(episode_num == 2){
+                        $("#char_name").text("Padme amidla")
+                        $("#char_txt1>.small_info").text("Female")
+                        $("#char_txt2>.small_info").text("1.68M")
+                        $("#char_txt3>.small_info").text("Human")
+                        $("#char_txt4>.small_info").text("Coruscant")
+                        $("#char_txt5>.small_info").text("Coruscant council")
+                        $("#char_info_txt_box>p").text("After his term in office, he resigned as queen of Nabu and became a member of the Republic, but suffered several assassinations. For this reason, Anakin is attached to Padme for her escort, and Obi-Wan acts separately for the first time, tracking down the assassin to find out who was behind her assassination.")
+                        $("#char_standing").attr({"src":"image/character/Char_info_2_3.png"})
+                        $("#char_simbol").attr({"src":"image/character/jedi_simbl.png"})
+
+                    }
                     if(episode_num == 3){
                         $("#char_name").text("Obiwan Kenobi")
                         $("#char_txt1>.small_info").text("Male")
@@ -1487,16 +1559,43 @@ setInterval(function(){
                 })
 
                 $("#movie_char_holo4").click(function(){
+                    if(episode_num == 1){
+                        $("#char_name").text("Darth Maul")
+                        $("#char_txt1>.small_info").text("Male")
+                        $("#char_txt2>.small_info").text("1.9M")
+                        $("#char_txt3>.small_info").text("Dassomillian")
+                        $("#char_txt4>.small_info").text("Unkown")
+                        $("#char_txt5>.small_info").text("Sith")
+                        $("#char_info_txt_box>p").text("Yoda was a legendary Jedi Master and stronger than most in his connection with the Force. Small in size but wise and powerful, he trained Jedi for over 800 years, playing integral roles in the Clone Wars, the instruction of Luke Skywalker, and unlocking the path to immortality.")
+                        $("#char_standing").attr({"src":"image/character/Char_info_1_4.png"})
+                        $("#char_simbol").attr({"src":"image/character/galaxy_empire_simbol.png"})
+                        $("#char_info_txt_box>p").text("When the Nabu incident broke out as a disciple of Darth Sidious, who was secretly growing power, he was ordered to assassinate Queen Padme Amidala, accompanying Jedi Master Quigon Jin, and Padawan Obiwan Kenobi, and pursued them to the Tattooines.")
+                        $("#char_standing").attr({"src":"image/character/Char_info_1_4.png"})
+                        $("#char_simbol").attr({"src":"image/character/galaxy_empire_simbol.png"})
 
+                    }
+                    if(episode_num == 2){
+                        $("#char_name").text("Count Duku")
+                        $("#char_txt1>.small_info").text("Male")
+                        $("#char_txt2>.small_info").text("1.83M")
+                        $("#char_txt3>.small_info").text("Human")
+                        $("#char_txt4>.small_info").text("trade union")
+                        $("#char_txt5>.small_info").text("Sith")
+                        $("#char_info_txt_box>p").text("Darth Vader, the evil Sith. Captures Princess Leah, who tried to steal Death Star's blueprint. After that, he confronts his archrival Obi-Wan Kenobi, who came to rescue the princess, and begins to pay attention to Luke, a young man with a strong force.")
+                        $("#char_standing").attr({"src":"image/character/char_info_2_4.png"})
+                        $("#char_simbol").attr({"src":"image/character/galaxy_empire_simbol.png"})
+
+                    }
                     if(episode_num == 3){
                         $("#char_name").text("Yoda")
                         $("#char_txt1>.small_info").text("Male")
-                        $("#char_txt2>.small_info").text("0.66M")
+                        $("#char_txt2>.small_info").text("1.9M")
                         $("#char_txt3>.small_info").text("Unknown")
                         $("#char_txt4>.small_info").text("Coruscant")
                         $("#char_txt5>.small_info").text("Jedi Order")
                         $("#char_info_txt_box>p").text("Yoda was a legendary Jedi Master and stronger than most in his connection with the Force. Small in size but wise and powerful, he trained Jedi for over 800 years, playing integral roles in the Clone Wars, the instruction of Luke Skywalker, and unlocking the path to immortality.")
                         $("#char_standing").attr({"src":"image/character/Char_info_3_4.png"})
+                        $("#char_simbol").attr({"src":"image/character/galaxy_empire_simbol.png"})
                         $("#char_simbol").attr({"src":"image/character/jedi_simbol.png"})
 
                     }
@@ -1508,8 +1607,8 @@ setInterval(function(){
                         $("#char_txt3>.small_info").text("Human(Cyborg)")
                         $("#char_txt4>.small_info").text("Death Star")
                         $("#char_txt5>.small_info").text("galaxtic Empire")
-                        $("#char_info_txt_box>p").text("Darth Vader, the evil Sith. Captures Princess Leah, who tried to steal Death Star's blueprint. After that, he confronts his archrival Obi-Wan Kenobi, who came to rescue the princess, and begins to pay attention to Luke, a young man with a strong force.")
-                        $("#char_standing").attr({"src":"image/character/char_info_4_4.png"})
+                        $("#char_info_txt_box>p").text("He reappeared in the galaxy about 10 years after becoming the Sith monarch, and he has not been idle. In the meantime, in connection with Shiv Palputin, he has secretly trained the Caminoe Clone Trooper army, while creating a droid army, laying the groundwork for his plan. Anyway, Count Dooku, who returned again, used his unique colorful sense of politics to bring together various planetary systems and large companies that were dissatisfied with the republic to form a separatist coalition to seek independence of the republic.")
+                        $("#char_standing").attr({"src":"image/character/char_info_2_4.png"})
                         $("#char_simbol").attr({"src":"image/character/galaxy_empire_simbol.png"})
 
                     }
@@ -1746,13 +1845,18 @@ setInterval(function(){
                     
                 })
 
-
+                
 
                                 $("#menu>li:nth-child(3)").click(function(){
                     $("html,body").animate({scrollTop:$("#movie_screen").offset().top},10) 
                     
                 })
                 $("#menu>li:nth-child(4)").click(function(){
+                    $("html,body").animate({scrollTop:$("#movie_char").offset().top},10) 
+                    
+                })
+
+                $("#menu>li:nth-child(6)").click(function(){
                     $("html,body").animate({scrollTop:$("#gallery").offset().top},10) 
                     
                 })
@@ -2047,8 +2151,8 @@ setInterval(function(){
        #critic>li:nth-child(1)>p>span{background: url(image/series/imdb_score.png) center no-repeat;display: inline-block;width: 41px;height: 39px;position: absolute;left: 12px;top: 18px;bottom: 0;margin: auto;}
        #critic>li:nth-child(2)>p{font-size: 26px;color: rgb(255, 255, 255);text-align: center;width: 54px;height: 54px;margin: auto;line-height: 54px;margin-top: 10px;background-color: #01ffff;border-radius: 5px;}
        #critic>li:nth-child(3)>p{font-size: 26px;color: #01ffff;text-align: center;line-height: 49px;margin-top: 10px;}
-       #series_list_prev{position: absolute;left: 0;top: 0;bottom: 0;margin: auto;cursor: pointer;}
-       #series_list_next{position: absolute;right: 0;top: 0;bottom: 0;margin: auto;cursor: pointer;}
+       .series_list_prev{position: absolute;left: 0;top: 0;bottom: 0;margin: auto;cursor: pointer;}
+       .series_list_next{position: absolute;right: 0;top: 0;bottom: 0;margin: auto;cursor: pointer;}
        #poster_big_box{position: fixed;left: 0;top: 0;z-index: 99;background-color: rgba(0, 0, 0, 0.9);width: 100%;height: 100%;display: none;}
        #poster_big_box>.poster_list{width: 560px;height: 820px;position: absolute;top: 90px;left: 0px;right: 0;background-color: #000;overflow: hidden;margin: auto;}
        #big_poster_close{position: absolute;left: 0;top: 20px;right: 0;margin: auto;opacity: 0.7;cursor: pointer;}
@@ -2058,15 +2162,15 @@ setInterval(function(){
 
 
 
-        #movie_char{height: 970px;width: 100%;overflow: hidden;position: absolute;left: 50%;top: 50%;margin-top: -485px;margin-left: -960px;}
-        #movie_char_box{width: 1300px;height: 700px;position: absolute;left: 50%;bottom: -700px;margin-left: -650px;overflow: hidden;}
+        #movie_char{height: 970px;position: relative;width: 100%;background: url(image/series/bg_punnel.png) center ;overflow: hidden;}
+        #movie_char_box{width: 1300px;height: 700px;position: absolute;left: 50%;bottom: 0px;margin-left: -650px;overflow: hidden;}
         #movie_char_box>div{width: 300px;height: 700px;margin-right: 33px;box-sizing: border-box;float: left;position: relative;}
         #movie_char_box>div:nth-child(4){margin-right: 0;}
         .holo_g{position: absolute;bottom: -20px;left: 0;right: 0;margin: auto;width: 100%;}
         .char_hololight_back{position: absolute;left: -17px;bottom: -110px;z-index: 2;display: none;}
-        .char_holo_char{position: absolute;left: 0;right: 0;margin: auto;cursor: pointer;z-index: 3;cursor: pointer;display: none;height: 520px;}
+        .char_holo_char{position: absolute;left: 0;right: 0;margin: auto;cursor: pointer;z-index: 3;cursor: pointer;height: 520px;}
         .char_hololight_front{position: absolute;left: -17px;bottom: -110px;z-index: 4;display: none;cursor: pointer;}
-        .holo_name{position: absolute;left: 0;right: 0;top: 0;margin: auto;font-size: 28px;text-align: center;color: #fff;z-index: 5;font-family: space;line-height: 45px;display: none;}
+        .holo_name{position: absolute;left: 0;right: 0;top: 0;margin: auto;font-size: 28px;text-align: center;color: #fff;z-index: 5;font-family: space;line-height: 45px;}
         #movie_char_holo1>.char_holo_char{bottom: 40px;opacity: 0.4;}
         #movie_char_holo2>.char_holo_char{bottom: 40px;opacity: 0.4;}
         #movie_char_holo3>.char_holo_char{bottom: 40px;opacity: 0.4;}
@@ -2074,7 +2178,7 @@ setInterval(function(){
 
 
 
-        #char_title{position: absolute;top: 50%;left: 50%;right: 0;text-align: center;width: 1300px;z-index: 10;margin-left: -650px;margin-top: -350px;display: none;}
+        #char_title{position: absolute;top: 50%;left: 50%;right: 0;text-align: center;width: 1300px;z-index: 10;margin-left: -650px;margin-top: -350px;}
         #char_title>div:nth-child(1){left: 5px;}
         #char_title>div:nth-child(3){right: 5px;}
         .char_line{width: 430px;top: 0;bottom: 0;position: absolute;margin: auto;height: 4px;background-color: #fff;}
@@ -2153,6 +2257,7 @@ setInterval(function(){
         <li>Home</li>
         <li>info</li>
         <li>series</li>
+        <li>character<li>
         <li>gallery</li>
     </ul>
 
@@ -2445,86 +2550,10 @@ setInterval(function(){
     <!---------------------시리즈 박스 시작------------------------>
     <section id="movie_screen">
         <!-------------------캐릭터 정보 -------------------------->
-        <div id="char_info">
-            <div id="char_info_title">
-                <div class="char_info_line"></div>
-                <img src="image/character/character_txt.png" alt="">
-                <div class="char_info_line"></div>
-            </div>
-            <img src="image/character/jedi_simbol.png" alt="" id="char_simbol">
-            <img src="image/character/Char_info_3_2.png" alt="" id="char_standing">
-            
-            <img src="image/character/close_btn.png" alt="" id="char_info_close">
-            <div id="char_info_txt_box">
-                <h3 id="char_name">Anakin Skywalker</h3>
-                <div id="char_txt1">
-                    <h4 class="small_title">GENDER</h4>
-                    <h4 class="small_info">Male</h4>
-                </div>
-                <div id="char_txt2">
-                    <h4 class="small_title">HEIGHT</h4>
-                    <h4 class="small_info">1.85M</h4>
-                </div>
-                <div id="char_txt3">
-                    <h4 class="small_title">SPACIES</h4>
-                    <h4 class="small_info">Human</h4>
-                </div>
-    
-                <div id="char_txt4">
-                    <h4 class="small_title">LOCATION</h4>
-                    <h4 class="small_info">Coruscant</h4>
-                </div>
-                <div id="char_txt5">
-                    <h4 class="small_title">AFFILIATIONS</h4>
-                    <h4 class="small_info">Jedi Order</h4>
-                </div>
-    
-                
-    
-                <p>Discovered as a slave on Tatooine by Qui-Gon Jinn and Obi-Wan Kenobi, Anakin Skywalker had the potential to become one of the most powerful Jedi ever. Some even believed he was the prophesied Chosen One who would bring balance to the Force. Always pushing the limits of his Jedi training, seeking to excel and live up to his reputation, Skywalker's passion often brought him into conflict with his mentor, Jedi Master Obi-Wan Kenobi. A hero of the Clone Wars, Anakin was caring and compassionate, but suffered from a deep fear of loss that would prove to be his downfall.</p>
-            </div>
-        </div>
+
 
 <!--------------------캐릭터 스탠드-리스트------------------------->
-        <section id="movie_char">
-            <div id="char_title">
-                <div class="char_line"></div>
-                <img src="image/character/character_txt.png" alt="">
-                <div class="char_line"></div>
-            </div>
-            <img src="image/character/close_btn.png" alt="" id="char_box_close">
-            <div id="movie_char_box">
-                
-                <div id="movie_char_holo1">
-                    <h3 class="holo_name">Darth <br> Sidious</h3>
-                    <img src="image/character/holo_generater.png" alt="" class="holo_g">
-                    <img src="image/character/red_light_high.png" alt="" class="char_hololight_back">
-                    <img src="image/character/red_light.png" alt="" class="char_hololight_front">
-                    <img src="image/character/info_3_1.png" alt="" class="char_holo_char">
-                </div>
-                <div id="movie_char_holo2">
-                    <h3 class="holo_name">Anakin <br> Skywalker</h3>
-                    <img src="image/character/holo_generater.png" alt="" class="holo_g">
-                    <img src="image/character/blue_light_high.png" alt="" class="char_hololight_back">
-                    <img src="image/character/blue_light.png" alt="" class="char_hololight_front">
-                    <img src="image/character/info_3_2.png" alt="" class="char_holo_char">
-                </div>
-                <div id="movie_char_holo3">
-                    <h3 class="holo_name">Obiwan <br> Kenobi</h3>
-                    <img src="image/character/holo_generater.png" alt="" class="holo_g">
-                    <img src="image/character/blue_light_high.png" alt="" class="char_hololight_back">
-                    <img src="image/character/blue_light.png" alt="" class="char_hololight_front">
-                    <img src="image/character/info_3_3.png" alt="" class="char_holo_char">
-                </div>
-                <div id="movie_char_holo4">
-                    <h3 class="holo_name">YODA</h3>
-                    <img src="image/character/holo_generater.png" alt="" class="holo_g">
-                    <img src="image/character/blue_light_high.png" alt="" class="char_hololight_back">
-                    <img src="image/character/blue_light.png" alt="" class="char_hololight_front">
-                    <img src="image/character/info_3_4.png" alt="" class="char_holo_char">
-                </div>
-            </div>
-        </section>
+
         <!--------------------포스터 박스 및 영화 정보------------------------->
          <img src="image/series/r2_hologram_light.png" alt="" id="R2D2_light">
          <div id="R2D2">
@@ -2610,8 +2639,8 @@ Ewan McGregor - Obi-Wan Kenobi <br>
         <img src="image/series/close_btn.png" alt="" id="big_poster_close">
         </div>
         
-        <img src="image/series/prev_btn.png" alt="" id="series_list_prev">
-        <img src="image/series/next_btn.png" alt="" id="series_list_next">
+        <img src="image/series/prev_btn.png" alt="" class="series_list_prev">
+        <img src="image/series/next_btn.png" alt="" class="series_list_next">
 
 
         <!--------------------홀로그램 버튼 박스------------------------->
@@ -2622,7 +2651,86 @@ Ewan McGregor - Obi-Wan Kenobi <br>
         <img src="image/series/series_door_left2.png" alt="" id="right_door">
         <img src="image/series/series_door_right2.png" alt="" id="left_door">
     </section>
-
+        <section id="movie_char">
+            <img src="image/series/prev_btn.png" alt="" class="series_list_prev">
+            <img src="image/series/next_btn.png" alt="" class="series_list_next">
+                    <div id="char_info">
+            <div id="char_info_title">
+                <div class="char_info_line"></div>
+                <img src="image/character/character_txt.png" alt="">
+                <div class="char_info_line"></div>
+            </div>
+            <img src="image/character/jedi_simbol.png" alt="" id="char_simbol">
+            <img src="image/character/Char_info_3_2.png" alt="" id="char_standing">
+            
+            <img src="image/character/close_btn.png" alt="" id="char_info_close">
+            <div id="char_info_txt_box">
+                <h3 id="char_name">Anakin Skywalker</h3>
+                <div id="char_txt1">
+                    <h4 class="small_title">GENDER</h4>
+                    <h4 class="small_info">Male</h4>
+                </div>
+                <div id="char_txt2">
+                    <h4 class="small_title">HEIGHT</h4>
+                    <h4 class="small_info">1.85M</h4>
+                </div>
+                <div id="char_txt3">
+                    <h4 class="small_title">SPACIES</h4>
+                    <h4 class="small_info">Human</h4>
+                </div>
+    
+                <div id="char_txt4">
+                    <h4 class="small_title">LOCATION</h4>
+                    <h4 class="small_info">Coruscant</h4>
+                </div>
+                <div id="char_txt5">
+                    <h4 class="small_title">AFFILIATIONS</h4>
+                    <h4 class="small_info">Jedi Order</h4>
+                </div>
+    
+                
+    
+                <p>Discovered as a slave on Tatooine by Qui-Gon Jinn and Obi-Wan Kenobi, Anakin Skywalker had the potential to become one of the most powerful Jedi ever. Some even believed he was the prophesied Chosen One who would bring balance to the Force. Always pushing the limits of his Jedi training, seeking to excel and live up to his reputation, Skywalker's passion often brought him into conflict with his mentor, Jedi Master Obi-Wan Kenobi. A hero of the Clone Wars, Anakin was caring and compassionate, but suffered from a deep fear of loss that would prove to be his downfall.</p>
+            </div>
+        </div>
+            <div id="char_title">
+                <div class="char_line"></div>
+                <img src="image/character/character_txt.png" alt="">
+                <div class="char_line"></div>
+            </div>
+            <img src="image/character/close_btn.png" alt="" id="char_box_close">
+            <div id="movie_char_box">
+                
+                <div id="movie_char_holo1">
+                    <h3 class="holo_name">Darth <br> Sidious</h3>
+                    <img src="image/character/holo_generater.png" alt="" class="holo_g">
+                    <img src="image/character/red_light_high.png" alt="" class="char_hololight_back">
+                    <img src="image/character/red_light.png" alt="" class="char_hololight_front">
+                    <img src="image/character/info_3_1.png" alt="" class="char_holo_char">
+                </div>
+                <div id="movie_char_holo2">
+                    <h3 class="holo_name">Anakin <br> Skywalker</h3>
+                    <img src="image/character/holo_generater.png" alt="" class="holo_g">
+                    <img src="image/character/blue_light_high.png" alt="" class="char_hololight_back">
+                    <img src="image/character/blue_light.png" alt="" class="char_hololight_front">
+                    <img src="image/character/info_3_2.png" alt="" class="char_holo_char">
+                </div>
+                <div id="movie_char_holo3">
+                    <h3 class="holo_name">Obiwan <br> Kenobi</h3>
+                    <img src="image/character/holo_generater.png" alt="" class="holo_g">
+                    <img src="image/character/blue_light_high.png" alt="" class="char_hololight_back">
+                    <img src="image/character/blue_light.png" alt="" class="char_hololight_front">
+                    <img src="image/character/info_3_3.png" alt="" class="char_holo_char">
+                </div>
+                <div id="movie_char_holo4">
+                    <h3 class="holo_name">YODA</h3>
+                    <img src="image/character/holo_generater.png" alt="" class="holo_g">
+                    <img src="image/character/blue_light_high.png" alt="" class="char_hololight_back">
+                    <img src="image/character/blue_light.png" alt="" class="char_hololight_front">
+                    <img src="image/character/info_3_4.png" alt="" class="char_holo_char">
+                </div>
+            </div>
+        </section>
     <!---------------------갤러리 영역 시작------------------------>
     <section id="gallery">
         <div id="gallery_box">
